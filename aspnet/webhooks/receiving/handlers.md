@@ -1,39 +1,39 @@
 ---
 uid: webhooks/receiving/handlers
-title: Обработчики веб-перехватчиков ASP.NET | Документация Майкрософт
+title: ASP.NET обработчики WebHooks (ru) Документы Майкрософт
 author: rick-anderson
-description: Обработка запросов в веб-перехватчиках ASP.NET.
+description: Как обрабатывать запросы в ASP.NET WebHooks.
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: a55b0d20-9c90-4bd3-a471-20da6f569f0c
-ms.openlocfilehash: 01c9a283d105c4a0973ff88c8de646c5f49a34db
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ff12dd8df167eca17ecbd9f03a71807d44af2b30
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78518034"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675216"
 ---
-# <a name="aspnet-webhooks-handlers"></a>Обработчики веб-перехватчиков ASP.NET
+# <a name="aspnet-webhooks-handlers"></a>обработчики ASP.NET WebHooks
 
-После проверки запросов веб-перехватчиков приемником веб-перехватчика он готов к обработке с помощью пользовательского кода. Именно здесь поступают *обработчики* . Обработчики являются производными от интерфейса [ивебхукхандлер](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) , но обычно используют класс [вебхукхандлер](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) вместо наследования непосредственно от интерфейса.
+После проверки запросов WebHooks приемником WebHook готов к обработке с помощью пользовательского кода. Это где *обработчики* приходят дюйма Обработчики вытекают из интерфейса [IWebHookHandler,](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) но обычно используют класс [WebHookHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandler.cs) вместо того, чтобы выводятся непосредственно из интерфейса.
 
-Запрос веб-перехватчика может обрабатываться одним или несколькими обработчиками. Обработчики вызываются в порядке, основанном на их свойствах *Order* , которые передаются от нижнего к большему, где порядок является простым целым числом (от 1 до 100):
+Запрос WebHook может быть обработан одним или несколько обработчиками. Обработчики называются в порядке, основанном на их соответствующем свойстве *Заказа,* переходяот из самого низкого к самому высокому, где Заказ является простым рядом (предлагается быть между 1 и 100):
 
-![Диаграмма свойств "порядок обработчика веб-перехватчика"](_static/Handlers.png)
+![Диаграмма обработчика Обработчика WebHook](_static/Handlers.png)
 
-Обработчик может дополнительно задать свойство *Response* для вебхукхандлерконтекст, которое приведет к прерыванию обработки, а ответ будет отправлен обратно как HTTP-ответ на веб-перехватчик. В приведенном выше случае обработчик C не будет вызываться, так как он имеет более высокий порядок, чем B, а B задает ответ.
+Обработчик может дополнительно установить свойство *ответа* на WebHookHandlerContext, что приведет к остановке обработки и отправке ответа обратно в качестве ответа HTTP на WebHook. В приведенном выше случае обработчик C не будет вызываться, поскольку он имеет более высокий порядок, чем B и B устанавливает ответ.
 
-Установка ответа обычно относится только к веб-перехватчикам, в которых ответ может передавать информацию обратно в исходный API. Например, в случае с веб-перехватчиками временного резерва, где ответ отправляется обратно в канал, из которого поступил веб-перехватчик. Обработчики могут задать свойство получателя, если им требуется только получить веб-перехватчики от этого конкретного получателя. Если они не задают получателя, они вызываются для всех из них.
+Настройка ответа обычно актуальна только для WebHooks, где ответ может донести информацию до исходного API. Это, например, случай с Slack WebHooks, где ответ размещается обратно на канал, откуда пришел WebHook. Обработчики могут установить свойство получателя, если они хотят получать WebHooks от этого конкретного получателя. Если они не устанавливают приемник, они призваны для всех из них.
 
-Еще одним распространенным применением ответа является использование ответа *410* , чтобы указать, что веб-перехватчик больше не активен и дальнейшие запросы не должны отправляться.
+Еще одно распространенное использование ответа заключается в использовании ответа *410 Gone,* чтобы указать, что WebHook больше не активен и никакие дополнительные запросы не должны быть представлены.
 
-По умолчанию обработчик будет вызываться всеми приемниками веб-перехватчика. Однако если свойству *получателя* присвоено имя обработчика, этот обработчик будет принимать только запросы веб-перехватчика от этого получателя.
+По умолчанию обработчик будет вызываться всеми приемниками WebHook. Однако, если свойство *получателя* настроено на имя обработчика, то этот обработчик будет получать запросы WebHook только от этого получателя.
 
-## <a name="processing-a-webhook"></a>Обработка веб-перехватчика
+## <a name="processing-a-webhook"></a>Обработка WebHook
 
-При вызове обработчика он получает [вебхукхандлерконтекст](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandlerContext.cs) , содержащий сведения о запросе веб-перехватчика. Данные (обычно текст HTTP-запроса) доступны в свойстве *Data* .
+При вызове обработчика он получает [WebHookHandlerContext,](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookHandlerContext.cs) содержащий информацию о запросе WebHook. Данные, как правило, орган запроса HTTP, доступны из свойства *данных.*
 
-Тип данных обычно представляет собой данные в формате JSON или HTML, но при необходимости можно привести к более конкретному типу. Например, пользовательские веб-перехватчики, создаваемые веб-перехватчиками ASP.NET, можно привести к типу [кустомнотификатионс](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers.Custom/WebHooks/CustomNotifications.cs) следующим образом:
+Тип данных обычно JSON или HTML-формы данных, но можно отбросить на более конкретный тип при желании. Например, пользовательские WebHooks, генерируемые ASP.NET WebHooks, могут быть отброшены в тип [Пользовательских Уведомлений](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers.Custom/WebHooks/CustomNotifications.cs) следующим образом:
 
 ```csharp
 public class MyWebHookHandler : WebHookHandler
@@ -57,11 +57,11 @@ public class MyWebHookHandler : WebHookHandler
 
   ## <a name="queued-processing"></a>Обработка в очереди
 
-Большинство Отправители веб-перехватчиков повторно отправляют веб-перехватчик, если ответ не будет создан в течение нескольких секунд. Это означает, что обработчик должен завершить обработку в течение этого промежутка времени, чтобы не вызывать его снова.
+Большинство отправителей WebHook отправит веб-крюк, если ответ не генерируется в течение нескольких секунд. Это означает, что обработчик должен завершить обработку в течение этого периода времени, чтобы не вызываться снова.
 
-Если обработка занимает больше времени или лучше обрабатывается отдельно, [вебхуккуеуехандлер](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) можно использовать для отправки запроса веб-перехватчика в очередь, например [очередь службы хранилища Azure](https://msdn.microsoft.com/library/azure/dd179353.aspx).
+Если обработка занимает больше времени или лучше обрабатывать отдельно, то [WebHookQueueHandler](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) можно использовать для отправки запроса WebHook в очередь, например [очередь хранения Azure.](https://msdn.microsoft.com/library/azure/dd179353.aspx)
 
-Структура реализации [вебхуккуеуехандлер](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs) представлена здесь:
+Наброски реализации [WebHook'ue](https://github.com/aspnet/WebHooks/blob/master/src/Microsoft.AspNet.WebHooks.Receivers/WebHooks/WebHookQueueHandler.cs)
 
 ```csharp
 public class QueueHandler : WebHookQueueHandler

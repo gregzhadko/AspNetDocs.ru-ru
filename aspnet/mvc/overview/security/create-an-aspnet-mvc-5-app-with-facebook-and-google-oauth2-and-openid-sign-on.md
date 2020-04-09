@@ -1,62 +1,62 @@
 ---
 uid: mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
-title: Создание приложения MVC 5 с помощью Facebook, Twitter, LinkedIn и Google OAuth2 Sign-OnC#() | Документация Майкрософт
+title: Создайте приложение MVC 5 с помощью Facebook, Twitter, LinkedIn и Google OAuth2 Всхейно (C) Документы Майкрософт
 author: Rick-Anderson
-description: В этом руководстве показано, как создать веб-приложение ASP.NET MVC 5, которое позволяет пользователям выполнять вход с использованием OAuth 2,0 с учетными данными из внешнего й...
+description: Этот учебник показывает вам, как построить ASP.NET MVC 5 веб-приложение, которое позволяет пользователям войти в систему с помощью OAuth 2.0 с полномочиями от внешнего authenti ...
 ms.author: riande
 ms.date: 04/03/2015
 ms.assetid: 81ee500f-fc37-40d6-8722-f1b64720fbb6
 msc.legacyurl: /mvc/overview/security/create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on
 msc.type: authoredcontent
 ms.openlocfilehash: dd2e55d68ceb5a90134e394c00f3a3a231cb27d6
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78456510"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675919"
 ---
 # <a name="create-an-aspnet-mvc-5-app-with-facebook-twitter-linkedin-and-google-oauth2-sign-on-c"></a>Создание приложения ASP.NET MVC 5 с единым входом с помощью учетных данных Facebook, Twitter, LinkedIn и Google OAuth2 (C#)
 
-по [Рик Андерсон (](https://twitter.com/RickAndMSFT)
+[Рик Андерсон](https://twitter.com/RickAndMSFT)
 
-> В этом руководстве показано, как создать веб-приложение ASP.NET MVC 5, которое позволяет пользователям входить в систему с помощью [OAuth 2,0](http://oauth.net/2/) с учетными данными от внешнего поставщика проверки подлинности, например Facebook, Twitter, LinkedIn, Microsoft или Google. Для простоты в этом учебнике рассматривается работа с учетными данными из Facebook и Google.
+> В этом учебнике показано, как создать веб-приложение mVC 5 ASP.NET, которое позволяет пользователям войти в систему с помощью [OAuth 2.0](http://oauth.net/2/) с учетными данными от внешнего поставщика аутентификации, таких как Facebook, Twitter, LinkedIn, Microsoft или Google. Для простоты, этот учебник фокусируется на работе с учетными данными от Facebook и Google.
 > 
-> Включение этих учетных данных на веб-сайтах обеспечивает значительное преимущество, поскольку миллионы пользователей уже имеют учетные записи с этими внешними поставщиками. Эти пользователи могут быть более наклонными для регистрации на сайте, если им не нужно создавать и запоминать новый набор учетных данных.
+> Включение этих учетных данных на веб-сайты обеспечивает значительное преимущество, поскольку миллионы пользователей уже имеют учетные записи с этими внешними поставщиками. Эти пользователи могут быть более склонны подписаться на ваш сайт, если они не должны создавать и запоминать новый набор учетных данных.
 > 
-> См. также [приложение ASP.NET MVC 5 с использованием SMS и двухфакторной проверки подлинности по электронной почте](aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md).
+> Смотрите также [ASP.NET приложение MVC 5 с SMS и электронной почте Двухфакторная аутентификация](aspnet-mvc-5-app-with-sms-and-email-two-factor-authentication.md).
 > 
-> В этом учебнике также показано, как добавить данные профиля для пользователя и как использовать API членства для добавления ролей. Этот учебник написан на [Рик Андерсон (](https://blogs.msdn.com/rickAndy) (следуйте указаниям в Twitter: [@RickAndMSFT](https://twitter.com/RickAndMSFT) ).
+> В учебнике также показано, как добавлять данные профиля для пользователя и как использовать API членства для добавления ролей. Этот учебник был написан [Рик Андерсон](https://blogs.msdn.com/rickAndy) ( [@RickAndMSFT](https://twitter.com/RickAndMSFT) Пожалуйста, следуйте за мной по щебетать: ).
 
 <a id="start"></a>
 ## <a name="getting-started"></a>Приступая к работе
 
-Начните с установки и запуска [Visual Studio Express 2013 для Web](https://go.microsoft.com/fwlink/?LinkId=299058) или [Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkId=306566). Установите Visual Studio [2013 с обновлением 3](https://go.microsoft.com/fwlink/?LinkId=390521) или более поздней версии. Дополнительные сведения о Dropbox, GitHub, LinkedIn, Instagram, buffer, Salesforce, STEAM, обмене стеками, Трипит, Твитч, Twitter, Yahoo! и др. см. в этом [образце проекта](https://github.com/matthewdunsdon/oauthforaspnet).
+Начните с установки и запуска [Visual Studio Express 2013 для Web](https://go.microsoft.com/fwlink/?LinkId=299058) или Visual Studio [2013](https://go.microsoft.com/fwlink/?LinkId=306566). Установите Visual Studio [2013 Обновление 3](https://go.microsoft.com/fwlink/?LinkId=390521) или выше. Для помощи с Dropbox, GitHub, Linkedin, Instagram, Буфер, Salesforce, STEAM, Стек Exchange, Tripit, Twitch, Twitter, Yahoo!, и многое другое, смотрите этот [пример проекта](https://github.com/matthewdunsdon/oauthforaspnet).
 
 > [!NOTE]
-> Необходимо установить Visual Studio [2013 с обновлением 3](https://go.microsoft.com/fwlink/?LinkId=390521) или более поздней версии, чтобы использовать Google OAuth 2 и локально выполнять отладку без предупреждений SSL.
+> Вы должны установить Visual Studio [2013 Обновление 3](https://go.microsoft.com/fwlink/?LinkId=390521) или выше, чтобы использовать Google OAuth 2 и отладить локально без SSL предупреждений.
 
-Нажмите кнопку **создать проект** на **начальной** странице, либо можно воспользоваться меню, выбрать **файл**, а затем **создать проект**.
+Нажмите **Новый проект** со **стартовой** страницы, или вы можете использовать меню и выбрать **файл,** а затем **новый проект**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image1.png)  
 
 <a id="1st"></a>
 ## <a name="creating-your-first-application"></a>Создание первого приложения
 
-Щелкните **создать проект**, выберите элемент **Visual C#**  слева, затем — **веб** , а затем выберите **веб-приложение ASP.NET**. Присвойте проекту имя "Мвкаус" и нажмите кнопку **ОК**.
+Нажмите **Новый проект**, затем выберите **Visual C "** слева, затем **веб,а** затем выберите **ASP.NET веб-приложений**. Назовите свой проект "MvcAuth", а затем нажмите **OK**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image2.png)
 
-В диалоговом окне **Новый проект ASP.NET** щелкните **MVC**. Если проверка подлинности не является **отдельной учетной записью пользователя**, нажмите кнопку **изменить проверку подлинности** и выберите **отдельные учетные записи пользователей**. Проверив **размещение в облаке**, приложение будет легко размещаться в Azure.
+В диалоге **проекта New ASP.NET** щелкните **MVC**. Если проверка подлинности не является **индивидуальными учетными записями пользователей,** нажмите кнопку **«Изменение аутентификации»** и выберите **индивидуальные учетные записи пользователей.** Проверяя **host в облаке,** приложение будет очень легко разместить в Azure.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image3.png)
 
-Если вы выбрали **узел в облаке**, заполните диалоговое окно настройки.
+Если вы выбрали **Host в облаке,** заполните диалог настройки.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image4.png)
 
-### <a name="use-nuget-to-update-to-the-latest-owin-middleware"></a>Использование NuGet для обновления по промежуточного слоя OWIN
+### <a name="use-nuget-to-update-to-the-latest-owin-middleware"></a>Используйте NuGet для обновления до последних программ OWIN
 
-Используйте диспетчер пакетов NuGet для обновления по [промежуточного слоя OWIN](../../../aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana.md). В меню слева выберите **обновления** . Можно нажать кнопку " **Обновить все** " или выполнить поиск только пакетов OWIN (показанных на следующем рисунке):
+Используйте менеджер пакетов NuGet для обновления [промежуточного посуды OWIN.](../../../aspnet/overview/owin-and-katana/getting-started-with-owin-and-katana.md) Выберите **обновления** в левом меню. Вы можете нажать на кнопку **Обновление Все** или вы можете искать только пакеты OWIN (показано на следующем изображении):
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image5.png)
 
@@ -64,11 +64,11 @@ ms.locfileid: "78456510"
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image6.png)
 
-В консоли диспетчера пакетов (PMC) можно ввести команду `Update-Package`, которая будет обновлять все пакеты.
+С консоли менеджера пакетов (PMC) можно ввести `Update-Package` команду, которая будет обновлять все пакеты.
 
-Нажмите клавишу **F5** или **CTRL + F5** , чтобы запустить приложение. На рисунке ниже показан номер порта 1234. При запуске приложения вы увидите другой номер порта.
+Нажмите **F5** или **Ctrl-F5** для запуска приложения. На рисунке ниже номер порта 1234. При запуске приложения вы увидите другой номер порта.
 
-В зависимости от размера окна браузера может потребоваться щелкнуть значок навигации, чтобы просмотреть ссылки **Домашняя страница**, **сведения о** **контакте**, **Регистрация** и **Вход** .
+В зависимости от размера окна браузера, возможно, потребуется нажать значок навигации, чтобы увидеть **"Дом",** **"Контакт",** **Contact** **"Регистрация"** и **"Вход в** ссылки".
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image7.png)  
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image8.png) 
@@ -76,31 +76,31 @@ ms.locfileid: "78456510"
 <a id="ssl"></a>
 ## <a name="setting-up-ssl-in-the-project"></a>Настройка SSL в проекте
 
-Для подключения к поставщикам проверки подлинности, таким как Google и Facebook, необходимо настроить IIS-Express для использования SSL. Важно использовать SSL после входа в систему, а не отменять его на HTTP, файл cookie для входа является как секретным именем пользователя и паролем, и без использования SSL вы отправляете его в виде открытого текста по каналу передачи. Кроме того, вы уже предоставили время для выполнения подтверждения и обеспечения безопасности канала (который представляет собой основную часть того, что делает HTTPS медленнее, чем HTTP) до выполнения конвейера MVC, поэтому перенаправление обратно на HTTP после входа в систему не сделает текущий запрос или будущее. запросы выполняются гораздо быстрее.
+Чтобы подключиться к поставщикам аутентификации, таким как Google и Facebook, необходимо настроить IIS-Express для использования SSL. Важно продолжать использовать SSL после входа и не возвращаться к HTTP, ваш файл cookie-файлов является таким же секретным, как и ваше имя пользователя и пароль, и без использования SSL вы отправляете его в ясном тексте по проводу. Кроме того, вы уже взяли время для выполнения рукопожатия и обеспечения безопасности канала (который является основной частью того, что делает HTTPS медленнее, чем HTTP) до запуска конвейера MVC, поэтому перенаправление обратно в HTTP после ввоза в систему не сделает текущий запрос или будущие запросы гораздо быстрее.
 
-1. В **Обозреватель решений**щелкните проект **мвкаус** .
-2. Нажмите клавишу F4, чтобы отобразить свойства проекта. Кроме того, в меню **вид** можно выбрать **окно свойства**.
-3. Измените значение по **протоколу SSL с Enabled** на true.  
+1. В **Solution Explorer**щелкните проект **MvcAuth.**
+2. Нажмите на ключ F4, чтобы показать свойства проекта. Кроме того, из меню **View** вы можете выбрать **окно свойств.**
+3. Изменение **SSL позволило** true.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image9.png)
-4. Скопируйте URL-адрес SSL (который будет `https://localhost:44300/`, если не созданы другие проекты SSL).
-5. В **Обозреватель решений**щелкните правой кнопкой мыши проект **мвкаус** и выберите пункт **Свойства**.
-6. Перейдите на вкладку **веб** и вставьте URL-адрес SSL в поле **URL-адрес проекта** . Сохраните файл (CTL + S). Этот URL-адрес потребуется для настройки приложений проверки подлинности Facebook и Google.  
+4. Копирование URL SSL (который будет, `https://localhost:44300/` если вы не создали другие проекты SSL).
+5. В **Solution Explorer**, право нажмите на проект **MvcAuth** и выберите **Свойства**.
+6. Выберите **web-вкладку,** а затем вставьте URL SSL в поле **Project Url.** Сохранить файл (Ctl-S). Этот URL-адрес необходим для настройки приложений для проверки подлинности Facebook и Google.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image10.png)
-7. Добавьте атрибут [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) к контроллеру `Home`, чтобы все запросы должны использовать HTTPS. Более безопасный подход заключается в добавлении фильтра [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) в приложение. См. раздел &quot;Защита приложения с помощью SSL и атрибута авторизации&quot; в моем руководстве [Создание приложения ASP.NET MVC с проверкой подлинности и базой данных SQL и развертывание в службе приложений Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Ниже показана часть контроллера Home.
+7. Добавьте атрибут [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) в `Home` контроллер, требующий, чтобы все запросы должны использовать HTTPS. Более безопасный подход заключается в добавлении фильтра [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute.aspx) в приложение. Смотрите раздел &quot;Защита приложения с SSL и&quot; Авторизовать атрибут в моем учебнике [Создать ASP.NET mVC приложение с auth и S'L DB и развернуть в Azure App Service](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data). Ниже показана часть контроллера Home.
 
     [!code-csharp[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample1.cs?highlight=1)]
-8. Для запуска приложения нажмите сочетание клавиш CTRL+F5. Если вы установили сертификат ранее, можно пропустить оставшуюся часть этого раздела и перейти к [созданию приложения Google для OAuth 2 и подключению приложения к проекту](#goog). в противном случае следуйте инструкциям, чтобы доверять самозаверяющий сертификат, который IIS Express создан.  
+8. Для запуска приложения нажмите сочетание клавиш CTRL+F5. Если вы установили сертификат в прошлом, вы можете пропустить остальную часть этого раздела и перейти к [созданию приложения Google для OAuth 2 и подключения приложения к проекту](#goog), в противном случае, следуйте инструкциям доверять самостоятельно подписанному сертификату, который iIS Express создал.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image11.png)
-9. Прочтите диалоговое окно **Security Warning (предупреждение системы безопасности** ) и нажмите кнопку **Да** , если хотите установить сертификат, представляющий localhost.  
+9. Прочитайте диалог **предупреждения о безопасности,** а затем нажмите **«Да»,** если вы хотите установить сертификат, представляющий localhost.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image12.png)
 10. В IE откроется *Главная* страница без предупреждений SSL.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image13.png)
-11. Google Chrome также принимает сертификат и будет отображать HTTPS-содержимое без предупреждения. Firefox использует собственное хранилище сертификатов, поэтому отобразится предупреждение. Для нашего приложения можно безопасно щелкнуть **я понимаю риски**.   
+11. Google Chrome также принимает сертификат и будет показывать содержимое HTTPS без предупреждения. Firefox использует свой собственный магазин сертификатов, поэтому он будет отображать предупреждение. Для нашего приложения вы можете безопасно нажать **Я понимаю риски**.   
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image14.png)
 
@@ -108,47 +108,47 @@ ms.locfileid: "78456510"
 ## <a name="creating-a-google-app-for-oauth-2-and-connecting-the-app-to-the-project"></a>Создание приложения Google для OAuth 2 и подключение приложения к проекту
 
 > [!WARNING]
-> Текущие инструкции Google OAuth см. [в разделе Настройка проверки подлинности Google в ASP.NET Core](/aspnet/core/security/authentication/social/google-logins).
+> Для текущих инструкций Google OAuth [см. Настройка аутентификации Google в ASP.NET Core](/aspnet/core/security/authentication/social/google-logins).
 
 1. Перейдите к [Консоли разработчиков Google](https://console.developers.google.com/).
-2. Если вы еще не создали проект, выберите **учетные данные** на вкладке слева и нажмите кнопку **создать**.
-3. На вкладке слева щелкните **учетные данные**.
-4. Щелкните **создать учетные данные** , а затем — **идентификатор клиента OAuth**. 
+2. Если вы еще не создали проект раньше, выберите **учетные данные** в левой вкладке, а затем выберите **Создать.**
+3. В левой вкладке нажмите **«Удостоверения».**
+4. Нажмите **Создать учетные данные,** то **OAuth идентификатор клиента**. 
 
-    1. В диалоговом окне **создать идентификатор клиента** следует использовать **веб-приложение** по умолчанию для типа приложения.
-    2. Установите для **полномочных источников JavaScript** URL-адрес SSL, который вы использовали ранее (`https://localhost:44300/`, если не созданы другие проекты SSL).
-    3. Задайте для подходящего **URI перенаправления** значение:  
+    1. В диалоге **«Создать идентификатор клиента»** сохраните **web-приложение** по умолчанию для типа приложения.
+    2. Установите **авторизованные** истоки JavaScript на URL`https://localhost:44300/` SSL, который вы использовали выше (если вы не создали другие SSL-проекты)
+    3. Установите **авторизованный перенаправить URI** на:  
          `https://localhost:44300/signin-google`
-5. Щелкните элемент меню экрана согласия OAuth, а затем укажите адрес электронной почты и название продукта. Завершив заполнение формы, нажмите кнопку **сохранить**.
-6. Щелкните пункт меню Библиотека, найдите **Google + API**, щелкните его и нажмите включить.
+5. Нажмите на пункт меню экрана OAuth Consent, а затем установите адрес электронной почты и название продукта. При заполнении формы нажмите **Сохранить**.
+6. Нажмите на элемент меню библиотеки, поиск **Google ' API**, нажмите на него, а затем нажмите Включить.
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image15.png)  
   
-   На рисунке ниже показаны включенные интерфейсы API.  
+   На рисунке ниже показаны включенные AIS.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image16.png)
-7. В диспетчере API Google API посетите вкладку **учетные данные** , чтобы получить **идентификатор клиента**. Скачайте, чтобы сохранить JSON-файл с секретами приложения. Скопируйте и вставьте **ClientID** и **ClientSecret** в метод `UseGoogleAuthentication`, находящийся в файле *Startup.auth.CS* в папке *App_Start* . Значения **ClientID** и **ClientSecret** , показанные ниже, являются примерами и не работают.
+7. С помощью API-менеджера Google API посетите вкладку **Credentials** для получения **идентификатора клиента.** Скачать, чтобы сохранить файл JSON с секретами приложения. Копируйте и вставьте **ClientId** и `UseGoogleAuthentication` **ClientSecret** в *метод,* найденный в Startup.Auth.cs файле в *папке App_Start.* Значения **ClientId** и **ClientSecret,** приведенные ниже, являются образцами и не работают.
 
     [!code-csharp[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample2.cs?highlight=37-39)]
 
     > [!WARNING]
-    > Безопасность — никогда не храните конфиденциальные данные в исходном коде. Учетная запись и учетные данные добавляются в приведенный выше код для упрощения примера. См. рекомендации [по развертыванию паролей и других конфиденциальных данных в ASP.NET и службе приложений Azure](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md).
-8. Нажмите **CTRL+F5** , чтобы построить и запустить приложение. Щелкните ссылку **Войти в систему** .  
+    > Безопасность - Никогда не храните конфиденциальные данные в исходном коде. Учетная запись и учетные данные добавляются в приведенный выше код, чтобы сохранить образец простым. [Ознакомьтесь с рекомендациями по развертыванию паролей и других конфиденциальных данных в ASP.NET и службе приложений Azure.](../../../identity/overview/features-api/best-practices-for-deploying-passwords-and-other-sensitive-data-to-aspnet-and-azure.md)
+8. Нажмите **на CTRL-F5,** чтобы построить и запустить приложение. Щелкните ссылку **Войти в систему** .  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image17.png)
-9. В разделе **использовать другую службу для входа**щелкните **Google**.  
+9. Под **использованием другой службы для входа в систему,** нажмите **Google**.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image18.png)
 
     > [!NOTE]
-    > Если вы пропустили какие-либо из описанных выше действий, возникнет ошибка HTTP 401. Выполните приведенные выше действия. Если вы пропустили требуемый параметр (например, **Название продукта**), добавьте недостающий элемент и сохраните его. Проверка подлинности может занять несколько минут.
-10. Вы будете перенаправлены на сайт Google, на который вы будете вводить свои учетные данные.   
+    > Если вы пропустите любой из вышеперечисленных шагов, вы получите ошибку HTTP 401. Перепроверьте свои шаги выше. Если вы пропустили требуемый параметр (например, **название продукта),** добавьте недостающий элемент и сохраните; проверка подлинности может занять несколько минут.
+10. Вы будете перенаправлены на сайт Google, где вы введете свои учетные данные.   
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image19.png)
-11. После ввода учетных данных появится запрос на получение разрешений для веб-приложения, которое было только что создано:
+11. После ввода учетных данных появится запрос на получение разрешений для веб-приложения, которое было только что создано: 
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image20.png)
-12. Нажмите кнопку **Принимаю**. Теперь вы будете перенаправлены обратно на страницу **регистрации** приложения мвкаус, где можно зарегистрировать учетную запись Google. Вы можете изменить имя регистрации локального адреса электронной почты, используемое для учетной записи Gmail, но в общем случае необходимо использовать псевдоним электронной почты по умолчанию (то есть тот, который использовался для проверки подлинности). Щелкните **Зарегистрировать**.  
+12. Нажмите **Принять**. Теперь вы будете перенаправлены обратно на страницу **Регистрации** приложения MvcAuth, где вы можете зарегистрировать свою учетную запись Google. У вас есть возможность изменить локальное имя регистрации электронной почты, используемое для вашей учетной записи Gmail, но вы, как правило, хотите сохранить псевдоним электронной почты по умолчанию (то есть тот, который вы использовали для проверки подлинности). Щелкните **Зарегистрировать**.  
   
     ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image21.png)
 
@@ -156,88 +156,88 @@ ms.locfileid: "78456510"
 ## <a name="creating-the-app-in-facebook-and-connecting-the-app-to-the-project"></a>Создание приложения в Facebook и подключение приложения к проекту
 
 > [!WARNING]
-> Текущие инструкции по проверке подлинности Facebook OAuth2 см. в статье [Настройка проверки подлинности Facebook](/aspnet/core/security/authentication/social/facebook-logins) .
+> Для текущих инструкций по аутентификации Facebook OAuth2 [см.](/aspnet/core/security/authentication/social/facebook-logins)
 
 <a id="mdb"></a>
-## <a name="examine-the-membership-data"></a>Проверка данных членства
+## <a name="examine-the-membership-data"></a>Изучение данных о членстве
 
-В меню **вид** выберите пункт **Обозреватель сервера**.
+В меню **View** нажмите **Server Explorer**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image32.png)
 
-Разверните узел **DefaultConnection (мвкаус)** , разверните узел **таблицы**, щелкните правой кнопкой мыши элемент **AspNetUsers** и выберите команду **отобразить данные таблицы**.
+Расширить **defaultConnection (MvcAuth),** расширить **таблицы**, нажмите право **aspNetUsers** и нажмите **Показать таблицы данных**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image33.png)
 
-![данные таблицы aspnetusers](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image34.png)
+![таблицы aspnetusers](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image34.png)
 
 <a id="ap"></a>
-## <a name="adding-profile-data-to-the-user-class"></a>Добавление данных профиля в класс User
+## <a name="adding-profile-data-to-the-user-class"></a>Добавление данных профиля в класс пользователя
 
-В этом разделе вы добавите дату рождения и домашний город в пользовательские данные во время регистрации, как показано на следующем рисунке.
+В этом разделе вы добавите дату рождения и родной город к данным пользователя во время регистрации, как показано на следующем изображении.
 
-![reg с помощью домашнего города и Бдай](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image35.png)
+![рег с родным городом и Bday](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image35.png)
 
-Откройте файл *моделс\идентитимоделс.КС* и добавьте свойства Дата рождения и домашний город:
+Откройте файл *Модели-IdentityModels.cs* и добавьте дату рождения и свойства родного города:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample4.cs?highlight=3-4)]
 
-Откройте файл *моделс\аккаунтвиевмоделс.КС* и задайте свойства Дата рождения и домашний город в `ExternalLoginConfirmationViewModel`.
+Откройте файл *Модели-AccountViewModels.cs* и установленную дату `ExternalLoginConfirmationViewModel`рождения и недвижимость в родном городе.
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample5.cs?highlight=8-9)]
 
-Откройте файл *контроллерс\аккаунтконтроллер.КС* и добавьте код для даты рождения и домашнего города в метод действия `ExternalLoginConfirmation`, как показано ниже.
+Откройте файл *Controllers-AccountController.cs* и добавьте код для `ExternalLoginConfirmation` даты рождения и родного города в методе действия, как показано на рисунке:
 
 [!code-csharp[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample6.cs?highlight=21-23)]
 
-Добавьте дату рождения и домашний город в файл *виевс\аккаунт\екстерналлогинконфирматион.кштмл* :
+Добавить дату рождения и родной город в файл *Views-Account-ExternalLoginConfirmation.cshtml:*
 
 [!code-cshtml[Main](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/samples/sample7.cshtml?highlight=27-40)]
 
-Удалите базу данных членства, чтобы снова зарегистрировать свою учетную запись Facebook в приложении, и убедитесь, что вы можете добавить новую дату рождения и сведения личного профиля города.
+Удалите базу данных о членстве, чтобы вы могли снова зарегистрировать свою учетную запись Facebook с вашим приложением и проверить, что вы можете добавить новую дату рождения и информацию профиля родного города.
 
-В **Обозреватель решений**щелкните значок **Показывать все файлы** , щелкните правой кнопкой мыши *добавить\_дата\аспнет-мвкаус-&lt;датестамп&gt;. mdf* и нажмите кнопку **Удалить**.
+От **разрешения Explorer**, нажмите Показать все **файлы** значок, а затем нажмите нажмите *Нажмите Добавить\_Data'aspnet-MvcAuth-&lt;dateStamp&gt;.mdf* и нажмите **Удалить**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image36.png)
 
-В меню **Сервис** выберите **Диспетчер пакетов NuGet**, а затем щелкните **консоль диспетчера пакетов** (PMC). Введите следующие команды в PMC.
+Из меню **Инструменты,** нажмите **NuGet пакет яслях**, а затем нажмите **пакет менеджер консоли** (PMC). Введите следующие команды в PMC.
 
-1. Включение и миграция
-2. Инициализация добавления и миграции
-3. Обновление базы данных
+1. Включение-миграция
+2. Адди-Миграция Init
+3. Обновление-База данных
 
 Запустите приложение и используйте FaceBook и Google для входа и регистрации некоторых пользователей.
 
-## <a name="examine-the-membership-data"></a>Проверка данных членства
+## <a name="examine-the-membership-data"></a>Изучение данных о членстве
 
-В меню **вид** выберите пункт **Обозреватель сервера**.
+В меню **View** нажмите **Server Explorer**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image37.png)
 
-Щелкните правой кнопкой мыши **AspNetUsers** и выберите команду " **отобразить данные таблицы**".
+Право нажмите **AspNetUsers** и нажмите **Показать Таблица данных**.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image38.png)
 
-Ниже показаны поля `HomeTown` и `BirthDate`.
+Поля `HomeTown` `BirthDate` и поля показаны ниже.
 
 ![](create-an-aspnet-mvc-5-app-with-facebook-and-google-oauth2-and-openid-sign-on/_static/image39.png)
 
 <a id="off"></a>
-## <a name="logging-off-your-app-and-logging-in-with-another-account"></a>Выход из приложения и вход с другой учетной записью
+## <a name="logging-off-your-app-and-logging-in-with-another-account"></a>Запись вашего приложения и регистрация с другой учетной записью
 
-Если вы входите в приложение с помощью Facebook, а затем выйдете из сети и попытаетесь войти еще раз с другой учетной записью Facebook (используя тот же браузер), вы сразу же войдете в предыдущую учетную запись Facebook, которую вы использовали. Чтобы использовать другую учетную запись, перейдите в Facebook и выйдите из Facebook. То же правило применяется к любому другому поставщику проверки подлинности стороннего производителя. Кроме того, можно войти в систему с другой учетной записью, используя другой браузер.
+Если вы входите в приложение с Facebook, а затем выходите из системы и попытаетесь войти снова с другой учетной записью Facebook (с помощью того же браузера), вы будете немедленно войти в предыдущий аккаунт Facebook, который вы использовали. Для того, чтобы использовать другую учетную запись, вам нужно перейти на Facebook и выйти на Facebook. То же правило применяется к любому другому поставщику аутентификации сторон. Кроме того, вы можете войти в систему с другой учетной записью с помощью другого браузера.
 
 ## <a name="next-steps"></a>Next Steps
 
-См. статью [Знакомство с поставщиками безопасности Yahoo и LinkedIn OAuth для OWIN](http://www.jerriepelser.com/blog/introducing-the-yahoo-linkedin-oauth-security-providers-for-owin/) с помощью Джерри Пелсер для Yahoo и LinkedIn. Чтобы включить кнопки входа в социальных сетях, см. Джерри кнопки входа в систему ASP.NET MVC 5.
+Смотрите [Представляя Yahoo и LinkedIn OAuth поставщиков безопасности для OWIN](http://www.jerriepelser.com/blog/introducing-the-yahoo-linkedin-oauth-security-providers-for-owin/) Джерри Пелсер для Yahoo и LinkedIn инструкции. Смотрите кнопки входа в социальную систему Jerrie's Pretty для ASP.NET MVC 5, чтобы включить кнопки социального входа.
 
-Следуйте указаниям [в моем руководстве создание приложения ASP.NET MVC с проверкой подлинности и базой данных SQL и развертывание в службе приложений Azure](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data), которое продолжится в этом руководстве и демонстрирует следующее:
+Следуйте [моему учебнику Создайте приложение mVC ASP.NET с auth и S'L DB и разместите в Azure App Service](https://docs.microsoft.com/aspnet/core/security/authorization/secure-data), который продолжает этот учебник и показывает следующее:
 
-1. Развертывание приложения в Azure.
-2. Как защитить приложение с помощью ролей.
-3. Как защитить приложение с помощью фильтров [RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute(v=vs.108).aspx) и [авторизации](https://msdn.microsoft.com/library/system.web.mvc.authorizeattribute(v=vs.100).aspx) .
+1. Как развернуть приложение в Azure.
+2. Как обезопасить приложение ролями.
+3. Как обезопасить приложение с помощью [фильтров RequireHttps](https://msdn.microsoft.com/library/system.web.mvc.requirehttpsattribute(v=vs.108).aspx) и [разрешить его.](https://msdn.microsoft.com/library/system.web.mvc.authorizeattribute(v=vs.100).aspx)
 4. Как использовать API членства для добавления пользователей и ролей.
 
-Оставьте отзыв о том, как вы понравится вам в этом учебнике, и что мы можем улучшить. Вы также можете запросить новые темы [, как показано в разделе как с кодом](http://aspnet.uservoice.com/forums/228522-show-me-how-with-code). Вы можете даже попросить и проголосовать за новые функции, которые будут добавлены в ASP.NET. Например, можно проголосовать за средство для [создания пользователей и ролей и управления ими.](http://aspnet.uservoice.com/forums/41199-general-asp-net/suggestions/5646857-asp-net-identity-membership-db-tool-to-mangage-use)
+Пожалуйста, оставьте отзыв о том, как вам понравился этот учебник и что мы могли бы улучшить. Вы также можете запросить новые темы на [Show Me How With Code](http://aspnet.uservoice.com/forums/228522-show-me-how-with-code). Вы даже можете попросить и проголосовать за новые функции, которые будут добавлены в ASP.NET. Например, можно проголосовать за инструмент [для создания и управления пользователями и ролями.](http://aspnet.uservoice.com/forums/41199-general-asp-net/suggestions/5646857-asp-net-identity-membership-db-tool-to-mangage-use)
 
-Хорошее описание работы служб внешней аутентификации ASP.NET см. в статье о [внешних службах аутентификации](https://asp.net/web-api/overview/security/external-authentication-services)Роберт мкмуррай. Статья Роберт также подробно рассказывает о включении проверки подлинности Майкрософт и Twitter. Отличное [руководство по EF/MVC](../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) Tom Dykstra) демонстрирует работу с Entity Framework.
+Для получения хорошего объяснения того, как работают службы [External Authentication Services](https://asp.net/web-api/overview/security/external-authentication-services)внешней аутентификации ASP.NET, см. Статья Роберта также подробно описывается в возможности проверки подлинности Microsoft и Twitter. Отличный учебник Tom Dykstra [EF/MVC](../getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application.md) показывает, как работать с Рамочной системой entity.

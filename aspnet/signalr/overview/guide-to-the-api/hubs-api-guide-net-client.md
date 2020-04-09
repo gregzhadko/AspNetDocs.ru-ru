@@ -1,110 +1,110 @@
 ---
 uid: signalr/overview/guide-to-the-api/hubs-api-guide-net-client
-title: Путеводитель по API концентраторов SignalR ASP.NET — клиент .NETC#() | Документация Майкрософт
+title: ASP.NET Руководство aPI концентраторов SignalR - .NET Клиент (C) Документы Майкрософт
 author: bradygaster
-description: В этом документе приводятся общие сведения об использовании API концентраторов для SignalR версии 2 в клиентах .NET, таких как Магазин Windows (WinRT), WPF, Silverlight и недостатки...
+description: Этот документ содержит введение в использование API-адреса концентратов для версии SignalR 2 у клиентов .NET, таких как Магазин Windows (WinRT), WPF, Silverlight и против...
 ms.author: bradyg
 ms.date: 01/15/2019
 ms.assetid: 6d02d9f7-94e5-4140-9f51-5a6040f274f6
 msc.legacyurl: /signalr/overview/guide-to-the-api/hubs-api-guide-net-client
 msc.type: authoredcontent
 ms.openlocfilehash: d3536f1c15cd7dad7cd660becf0577e5c131f707
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78467406"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675931"
 ---
-# <a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>Путеводитель по API концентраторов SignalR ASP.NET — клиент .NETC#()
+# <a name="aspnet-signalr-hubs-api-guide---net-client-c"></a>ASP.NET Руководство aPI концентраторов SignalR - .NET Клиент (C)
 
 [!INCLUDE [Consider ASP.NET Core SignalR](~/includes/signalr/signalr-version-disambiguation.md)]
 
-> В этом документе содержатся общие сведения об использовании API концентраторов для SignalR версии 2 в клиентах .NET, таких как Магазин Windows (WinRT), WPF, Silverlight и консольные приложения.
+> Этот документ содержит введение в использование API-адреса концентратов для версии SignalR 2 у клиентов .NET, таких как Windows Store (WinRT), WPF, Silverlight и консольных приложений.
 >
-> API концентраторов SignalR позволяет выполнять удаленные вызовы процедур (RPC) с сервера на подключенные клиенты и с клиентов на сервер. В серверном коде определяются методы, которые могут вызываться клиентами, и вызываются методы, которые выполняются на клиенте. В клиентском коде определяются методы, которые могут быть вызваны с сервера, а также вызываются методы, которые выполняются на сервере. Этот механизм отвечает за все клиентские коммуникации.
+> API Концентраторов SignalR позволяет совершать удаленные процедурные звонки (RPCs) с сервера для подключенных клиентов и от клиентов к серверу. В коде сервера вы определяете методы, которые могут вызываться клиентами, и вызываете методы, которые работают на клиенте. В клиентском коде вы определяете методы, которые можно вызывать с сервера, и вызываете методы, которые работают на сервере. SignalR заботится о всех клиента к серверу сантехника для вас.
 >
-> SignalR также предлагает интерфейс API более низкого уровня, называемый постоянными подключениями. Общие сведения о SignalR, концентраторах и постоянных подключениях, а также руководство, в котором показано, как создать полноценное приложение SignalR, см. в разделе [SignalR-начало работы](../getting-started/index.md).
+> SignalR также предлагает API более низкого уровня под названием Persistent Connections. Для введения в SignalR, концентраторы, и стойкие соединения, или для учебника, который показывает, как построить полное приложение SignalR, см [SignalR - Начало работы](../getting-started/index.md).
 >
-> ## <a name="software-versions-used-in-this-topic"></a>Версии программного обеспечения, используемые в этом разделе
+> ## <a name="software-versions-used-in-this-topic"></a>Версии программного обеспечения, используемые в этой теме
 >
 >
 > - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/)
 > - .NET 4.5
-> - SignalR версии 2
+> - Версия SignalR 2
 >
 >
 >
-> ## <a name="previous-versions-of-this-topic"></a>Предыдущие версии этого раздела
+> ## <a name="previous-versions-of-this-topic"></a>Предыдущие версии этой темы
 >
-> Сведения о более ранних версиях SignalR см. в статье о [старых версиях](../older-versions/index.md)SignalR.
+> Для получения информации о более ранних версиях SignalR, см [SignalR Старые версии](../older-versions/index.md).
 >
 > ## <a name="questions-and-comments"></a>Вопросы и комментарии
 >
-> Оставьте отзыв о том, как вы понравится вам в этом учебнике, и что можно улучшить в комментариях в нижней части страницы. Если у вас есть вопросы, не связанные непосредственно с этим руководством, их можно опубликовать на [форуме ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) или [StackOverflow.com](http://stackoverflow.com/).
+> Пожалуйста, оставьте обратную связь о том, как вам понравился этот учебник и что мы могли бы улучшить в комментариях в нижней части страницы. Если у вас есть вопросы, которые не имеют прямого отношения к учебнику, вы можете разместить их на [форуме ASP.NET SignalR](https://forums.asp.net/1254.aspx/1?ASP+NET+SignalR) или [StackOverflow.com.](http://stackoverflow.com/)
 
 ## <a name="overview"></a>Обзор
 
 Этот документ содержит следующие разделы.
 
-- [Установка клиента](#clientsetup)
+- [Настройка клиента](#clientsetup)
 - [Как установить соединение](#establishconnection)
 
-    - [Междоменные соединения от клиентов Silverlight](#slcrossdomain)
-- [Настройка подключения](#configureconnection)
+    - [Кросс-доменсоединения от клиентов Silverlight](#slcrossdomain)
+- [Как настроить соединение](#configureconnection)
 
-    - [Установка максимального числа одновременных подключений в клиентах WPF](#maxconnections)
-    - [Указание параметров строки запроса](#querystring)
-    - [Как указать метод перевозки](#transport)
+    - [Как установить максимальное количество одновременных подключений в клиентах WPF](#maxconnections)
+    - [Как указать параметры строки запроса](#querystring)
+    - [Как указать транспортный метод](#transport)
     - [Как указать заголовки HTTP](#httpheaders)
     - [Как указать сертификаты клиента](#clientcertificate)
-- [Создание прокси-сервера концентратора](#proxy)
-- [Определение методов на клиенте, который может вызывать сервер](#callclient)
+- [Как создать прокси-сервер концентратора](#proxy)
+- [Как определить методы на клиенте, который может вызвать сервер](#callclient)
 
     - [Методы без параметров](#clientmethodswithoutparms)
-    - [Методы с параметрами, указание типов параметров](#clientmethodswithparmtypes)
-    - [Методы с параметрами, указание динамических объектов для параметров](#clientmethodswithdynamparms)
-    - [Удаление обработчика](#removehandler)
-- [Вызов методов сервера из клиента](#callserver)
-- [Как работать с событиями времени жизни соединения](#connectionlifetime)
-- [Как обрабатывались ошибки](#handleerrors)
-- [Как включить ведение журнала на стороне клиента](#logging)
-- [Примеры кода приложений WPF, Silverlight и консольного приложения для клиентских методов, которые может вызывать сервер](#wpfsl)
+    - [Методы с параметрами, определяющие типы параметров](#clientmethodswithparmtypes)
+    - [Методы с параметрами, определяющие динамические объекты для параметров](#clientmethodswithdynamparms)
+    - [Как удалить обработчик](#removehandler)
+- [Как вызвать методы сервера от клиента](#callserver)
+- [Как обрабатывать события жизни соединения](#connectionlifetime)
+- [Как обрабатывать ошибки](#handleerrors)
+- [Как включить журналирование на стороне клиента](#logging)
+- [Образцы кода приложений WPF, Silverlight и консольных приложений для методов клиента, которые сервер может вызвать](#wpfsl)
 
-Примеры клиентских проектов .NET см. в следующих ресурсах:
+Для примера клиентских проектов .NET см.
 
-- [Густаво-Армента/SignalR-Samples](https://github.com/gustavo-armenta/SignalR-Samples) на GitHub.com (WinRT, Silverlight, примеры консольного приложения).
-- [Дамианедвардс/SignalR-мовешапедемо/мовешапе. Desktop](https://github.com/DamianEdwards/SignalR-MoveShapeDemo/tree/master/MoveShape/MoveShape.Desktop) на GitHub.com (пример с WPF).
-- [SignalR/Microsoft. AspNet. SignalR. Client. Samples](https://github.com/SignalR/SignalR/tree/master/samples/Microsoft.AspNet.SignalR.Client.Samples) on GitHub.com (пример консольного приложения).
+- [gustavo-armenta / SignalR-Образцы](https://github.com/gustavo-armenta/SignalR-Samples) на GitHub.com (WinRT, Silverlight, примеры консольных приложений).
+- [DamianEdwards / SignalR-MoveShapeDemo / MoveShape.Desktop](https://github.com/DamianEdwards/SignalR-MoveShapeDemo/tree/master/MoveShape/MoveShape.Desktop) на GitHub.com (пример WPF).
+- [SignalR / Microsoft.AspNet.SignalR.Client.Samples](https://github.com/SignalR/SignalR/tree/master/samples/Microsoft.AspNet.SignalR.Client.Samples) на GitHub.com (пример приложения для консоли).
 
-Документацию по программированию клиентов сервера или JavaScript см. в следующих ресурсах:
+Для получения документации о том, как запрограммировать сервер или JavaScript клиентов, см.
 
-- [Путеводитель по API концентраторов SignalR — сервер](hubs-api-guide-server.md)
-- [Путеводитель по API концентраторов SignalR — клиент JavaScript](hubs-api-guide-javascript-client.md)
+- [Руководство По API Концентратов SignalR - Сервер](hubs-api-guide-server.md)
+- [Руководство По API Концентратов SignalR - Клиент JavaScript](hubs-api-guide-javascript-client.md)
 
-Ссылки на справочные статьи по API относятся к версии .NET 4,5 API. Если вы используете .NET 4, см. [статьи с описанием API для .NET 4](https://msdn.microsoft.com/library/jj891075(v=vs.100).aspx).
+Ссылки на темы API Справочные ссылки на .NET 4.5 версия API. Если вы используете .NET 4, [см.](https://msdn.microsoft.com/library/jj891075(v=vs.100).aspx)
 
 <a id="clientsetup"></a>
 
 ## <a name="client-setup"></a>Настройка клиента
 
-Установите пакет NuGet [Microsoft. ASPNET. SignalR. Client](http://nuget.org/packages/Microsoft.AspNet.SignalR.Client) (не пакет [Microsoft. ASPNET. SignalR](http://nuget.org/packages/microsoft.aspnet.signalr) ). Этот пакет поддерживает клиентские приложения WinRT, Silverlight, WPF, консольное приложение и Windows Phone для .NET 4 и .NET 4,5.
+Установите пакет [Microsoft.AspNet.SignalR.Client](http://nuget.org/packages/Microsoft.AspNet.SignalR.Client) NuGet (не пакет [Microsoft.AspNet.SignalR).](http://nuget.org/packages/microsoft.aspnet.signalr) Этот пакет поддерживает клиентов WinRT, Silverlight, WPF, консольных приложений и Windows Phone как для .NET 4, так и для .NET 4.5.
 
-Если версия SignalR, установленная на клиенте, отличается от версии на сервере, то SignalR часто может адаптироваться к разнице. Например, сервер, на котором работает SignalR версии 2, будет поддерживать клиенты, на которых установлена версия 1.1. x, а также клиенты с установленной версией 2. Если разница между версией на сервере и версией на клиенте слишком велика или если Клиент новее, чем сервер, SignalR вызывает исключение `InvalidOperationException`, когда клиент пытается установить соединение. Сообщение об ошибке: "`You are using a version of the client that isn't compatible with the server. Client version X.X, server version X.X`".
+Если версия SignalR, которая у вас есть на клиенте отличается от версии, что у вас есть на сервере, SignalR часто в состоянии адаптироваться к разнице. Например, сервер под управлением signalR версии 2 будет поддерживать клиентов, которые имеют 1.1.x установлен, а также клиентов, которые имеют версию 2 установлен. Если разница между версией на сервере и версией на клиенте слишком велика, или если клиент `InvalidOperationException` новее, чем сервер, SignalR бросает исключение, когда клиент пытается установить соединение. Сообщение об ошибке ".`You are using a version of the client that isn't compatible with the server. Client version X.X, server version X.X`
 
 <a id="establishconnection"></a>
 
 ## <a name="how-to-establish-a-connection"></a>Как установить соединение
 
-Прежде чем установить соединение, необходимо создать объект `HubConnection` и создать прокси-сервер. Чтобы установить соединение, вызовите метод `Start` для объекта `HubConnection`.
+Прежде чем установить соединение, необходимо `HubConnection` создать объект и создать прокси- Чтобы установить соединение, `Start` позвоните `HubConnection` методу на объект.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample1.cs?highlight=1,5)]
 
 > [!NOTE]
-> Для клиентов JavaScript необходимо зарегистрировать по крайней мере один обработчик событий перед вызовом метода `Start` для установления соединения. Это не является обязательным для клиентов .NET. Для клиентов JavaScript созданный код прокси автоматически создает учетные записи-посредники для всех концентраторов, существующих на сервере, и регистрирует обработчик, чтобы указать, какие концентраторы клиент планирует использовать. Но для клиента .NET вы создаете прокси-серверы концентратора вручную, поэтому SignalR предполагает, что вы будете использовать любой центр, для которого создается прокси.
+> Для клиентов JavaScript необходимо зарегистрировать по крайней `Start` мере одного обработчика событий, прежде чем вызвать метод для установления соединения. Это не обязательно для клиентов .NET. Для клиентов JavaScript сгенерированный прокси-код автоматически создает прокси-серверы для всех концентраторов, которые существуют на сервере, и регистрация обработчика — это то, как вы указываете, какие концентраторы, которые намерен использовать клиент. Но для клиента .NET вы создаете прокси-серверы концентратора вручную, поэтому SignalR предполагает, что вы будете использовать любой концентратор, для которого вы создаете прокси.
 
-В примере кода для подключения к службе SignalR используется URL-адрес по умолчанию "/SignalR". Сведения о том, как указать другой базовый URL-адрес, см. [в разделе ASP.NET SignalR Hub API Guide-Server-URL-адрес/SignalR](hubs-api-guide-server.md#signalrurl).
+Пример кода использует URL-адрес по умолчанию "/сигнальщик" для подключения к службе SignalR. Для получения информации о том, как указать другой базовый URL, см [ASP.NET.](hubs-api-guide-server.md#signalrurl)
 
-Метод `Start` выполняется асинхронно. Чтобы следующие строки кода не выполнялись до тех пор, пока соединение не будет установлено, используйте `await` в асинхронном методе ASP.NET 4,5 или `.Wait()` в синхронном методе. Не используйте `.Wait()` в клиенте WinRT.
+Метод `Start` выполняется асинхронно. Чтобы убедиться, что последующие строки кода не выполняются `await` до тех пор, пока соединение `.Wait()` не будет установлено, используйте в ASP.NET 4.5 асинхронного метода или в синхронном методе. Не используйте `.Wait()` в клиенте WinRT.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample2.cs?highlight=1)]
 
@@ -112,68 +112,68 @@ ms.locfileid: "78467406"
 
 <a id="slcrossdomain"></a>
 
-### <a name="cross-domain-connections-from-silverlight-clients"></a>Междоменные соединения от клиентов Silverlight
+### <a name="cross-domain-connections-from-silverlight-clients"></a>Кросс-доменсоединения от клиентов Silverlight
 
-Сведения о том, как включить междоменные подключения от клиентов Silverlight, см. в разделе [обеспечение доступности службы через границы домена](https://msdn.microsoft.com/library/cc197955(v=vs.95).aspx).
+Для получения информации о том, как включить кросс-домен соединения от клиентов Silverlight, [см.](https://msdn.microsoft.com/library/cc197955(v=vs.95).aspx)
 
 <a id="configureconnection"></a>
 
-## <a name="how-to-configure-the-connection"></a>Настройка подключения
+## <a name="how-to-configure-the-connection"></a>Как настроить соединение
 
-Прежде чем устанавливать соединение, можно указать любой из следующих параметров.
+Прежде чем установить соединение, можно указать любой из следующих вариантов:
 
-- Ограничение количества одновременных подключений.
+- Одновременное ограничение соединений.
 - Параметры строки запроса.
-- Метод перевозки.
-- Заголовки HTTP.
-- Сертификаты клиента.
+- Транспортный метод.
+- ЗАГОЛОВКи HTTP.
+- Сертификаты клиентов.
 
 <a id="maxconnections"></a>
 
-### <a name="how-to-set-the-maximum-number-of-concurrent-connections-in-wpf-clients"></a>Установка максимального числа одновременных подключений в клиентах WPF
+### <a name="how-to-set-the-maximum-number-of-concurrent-connections-in-wpf-clients"></a>Как установить максимальное количество одновременных подключений в клиентах WPF
 
-В клиентах WPF может потребоваться увеличить максимальное число одновременных подключений со значением по умолчанию 2. Рекомендуемое значение — 10.
+В клиентах WPF может потребоваться увеличить максимальное количество одновременных подключений от значения по умолчанию 2. Рекомендуемое значение 10.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample4.cs?highlight=5)]
 
-Дополнительные сведения см. в разделе [ServicePointManager. DefaultConnectionLimit](https://msdn.microsoft.com/library/system.net.servicepointmanager.defaultconnectionlimit.aspx).
+Для получения дополнительной информации [см.](https://msdn.microsoft.com/library/system.net.servicepointmanager.defaultconnectionlimit.aspx)
 
 <a id="querystring"></a>
 
-### <a name="how-to-specify-query-string-parameters"></a>Указание параметров строки запроса
+### <a name="how-to-specify-query-string-parameters"></a>Как указать параметры строки запроса
 
-Если требуется отправлять данные на сервер при подключении клиента, можно добавить параметры строки запроса в объект соединения. В следующем примере показано, как задать параметр строки запроса в клиентском коде.
+Если вы хотите отправить данные на сервер при подключении клиента, можно добавить параметры строки запроса к объекту соединения. В следующем примере показано, как установить параметр строки запроса в клиентском коде.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample5.cs)]
 
-В следующем примере показано, как считать параметр строки запроса в серверном коде.
+В следующем примере показано, как прочитать параметр строки запроса в коде сервера.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample6.cs?highlight=5)]
 
 <a id="transport"></a>
 
-### <a name="how-to-specify-the-transport-method"></a>Как указать метод перевозки
+### <a name="how-to-specify-the-transport-method"></a>Как указать транспортный метод
 
-В рамках процесса подключения клиент SignalR обычно согласовывается с сервером для определения наилучшего транспорта, поддерживаемого как сервером, так и клиентом. Если вы уже уверены, какой транспорт вы хотите использовать, можно обойти этот процесс согласования. Чтобы указать транспортный метод, передайте объект транспорта в метод Start. В следующем примере показано, как указать метод перевозки в клиентском коде.
+В процессе подключения клиент SignalR обычно ведет переговоры с сервером, чтобы определить наилучший транспорт, который поддерживается как сервером, так и клиентом. Если вы уже знаете, какой транспорт вы хотите использовать, вы можете обойти этот процесс переговоров. Чтобы указать способ транспортировки, передайте в транспортном объекте методу Start. В следующем примере показано, как указать метод транспортировки в клиентском коде.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample7.cs?highlight=5)]
 
-Пространство имен [Microsoft. AspNet. SignalR. Client.](https://msdn.microsoft.com/library/jj918090(v=vs.111).aspx) Transports содержит следующие классы, которые можно использовать для указания транспорта.
+В названии [Microsoft.AspNet.SignalR.Client.Transports включены](https://msdn.microsoft.com/library/jj918090(v=vs.111).aspx) следующие классы, которые можно использовать для указания транспорта.
 
-- [лонгполлингтранспорт](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.longpollingtransport(v=vs.111).aspx)
-- [серверсентевентстранспорт](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.serversenteventstransport(v=vs.111).aspx)
-- [Вебсоккеттранспорт](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.websockettransport(v=vs.111).aspx) (доступно, только если сервер и клиент используют .NET 4,5).
-- [Автотранспортировка](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.autotransport(v=vs.111).aspx) (автоматически выбирает лучший транспорт, который поддерживается как клиентом, так и сервером. Это транспорт по умолчанию. Передача этого метода в метод `Start` имеет тот же результат, что и не передает ничего.)
+- [LongPollingTransport](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.longpollingtransport(v=vs.111).aspx)
+- [СерверСентСобытийТранспорт](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.serversenteventstransport(v=vs.111).aspx)
+- [WebSocketTransport](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.websockettransport(v=vs.111).aspx) (доступно только при использовании сервера и клиента .NET 4.5.)
+- [AutoTransport](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.transports.autotransport(v=vs.111).aspx) (Автоматически выбирает лучший транспорт, который поддерживается как клиентом, так и сервером. Это транспорт по умолчанию. Передача этого `Start` в метод имеет тот же эффект, как не проходя ни в чем.)
 
-Транспорт Фореверфраме не включен в этот список, так как он используется только браузерами.
+Транспорт ForeverFrame не включен в этот список, поскольку он используется только браузерами.
 
-Сведения о том, как проверить транспортный метод в коде сервера, см. в разделе [ASP.NET SignalR Hub API Guide-Server-как получить сведения о клиенте из свойства Context](hubs-api-guide-server.md#contextproperty). Дополнительные сведения о транспортировках и резервных запасах см. [в статье Введение в SignalR-транспорты и резервные стратегии](../getting-started/introduction-to-signalr.md#transports).
+Подробнее о том, как проверить метод транспортировки в серверном коде, смотрите [ASP.NET Руководство по aPI SignalR Hubs API - Server - Как получить информацию о клиенте из свойства Контекста.](hubs-api-guide-server.md#contextproperty) Для получения дополнительной информации о транспорте и откатов, [см. Введение в SignalR - Транспорт и Fallbacks](../getting-started/introduction-to-signalr.md#transports).
 
 <a id="httpheaders"></a>
 
 ### <a name="how-to-specify-http-headers"></a>Как указать заголовки HTTP
 
-Чтобы задать заголовки HTTP, используйте свойство `Headers` объекта Connection. В следующем примере показано, как добавить заголовок HTTP.
+Чтобы установить заголовки `Headers` HTTP, используйте свойство на объекте соединения. Ниже приводится следующий пример, как добавить заголовок HTTP.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample8.cs?highlight=2)]
 
@@ -181,103 +181,103 @@ ms.locfileid: "78467406"
 
 ### <a name="how-to-specify-client-certificates"></a>Как указать сертификаты клиента
 
-Чтобы добавить сертификаты клиента, используйте метод `AddClientCertificate` объекта Connection.
+Чтобы добавить сертификаты `AddClientCertificate` клиента, используйте метод на объекте соединения.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample9.cs?highlight=2)]
 
 <a id="proxy"></a>
 
-## <a name="how-to-create-the-hub-proxy"></a>Создание прокси-сервера концентратора
+## <a name="how-to-create-the-hub-proxy"></a>Как создать прокси-сервер концентратора
 
-Чтобы определить методы на клиенте, которые концентратор может вызывать с сервера, и вызывать методы в концентраторе на сервере, создайте прокси-сервер для концентратора, вызвав `CreateHubProxy` для объекта Connection. Строка, которую вы передаете `CreateHubProxy`, является именем класса концентратора или именем, заданным атрибутом `HubName`, если он использовался на сервере. Сопоставление имен не зависит от регистра.
+Для определения методов клиента, которые концентратор может вызвать с сервера, и вызова методов на концентраторе на сервере, создайте прокси для концентратора, вызывая `CreateHubProxy` объект соединения. Строка, которую `CreateHubProxy` вы передаете, — это имя класса `HubName` концентратора или имя, указанное атрибутом, если он был использован на сервере. Сопоставление имен не зависит от регистра.
 
-**Класс Hub на сервере**
+**Класс концентратора на сервере**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample10.cs?highlight=1)]
 
-**Создание прокси клиента для класса HUB**
+**Создание клиентского прокси для класса концентратора**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample11.cs?highlight=3)]
 
-Если класс Hub дополнить атрибутом `HubName`, используйте это имя.
+Если вы украсите `HubName` свой класс концентратора атрибутом, используйте это имя.
 
-**Класс Hub на сервере**
+**Класс концентратора на сервере**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample12.cs)]
 
-**Создание прокси клиента для класса HUB**
+**Создание клиентского прокси для класса концентратора**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample13.cs?highlight=3)]
 
-Если вы вызываете `HubConnection.CreateHubProxy` несколько раз с одним и тем же `hubName`, вы получаете тот же кэшированный `IHubProxy` объект.
+Если вы `HubConnection.CreateHubProxy` звоните несколько раз с тем же, `hubName`вы получите тот же кэшированный `IHubProxy` объект.
 
 <a id="callclient"></a>
 
-## <a name="how-to-define-methods-on-the-client-that-the-server-can-call"></a>Определение методов на клиенте, который может вызывать сервер
+## <a name="how-to-define-methods-on-the-client-that-the-server-can-call"></a>Как определить методы на клиенте, который может вызвать сервер
 
-Чтобы определить метод, который может вызвать сервер, используйте метод `On` прокси-сервера для регистрации обработчика событий.
+Чтобы определить метод, который может вызвать сервер, используйте `On` метод прокси для регистрации обработчика событий.
 
-Сопоставление имен методов не учитывает регистр. Например, `Clients.All.UpdateStockPrice` на сервере будет выполнять `updateStockPrice`, `updatestockprice`или `UpdateStockPrice` на клиенте.
+Сопоставление имен метода является нечувствительным. Например, `Clients.All.UpdateStockPrice` на сервере `updateStockPrice` `updatestockprice`будет `UpdateStockPrice` выполняться, или на клиенте.
 
-Разные клиентские платформы имеют разные требования к написанию кода метода для обновления пользовательского интерфейса. Приведенные примеры предназначены для клиентов WinRT (Windows Store .NET). Примеры приложений WPF, Silverlight и консольного приложения приведены в [отдельном разделе далее в этом разделе](#wpfsl).
+Различные клиентские платформы имеют различные требования к тому, как вы пишете код метода для обновления пользовательского доступа. Приведенные примеры для клиентов WinRT (Windows Store .NET). Примеры WPF, Silverlight и консольных приложений приведены в [отдельном разделе позже в этой теме.](#wpfsl)
 
 <a id="clientmethodswithoutparms"></a>
 
 ### <a name="methods-without-parameters"></a>Методы без параметров
 
-Если обрабатываемый метод не имеет параметров, используйте неуниверсальную перегрузку метода `On`:
+Если метод, с помощью которой вы работаете, не имеет `On` параметров, используйте неродовую перегрузку метода:
 
-**Код сервера, вызывающий клиентский метод без параметров**
+**Серверный код вызова методклиента без параметров**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample14.cs?highlight=5)]
 
-**Клиентский код WinRT для метода, вызываемого с сервера без параметров ([см. примеры WPF и Silverlight далее в этом разделе](#wpfsl))**
+**Код клиента WinRT для метода, вызываемого с сервера без параметров[(см. примеры WPF и Silverlight позже в этой теме)](#wpfsl)**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample15.cs)]
 
 <a id="clientmethodswithparmtypes"></a>
 
-### <a name="methods-with-parameters-specifying-the-parameter-types"></a>Методы с параметрами, указание типов параметров
+### <a name="methods-with-parameters-specifying-the-parameter-types"></a>Методы с параметрами, определяющие типы параметров
 
-Если обрабатываемый метод имеет параметры, укажите типы параметров в качестве универсальных типов метода `On`. Существуют универсальные перегрузки метода `On`, позволяющие указать до 8 параметров (4 в Windows Phone 7). В следующем примере один параметр отправляется в метод `UpdateStockPrice`.
+Если метод, с которой вы обрабатываете, имеет параметры, укажите типы параметров как общие типы метода. `On` Существуют общие перегрузки `On` метода, позволяющие указывать до 8 параметров (4 на Windows Phone 7). В следующем примере один параметр `UpdateStockPrice` отправляется в метод.
 
-**Серверный код, вызывающий клиентский метод с параметром**
+**Серверный код вызова метода клиента с параметром**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample16.cs?highlight=3)]
 
-**Класс акции, используемый для параметра**
+**Класс stock, используемый для параметра**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample17.cs)]
 
-**Клиентский код WinRT для метода, вызываемого с сервера с параметром ([см. примеры WPF и Silverlight далее в этом разделе](#wpfsl))**
+**Код клиента WinRT для метода, вызванного с сервера с параметром[(см. примеры WPF и Silverlight позже в этой теме)](#wpfsl)**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample18.cs?highlight=1,5)]
 
 <a id="clientmethodswithdynamparms"></a>
 
-### <a name="methods-with-parameters-specifying-dynamic-objects-for-the-parameters"></a>Методы с параметрами, указание динамических объектов для параметров
+### <a name="methods-with-parameters-specifying-dynamic-objects-for-the-parameters"></a>Методы с параметрами, определяющие динамические объекты для параметров
 
-В качестве альтернативы указанию параметров в качестве универсальных типов метода `On` можно указать параметры как динамические объекты:
+В качестве альтернативы определению параметров в `On` качестве общих типов метода можно указать параметры как динамические объекты:
 
-**Серверный код, вызывающий клиентский метод с параметром**
+**Серверный код вызова метода клиента с параметром**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample19.cs?highlight=3)]
 
-**Класс акции, используемый для параметра**
+**Класс stock, используемый для параметра**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample20.cs)]
 
-**Клиентский код WinRT для метода, вызываемого с сервера с параметром, с использованием динамического объекта для параметра ([см. примеры WPF и Silverlight далее в этом разделе](#wpfsl))**
+**Код Клиента WinRT для метода, вызванного с сервера с параметром, с использованием динамического объекта для параметра[(см. примеры WPF и Silverlight позже в этой теме)](#wpfsl)**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample21.cs?highlight=1,5)]
 
 <a id="removehandler"></a>
 
-### <a name="how-to-remove-a-handler"></a>Удаление обработчика
+### <a name="how-to-remove-a-handler"></a>Как удалить обработчик
 
-Чтобы удалить обработчик, вызовите его метод `Dispose`.
+Чтобы удалить обработчик, позвоните его `Dispose` методу.
 
-**Клиентский код для метода, вызываемого с сервера**
+**Клиентский код для метода, вызванного с сервера**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample22.cs?highlight=1)]
 
@@ -287,90 +287,90 @@ ms.locfileid: "78467406"
 
 <a id="callserver"></a>
 
-## <a name="how-to-call-server-methods-from-the-client"></a>Вызов методов сервера из клиента
+## <a name="how-to-call-server-methods-from-the-client"></a>Как вызвать методы сервера от клиента
 
-Чтобы вызвать метод на сервере, используйте метод `Invoke` для прокси-сервера концентратора.
+Чтобы вызвать метод на сервере, используйте `Invoke` метод на прокси-сервере концентратора.
 
-Если метод сервера не имеет возвращаемого значения, используйте неуниверсальную перегрузку метода `Invoke`.
+Если метод сервера не имеет значения возврата, используйте `Invoke` негенерическую перегрузку метода.
 
-**Серверный код для метода, не имеющего возвращаемого значения**
+**Код сервера для метода, не имевавого значения возврата**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample24.cs?highlight=3)]
 
-**Клиентский код, вызывающий метод, не имеющий возвращаемого значения**
+**Код клиента вызова метода, который не имеет значения возврата**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample25.cs?highlight=1)]
 
-Если метод сервера имеет возвращаемое значение, укажите тип возвращаемого значения в качестве универсального типа метода `Invoke`.
+Если метод сервера имеет значение возврата, укажите тип `Invoke` возврата как общий тип метода.
 
-**Серверный код для метода, который имеет возвращаемое значение и принимает параметр сложного типа**
+**Код сервера для метода, который имеет значение возврата и использует сложный параметр типа**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample26.cs?highlight=1)]
 
-**Класс акции, используемый для параметра и возвращаемого значения**
+**Класс stock, используемый для значения параметра и возврата**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample27.cs)]
 
-**Клиентский код, вызывающий метод с возвращаемым значением и принимающий параметр сложного типа в асинхронном методе ASP.NET 4,5**
+**Клиентский код вызова метода, который имеет значение возврата и принимает сложный параметр типа, в ASP.NET методе 4.5 async**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample28.cs?highlight=1-2)]
 
-**Клиентский код, вызывающий метод с возвращаемым значением и принимающий параметр сложного типа в синхронном методе**
+**Клиентский код вызова метода, который имеет значение возврата и принимает сложный параметр типа, в синхронном методе**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample29.cs?highlight=1-2)]
 
-Метод `Invoke` выполняется асинхронно и возвращает объект `Task`. Если не указать `await` или `.Wait()`, следующая строка кода будет выполняться до завершения выполнения метода, который вызывается.
+Метод `Invoke` выполняет асинхронно и `Task` возвращает объект. Если вы не `await` указали или, `.Wait()`следующая строка кода будет выполняться до метода, который вы ссылаетесь закончил выполнение.
 
 <a id="connectionlifetime"></a>
 
-## <a name="how-to-handle-connection-lifetime-events"></a>Как работать с событиями времени жизни соединения
+## <a name="how-to-handle-connection-lifetime-events"></a>Как обрабатывать события жизни соединения
 
-SignalR предоставляет следующие события времени жизни подключения, которые можно выполнять:
+SignalR предоставляет следующие события жизни соединения, которые вы можете обрабатывать:
 
-- `Received`: возникает, когда в соединении получены какие-либо данные. Предоставляет полученные данные.
-- `ConnectionSlow`: возникает, когда клиент обнаруживает слишком большое или частое удаление соединения.
-- `Reconnecting`: возникает, когда начинается повторное подключение базового транспорта.
-- `Reconnected`: возникает при повторном подключении базового транспорта.
-- `StateChanged`: возникает при изменении состояния соединения. Предоставляет старое состояние и новое состояние. Сведения о значениях состояния соединения см. в разделе [перечисление ConnectionState](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.connectionstate(v=vs.111).aspx).
-- `Closed`: возникает при отключении соединения.
+- `Received`: Поднятыпри получать какие-либо данные о подключении. Предоставляет полученные данные.
+- `ConnectionSlow`: Поднят, когда клиент обнаруживает медленное или часто падающее соединение.
+- `Reconnecting`: Поднятый, когда базовый транспорт начинает воссоединение.
+- `Reconnected`: Поднятый при повторном подключении основного транспорта.
+- `StateChanged`: Поднят при изменении состояния соединения. Обеспечивает старое состояние и новое состояние. Для получения информации о [ConnectionState Enumeration](https://msdn.microsoft.com/library/microsoft.aspnet.signalr.client.connectionstate(v=vs.111).aspx)значениях состояния соединения см.
+- `Closed`: Поднят освоено при отключении соединения.
 
-Например, если требуется отображать предупреждающие сообщения об ошибках, которые не являются критическими, но вызывают периодически возникающих проблем с подключением, например медленная работа или частым удалением соединения, обработайте событие `ConnectionSlow`.
+Например, если вы хотите отобразить предупреждающие сообщения об ошибках, которые не являются фатальными, но `ConnectionSlow` вызывают периодические проблемы с подключением, такие как медлительность или частое падение соединения, справьтесь с событием.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample30.cs)]
 
-Дополнительные сведения см. [в разделе Основные сведения и обработка событий времени жизни подключения в SignalR](handling-connection-lifetime-events.md).
+Для получения дополнительной информации, см [Понимание и обработка подключения Пожизненные события в SignalR](handling-connection-lifetime-events.md).
 
 <a id="handleerrors"></a>
 
-## <a name="how-to-handle-errors"></a>Как обрабатывались ошибки
+## <a name="how-to-handle-errors"></a>Как обрабатывать ошибки
 
-Если на сервере явно не включены подробные сообщения об ошибках, то объект исключения, возвращаемый SignalR после ошибки, содержит минимальные сведения об ошибке. Например, если вызов `newContosoChatMessage` завершается ошибкой, сообщение об ошибке в объекте Error содержит "`There was an error invoking Hub method 'contosoChatHub.newContosoChatMessage'.`" Отправка подробных сообщений об ошибках клиентам в рабочей среде не рекомендуется по соображениям безопасности, но если вы хотите включить подробные сообщения об ошибках для устранения неполадок, используйте следующий код на сервере.
+Если вы явно не включаете подробные сообщения об ошибке на сервере, объект исключения, который возвращает SignalR после ошибки, содержит минимальную информацию об ошибке. Например, если вызов `newContosoChatMessage` не удается, сообщение об`There was an error invoking Hub method 'contosoChatHub.newContosoChatMessage'.`ошибке в объекте ошибки содержит " Отправка подробных сообщений об ошибках клиентам в производственной сфере не рекомендуется по соображениям безопасности, но если вы хотите включить подробные сообщения об ошибках для устранения неполадок, используйте следующий код на сервере.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample31.cs?highlight=2)]
 
 <a id="handleerrors"></a>
 
-Для обработки ошибок, вызванных SignalR, можно добавить обработчик для события `Error` в объекте Connection.
+Для обработки ошибок, которые вызывает SignalR, можно добавить обработчик `Error` для события на объекте соединения.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample32.cs)]
 
-Чтобы обрабатывались ошибки вызовов методов, заключите код в блок try-catch.
+Для обработки ошибок из вызовов метода заверните код в блок try-catch.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample33.cs)]
 
 <a id="logging"></a>
 
-## <a name="how-to-enable-client-side-logging"></a>Как включить ведение журнала на стороне клиента
+## <a name="how-to-enable-client-side-logging"></a>Как включить журналирование на стороне клиента
 
-Чтобы включить ведение журнала на стороне клиента, задайте свойства `TraceLevel` и `TraceWriter` объекта соединения.
+Чтобы включить журнал в сторону клиента, установите `TraceLevel` и `TraceWriter` свойства на объект соединения.
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample34.cs?highlight=3-4)]
 
 <a id="wpfsl"></a>
 
-## <a name="wpf-silverlight-and-console-application-code-samples-for-client-methods-that-the-server-can-call"></a>Примеры кода приложений WPF, Silverlight и консольного приложения для клиентских методов, которые может вызывать сервер
+## <a name="wpf-silverlight-and-console-application-code-samples-for-client-methods-that-the-server-can-call"></a>Образцы кода приложений WPF, Silverlight и консольных приложений для методов клиента, которые сервер может вызвать
 
-Примеры кода, показанные выше, для определения клиентских методов, которые сервер может вызывать для клиентов WinRT. В следующих примерах показан эквивалентный код для клиентов WPF, Silverlight и консольных приложений.
+Образцы кода, показанные ранее для определения методов клиента, которые сервер может вызвать, применимы к клиентам WinRT. Следующие примеры показывают эквивалентный код для клиентов WPF, Silverlight и консольных приложений.
 
 ### <a name="methods-without-parameters"></a>Методы без параметров
 
@@ -382,34 +382,34 @@ SignalR предоставляет следующие события време�
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample36.cs?highlight=1)]
 
-**Код клиента консольного приложения для метода, вызываемого с сервера без параметров**
+**Консольный клиентский код приложения для метода, вызываемого с сервера без параметров**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample37.cs?highlight=1)]
 
-### <a name="methods-with-parameters-specifying-the-parameter-types"></a>Методы с параметрами, указание типов параметров
+### <a name="methods-with-parameters-specifying-the-parameter-types"></a>Методы с параметрами, определяющие типы параметров
 
-**Клиентский код WPF для метода, вызываемого с сервера с параметром**
+**Клиентский код WPF для метода, вызванного с сервера с параметром**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample38.cs?highlight=1,4)]
 
-**Клиентский код Silverlight для метода, вызываемого с сервера с параметром**
+**Клиентский код Silverlight для метода, вызванного с сервера с параметром**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample39.cs?highlight=1,5)]
 
-**Код клиента консольного приложения для метода, вызываемого с сервера с параметром**
+**Консольный клиентский код приложения для метода, вызванного с сервера с параметром**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample40.cs?highlight=1-2)]
 
-### <a name="methods-with-parameters-specifying-dynamic-objects-for-the-parameters"></a>Методы с параметрами, указание динамических объектов для параметров
+### <a name="methods-with-parameters-specifying-dynamic-objects-for-the-parameters"></a>Методы с параметрами, определяющие динамические объекты для параметров
 
-**Клиентский код WPF для метода, вызываемого с сервера с параметром, с использованием динамического объекта для параметра**
+**Клиентский код WPF для метода, вызванного с сервера с параметром, с использованием динамического объекта для параметра**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample41.cs?highlight=1,4)]
 
-**Клиентский код Silverlight для метода, вызываемого с сервера с параметром, с использованием динамического объекта для параметра**
+**Клиентский код Silverlight для метода, вызванного с сервера с параметром, с использованием динамического объекта для параметра**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample42.cs?highlight=1,5)]
 
-**Код клиента консольного приложения для метода, вызываемого с сервера с параметром, с использованием динамического объекта для параметра**
+**Консольный клиентский код приложения для метода, вызванного с сервера с параметром, с использованием динамического объекта для параметра**
 
 [!code-csharp[Main](hubs-api-guide-net-client/samples/sample43.cs?highlight=1-2)]

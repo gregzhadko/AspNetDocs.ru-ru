@@ -1,18 +1,18 @@
 ---
-uid: mvc/overview/deployment/docker
+uid: mvc/overview/deployment/docker-aspnetmvc
 title: Перенос приложений ASP.NET MVC в контейнеры Windows
 description: Узнайте, как запустить существующее приложение ASP.NET MVC в контейнере Windows Docker
-keywords: Контейнеры Windows, Docker, ASP. NET MVC
+keywords: Контейнеры для Windows,Докер,ASP.NET MVC
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/14/2018
 ms.assetid: c9f1d52c-b4bd-4b5d-b7f9-8f9ceaf778c4
-ms.openlocfilehash: ef184f4256c20e2a66de8fd2d4f8e67f07d9a086
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 2c3aefab16673f4d4dd28c74319903fbd25a9e7e
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78471552"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675184"
 ---
 # <a name="migrating-aspnet-mvc-applications-to-windows-containers"></a>Перенос приложений ASP.NET MVC в контейнеры Windows
 
@@ -33,11 +33,11 @@ ms.locfileid: "78471552"
 
 [Готовое приложение](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) находится на GitHub.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
-На компьютере разработчика должно быть установлено следующее программное обеспечение:
+Машина разработки должна иметь следующее программное обеспечение:
 
-- [Юбилейное обновление Windows 10](https://www.microsoft.com/software-download/windows10/) (или более поздняя версия) или [Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) (или более поздней версии)
+- [Обновление windows 10 Anniversary](https://www.microsoft.com/software-download/windows10/) (или выше) или [Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) (или выше)
 - [Docker для Windows](https://docs.docker.com/docker-for-windows/) — версия Stable 1.13.0 или 1.12 Beta 26 (или более поздние)
 - [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
@@ -55,23 +55,23 @@ ms.locfileid: "78471552"
 **Этапы публикации**
 
 1. Щелкните правой кнопкой мыши веб-проект в Visual Studio и выберите **Publish** (Публикация).
-1. Нажмите кнопку **Пользовательский профиль**, а затем выберите **Файловая система** в качестве метода.
+1. Нажмите **кнопку пользовательский профиль,** а затем выберите **файловую систему** в качестве метода.
 1. Выберите каталог. По правилам загруженный образец использует `bin\Release\PublishOutput`.
 
 ![Публикация: подключение][publish-connection]
 
-Откройте раздел **Параметры публикации файла** на вкладке **Параметры** . Выберите **Предварительная компиляция во время публикации**. Эта оптимизация означает, что представления не будут компилироваться в контейнере Docker, вместо этого будут копироваться предварительно скомпилированные представления.
+Откройте раздел **Параметры публикации файлов** **вкладки «Настройки.** Выберите **precompile во время публикации**. Эта оптимизация означает, что представления не будут компилироваться в контейнере Docker, вместо этого будут копироваться предварительно скомпилированные представления.
 
-![Публикация: параметры][publish-settings]
+![Настройки публикации][publish-settings]
 
 Нажмите кнопку **Publish** (Публикация), и Visual Studio скопирует все необходимые ресурсы в целевую папку.
 
 ## <a name="build-the-image"></a>Создание образа
 
-Создайте новый файл с именем *Dockerfile* , чтобы определить образ DOCKER. *Dockerfile* содержит инструкции по созданию окончательного образа и включает все базовые имена образов, необходимые компоненты, приложение, которое требуется запустить, и другие образы конфигурации. *Dockerfile* — это входные данные для команды `docker build`, которая создает образ.
+Создайте новый файл под названием *Dockerfile* для определения изображения Docker. *Dockerfile* содержит инструкции по созданию окончательного изображения и включает в себя любые имена базовых изображений, необходимые компоненты, приложение, которым вы хотите запускать, и другие изображения конфигурации. *Dockerfile* — это вход `docker build` в команду, создающий изображение.
 
-В этом упражнении будет построен образ на основе образа `microsoft/aspnet`, расположенного в [DOCKER Hub](https://hub.docker.com/r/microsoft/aspnet/).
-Базовый образ `microsoft/aspnet` — это образ Windows Server. Он содержит Windows Server Core, IIS и ASP.NET 4.7.2. При запуске этого образа в контейнере он автоматически использует IIS и установленные веб-сайты.
+Для этого упражнения вы создаме `microsoft/aspnet` изображение на основе изображения, расположенного на [Docker Hub.](https://hub.docker.com/r/microsoft/aspnet/)
+Базовый образ `microsoft/aspnet` — это образ Windows Server. Он содержит ядро сервера Windows, IIS и ASP.NET 4.7.2. При запуске этого образа в контейнере он автоматически использует IIS и установленные веб-сайты.
 
 Dockerfile, который создает образ, выглядит следующим образом:
 
@@ -85,15 +85,15 @@ FROM microsoft/aspnet
 COPY ./bin/Release/PublishOutput/ /inetpub/wwwroot
 ```
 
-В этом файле Dockerfile нет команды `ENTRYPOINT`. Она не нужна здесь. При использовании Windows Server с IIS процесс IIS — это точка входа, которая настроена для запуска в базовом образе ASPNET.
+В этом файле Dockerfile нет команды `ENTRYPOINT`. Она не нужна здесь. При запуске Windows Server с IIS процесс IIS является точкой входа, которая настроена для запуска в базовом изображении aspnet.
 
-Выполните команду сборки Docker, чтобы создать образ, который запускает приложение ASP.NET. Для этого откройте окно PowerShell в каталоге проекта и введите следующую команду в каталог решения:
+Выполните команду сборки Docker, чтобы создать образ, который запускает приложение ASP.NET. Для этого откройте окно PowerShell в каталоге проекта и введите следующую команду в каталоге решений:
 
 ```console
 docker build -t mvcrandomanswers .
 ```
 
-Эта команда создает новый образ, следуя инструкциям в Dockerfile, именование (-t тегирования) образа как мвкрандомансверс. Это может включать получение базового образа из [Docker Hub](http://hub.docker.com). После этого в образ будет добавлено приложение.
+Эта команда будет строить новое изображение, используя инструкции в Dockerfile, называя (т пометки) изображение как mvcrandomanswers. Это может включать получение базового образа из [Docker Hub](http://hub.docker.com). После этого в образ будет добавлено приложение.
 
 После выполнения этой команды можно выполнить команду `docker images` для просмотра сведений о новом образе:
 
@@ -114,7 +114,7 @@ docker run -d --name randomanswers mvcrandomanswers
 
 Аргумент `-d` предписывает Docker запустить образ в отсоединенном режиме. Это значит, что образ Docker запускается в отрыве от текущей оболочки.
 
-Во многих примерах DOCKER вы можете увидеть-p, чтобы отобразить контейнер и порты узлов. В образе ASPNET по умолчанию уже настроен контейнер для прослушивания порта 80 и его предоставление.
+Во многих примерах докеров можно увидеть -p для картирования контейнеров и портов-хостелей. Изображение aspnet по умолчанию уже настроило контейнер для прослушивания на порту 80 и его обнажения.
 
 Аргумент `--name randomanswers` содержит имя запущенного контейнера. Это имя можно использовать вместо идентификатора контейнера в большинстве команд.
 
@@ -122,7 +122,7 @@ docker run -d --name randomanswers mvcrandomanswers
 
 ## <a name="verify-in-the-browser"></a>Проверка в браузере
 
-После запуска контейнера подключитесь к выполняющемуся контейнеру, используя `http://localhost` в приведенном примере. Введите этот URL-адрес в адресной строке браузера, и вы увидите работающий сайт.
+Как только контейнер запускается, подключитесь к бегущей таре, используя `http://localhost` в приведенном примере. Введите этот URL-адрес в адресной строке браузера, и вы увидите работающий сайт.
 
 > [!NOTE]
 > Некоторые программы VPN или прокси-серверы могут препятствовать переходу на ваш узел.
@@ -134,7 +134,7 @@ docker run -d --name randomanswers mvcrandomanswers
 ./run.ps1
 ```
 
-Приведенная выше команда создает образ, отображает список образов на компьютере и запускает контейнер.
+Команда выше строит изображение, отображает список изображений на вашей машине, и запускает контейнер.
 
 Чтобы остановить контейнер, выполните команду `docker stop`:
 
@@ -150,4 +150,4 @@ docker rm randomanswers
 
 [windows-container]: media/aspnetmvc/SwitchContainer.png "Переключение на контейнер Windows"
 [publish-connection]: media/aspnetmvc/PublishConnection.png "Публикация в файловой системе"
-[publish-settings]: media/aspnetmvc/PublishSettings.png "Публикация: параметры"
+[publish-settings]: media/aspnetmvc/PublishSettings.png "Настройки публикации"

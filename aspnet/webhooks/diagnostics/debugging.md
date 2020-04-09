@@ -1,42 +1,42 @@
 ---
 uid: webhooks/diagnostics/debugging
-title: Отладка веб-перехватчиков ASP.NET | Документация Майкрософт
+title: отладка WebHooks ASP.NET веб-хуков (ru) Документы Майкрософт
 author: rick-anderson
-description: Отладка веб-перехватчиков ASP.NET.
+description: Как отладить ASP.NET WebHooks.
 ms.author: riande
 ms.date: 01/17/2012
 ms.assetid: 467da78b-3c35-4c51-8b08-77a32379e4a8
-ms.openlocfilehash: 517d282fc22703b5861b748aea51023fa0a12a26
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 2f1f8196478e7025a0467acb945d9ed36c8fd0ca
+ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78520602"
+ms.lasthandoff: 04/06/2020
+ms.locfileid: "80675367"
 ---
-# <a name="aspnet-webhooks-debugging"></a>Отладка веб-перехватчиков ASP.NET  
+# <a name="aspnet-webhooks-debugging"></a>отладка WebHooks ASP.NET
 
 ## <a name="debugging-in-azure"></a>Отладка в Azure
 
-Чтобы выполнить отладку веб-приложения во время работы в Azure, см. Руководство по [устранению неполадок веб-приложения в службе приложений Azure с помощью Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/#webserverlogs).
+Чтобы отладить веб-приложение во время работы в Azure, пожалуйста, смотрите учебник [Troubleshoot веб-приложение в Azure App Service с помощью Visual Studio](https://azure.microsoft.com/documentation/articles/web-sites-dotnet-troubleshoot-visual-studio/#webserverlogs).
 
-## <a name="debugging-with-source-and-symbols"></a>Отладка с использованием исходного кода и символов
+## <a name="debugging-with-source-and-symbols"></a>Отладка с источником и символами
 
-В дополнение к отладке собственного кода можно выполнять отладку непосредственно в Microsoft ASP.NET веб-перехватчиках и на самом деле все .NET. Это работает независимо от того, выполняется ли отладка локально или удаленно. Сначала настройте Visual Studio, чтобы найти исходный код и символы, выбрав **Отладка** , а затем — **Параметры и параметры**. Задайте такие параметры:
+В дополнение к отладке собственного кода, можно отладить непосредственно в Microsoft ASP.NET WebHooks, а на самом деле все .NET. Это работает независимо от того, отлажоните локально или удаленно. Во-первых, настроить Visual Studio, чтобы найти источник и символы, перейдя к **Отуга,** а затем **параметры и настройки.** Установите параметры следующим образом:
 
 ![Параметры и настройки](_static/SourceSymbols.png)
 
-Затем добавьте ссылку на [symbolsource.org](http://symbolsource.org) для скачивания исходного кода и символов. Перейдите на вкладку **символы** в меню выше и добавьте в качестве расположения символа следующее:
+Затем добавьте ссылку на [symbolsource.org](http://symbolsource.org) для загрузки источника и символов. Перейдите на вкладку **Символы** меню выше и добавьте следующее в качестве символа местоположения:
 
 ```
 http://srv.symbolsource.org/pdb/Public
 ```
 
-Кроме того, убедитесь, что каталог кэша имеет короткое имя. в противном случае имена файлов могут оказаться слишком длинными, что приведет к тому, что символы не будут загружены. Пример пути:
+Кроме того, убедитесь, что каталог кэша имеет короткое имя; в противном случае имена файлов могут получить слишком долго, что приведет к символам, чтобы не загружаться. Путь образца:
 
 ```
 C:\SymCache
 ```
 
-Параметры должны выглядеть следующим образом:
+Настройки должны выглядеть так же, как это:
 
-![Пример параметра расположение файла символов](_static/SymSource.png)
+![Пример расположения файла символа опций](_static/SymSource.png)
