@@ -1,76 +1,76 @@
 ---
 uid: web-api/overview/odata-support-in-aspnet-web-api/odata-v4/complex-type-inheritance-in-odata-v4
-title: Наследование сложных типов в OData v4 с помощью веб-API ASP.NET | Документация Майкрософт
-author: microsoft
-description: В соответствии со спецификацией OData версии 4 сложный тип может наследовать от другого сложного типа. (Сложный тип — это структурированный тип без ключа.) Веб-API...
+title: Наследовать с комплексом типа в OData v4 с ASP.NET Web API Документы Майкрософт
+author: rick-anderson
+description: Согласно спецификации OData v4, сложный тип может наследоваться от другого сложного типа. (Сложный тип представляет собой структурированный тип без ключа.) Веб-API...
 ms.author: riande
 ms.date: 09/16/2014
 ms.assetid: a00d3600-9c2a-41bc-9460-06cc527904e2
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/complex-type-inheritance-in-odata-v4
 msc.type: authoredcontent
-ms.openlocfilehash: 3d90216c8e594055f77577eb6d8b1d978ae4c24d
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: f433cf625c7d6ff4922d8c4a9954682fc0f1cc33
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78448134"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543604"
 ---
-# <a name="complex-type-inheritance-in-odata-v4-with-aspnet-web-api"></a>Наследование сложных типов в OData v4 с веб-API ASP.NET
+# <a name="complex-type-inheritance-in-odata-v4-with-aspnet-web-api"></a>Наследовать сложный тип в OData v4 с ASP.NET Web API
 
-по [Майкрософт](https://github.com/microsoft)
+[корпорацией Майкрософт](https://github.com/microsoft)
 
-> В соответствии со [спецификацией](http://www.odata.org/documentation/odata-version-4-0/)OData версии 4 сложный тип может наследовать от другого сложного типа. ( *Сложный* тип — это структурированный тип без ключа.) Веб-API OData 5,3 поддерживает наследование сложного типа.
+> Согласно [спецификации](http://www.odata.org/documentation/odata-version-4-0/)OData v4, сложный тип может наследовать от другого сложного типа. *(Сложный* тип представляет собой структурированный тип без ключа.) Web API OData 5.3 поддерживает наследование сложного типа.
 > 
-> В этом разделе показано, как создать модель EDM со сложными типами наследования. Полный исходный код см. в разделе [Пример наследования сложных типов OData](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/OData/v4/ODataComplexTypeInheritanceSample/ReadMe.txt).
+> В этой теме показано, как построить модель данных сущности (EDM) со сложными типами наследования. Для полного исходного [OData Complex Type Inheritance Sample](http://aspnet.codeplex.com/sourcecontrol/latest#Samples/WebApi/OData/v4/ODataComplexTypeInheritanceSample/ReadMe.txt)кода см.
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Версии программного обеспечения, используемые в этом руководстве
+> ## <a name="software-versions-used-in-the-tutorial"></a>Версии программного обеспечения, используемые в учебнике
 > 
 > 
-> - Веб-API OData 5,3
+> - Web API OData 5.3
 > - OData v4
 
-## <a name="model-hierarchy"></a>Иерархия модели
+## <a name="model-hierarchy"></a>Типовая иерархия
 
-Чтобы продемонстрировать наследование сложного типа, мы будем использовать следующую иерархию классов.
+Чтобы проиллюстрировать сложное наследование типа, мы используем следующую иерархию классов.
 
 ![](complex-type-inheritance-in-odata-v4/_static/image1.png)
 
-`Shape` является абстрактным сложным типом. `Rectangle`, `Triangle`и `Circle` являются сложными типами, производными от `Shape`, а `RoundRectangle` является производным от `Rectangle`. `Window` является типом сущности и содержит экземпляр `Shape`.
+`Shape`является абстрактным сложным типом. `Rectangle`, `Triangle`, `Circle` и являются сложными `RoundRectangle` типами, `Rectangle`полученными из `Shape`, и происходит от . `Window`— тип сущности `Shape` и содержит экземпляр.
 
-Ниже приведены классы CLR, определяющие эти типы.
+Вот классы CLR, которые определяют эти типы.
 
 [!code-csharp[Main](complex-type-inheritance-in-odata-v4/samples/sample1.cs)]
 
-## <a name="build-the-edm-model"></a>Построение модели EDM
+## <a name="build-the-edm-model"></a>Создание модели EDM
 
-Чтобы создать EDM, можно использовать **одатаконвентионмоделбуилдер**, который выводит отношения наследования от типов CLR.
+Для создания EDM можно использовать **ODataConventionModelBuilder,** который выводит отношения наследования из типов CLR.
 
 [!code-csharp[Main](complex-type-inheritance-in-odata-v4/samples/sample2.cs)]
 
-Вы также можете создать EDM явным образом с помощью **одатамоделбуилдер**. Это занимает больше кода, но обеспечивает более полный контроль над EDM.
+Вы также можете построить EDM явно, используя **ODataModelBuilder**. Это требует больше кода, но дает вам больше контроля над EDM.
 
 [!code-csharp[Main](complex-type-inheritance-in-odata-v4/samples/sample3.cs)]
 
 Эти два примера создают одну и ту же схему EDM.
 
-## <a name="metadata-document"></a>Документ метаданных
+## <a name="metadata-document"></a>Метаданный документ
 
-Ниже приведен документ метаданных OData, демонстрирующий наследование сложного типа.
+Вот документ метаданных OData, показывающий наследование сложного типа.
 
 [!code-xml[Main](complex-type-inheritance-in-odata-v4/samples/sample4.xml?highlight=13,17,25,30)]
 
-Из документа метаданных можно увидеть следующее:
+Из документа метаданных можно увидеть:
 
-- Сложный тип `Shape` является абстрактным.
-- `Rectangle`, `Triangle`и `Circle` сложного типа имеют базовый тип `Shape`.
-- Тип `RoundRectangle` имеет `Rectangle`базового типа.
+- Сложный `Shape` тип абстрактный.
+- В `Rectangle` `Triangle`, `Circle` и сложный тип `Shape`имеют базовый тип .
+- Тип `RoundRectangle` имеет базовый `Rectangle`тип.
 
-## <a name="casting-complex-types"></a>Приведение сложных типов
+## <a name="casting-complex-types"></a>Типы кастинг-комплексов
 
-Приведение типов в сложных типах теперь поддерживается. Например, следующий запрос приводит `Shape` к `Rectangle`.
+Кастинг на сложных типах теперь поддерживается. Например, следующий запрос отбрасывает `Shape` `Rectangle`a к .
 
 [!code-console[Main](complex-type-inheritance-in-odata-v4/samples/sample5.cmd)]
 
-Ниже приведены полезные данные ответа:
+Вот полезная нагрузка ответа:
 
 [!code-console[Main](complex-type-inheritance-in-odata-v4/samples/sample6.cmd)]

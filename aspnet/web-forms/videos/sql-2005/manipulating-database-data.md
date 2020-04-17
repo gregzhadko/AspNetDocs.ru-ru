@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/sql-2005/manipulating-database-data
-title: Управление данными базы данных | Документация Майкрософт
-author: microsoft
-description: SQL Server начинающих будет изучать объекты ADO.NET и выполнение инструкции SQL из ADO.NET. Изучите SQL и Узнайте о вставке, обновлении и удалении STA...
+title: Манипулирование данными базы данных (ru) Документы Майкрософт
+author: rick-anderson
+description: Новички S'L Server узнают об объектах ADO.NET и выполнении выписки из ADO.NET. Исследуйте S'L и узнайте о вставке, обновлении и удалении sta...
 ms.author: riande
 ms.date: 03/29/2006
 ms.assetid: 03a4cdda-480f-43fa-891c-a976633d90ae
 msc.legacyurl: /web-forms/videos/sql-2005/manipulating-database-data
 msc.type: video
-ms.openlocfilehash: 10f9379a27f96ac4acb77af1a6062a42aaecc14f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 9db4985c07cdcc51cb3c45d811fc44366028a59d
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78501096"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543279"
 ---
 # <a name="manipulating-database-data"></a>Манипулирование данными базы данных
 
-по [Майкрософт](https://github.com/microsoft)
+[корпорацией Майкрософт](https://github.com/microsoft)
 
-SQL Server начинающих будет изучать объекты ADO.NET и выполнение инструкции SQL из ADO.NET. Изучите SQL и ознакомьтесь с инструкциями по вставке, обновлению и удалению.
+Новички S'L Server узнают об объектах ADO.NET и выполнении выписки из ADO.NET. Изучите S'L и узнайте о вставках, обновлении и удалении инструкций.
 
-[&#9654;Смотреть видео (40 минут)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/manipulating-database-data)
+[&#9654; Смотреть видео (40 минут)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/manipulating-database-data)
 
 > [!div class="step-by-step"]
 > [Назад](designing-relational-database-tables.md)

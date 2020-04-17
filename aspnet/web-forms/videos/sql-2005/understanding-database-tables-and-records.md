@@ -1,27 +1,27 @@
 ---
 uid: web-forms/videos/sql-2005/understanding-database-tables-and-records
-title: Основные сведения о таблицах и записях базы данных | Документация Майкрософт
-author: microsoft
-description: SQL Server начинающих узнает о таблицах и определениях типов данных, свойств, ключей и т. д. во втором видео. Узнайте, как строки таблицы, столбцы,...
+title: Понимание таблиц и записей баз данных (ru) Документы Майкрософт
+author: rick-anderson
+description: Новички S'L Server узнают о таблицах и определениях типов данных, свойств, ключей и т.д. в этом втором видео. Узнайте, как строки таблицы, столбцы, ...
 ms.author: riande
 ms.date: 03/29/2006
 ms.assetid: 9ebe8ebc-eae6-41c1-83a6-38410b610331
 msc.legacyurl: /web-forms/videos/sql-2005/understanding-database-tables-and-records
 msc.type: video
-ms.openlocfilehash: f88c1725b990ba67cf4b9d3356f3aaa49459be01
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 012eea9991c51c0e9047f9b8adf18fab014bab9d
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78440970"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543240"
 ---
 # <a name="understanding-database-tables-and-records"></a>Общие сведения о таблицах и записях базы данных
 
-по [Майкрософт](https://github.com/microsoft)
+[корпорацией Майкрософт](https://github.com/microsoft)
 
-SQL Server начинающих узнает о таблицах и определениях типов данных, свойств, ключей и т. д. во втором видео. Узнайте, как взаимосвязаны строки, столбцы и поля таблицы, а также указывает, могут ли столбцы быть пустыми.
+Новички S'L Server узнают о таблицах и определениях типов данных, свойств, ключей и т.д. в этом втором видео. Узнайте, как соотнесены строки таблиц, столбцов и полей и могут ли столбцы быть пустыми.
 
-[&#9654;Смотреть видео (24 минуты)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/understanding-database-tables-and-records)
+[&#9654; Смотреть видео (24 минуты)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/understanding-database-tables-and-records)
 
 > [!div class="step-by-step"]
 > [Назад](what-is-a-database.md)

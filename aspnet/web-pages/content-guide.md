@@ -1,6 +1,6 @@
 ---
 uid: web-pages/content-guide
-title: Путеводитель по содержимому WebMatrix | Документация Майкрософт
+title: Веб-Матрица Содержание Руководство (ru) Документы Майкрософт
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -8,72 +8,72 @@ ms.date: 01/13/2011
 ms.assetid: b558e481-775a-4aa0-bd3b-ad61e530c2d2
 msc.legacyurl: /web-pages/content-guide
 msc.type: content
-ms.openlocfilehash: 33b1fa8aa1db90b8995fa86ab64782d482753d4b
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: dd717eba217e0dd16003224d39945b21370d89f2
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78419820"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543513"
 ---
 # <a name="webmatrix-content-guide"></a>Руководство по содержимому WebMatrix
 
 > [!NOTE] 
-> WebMatrix больше не рекомендуется использовать в качестве интегрированной среды разработки для веб-страницы ASP.NET. Используйте [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix больше не рекомендуется в качестве интегрированной среды разработки для ASP.NET web-страниц. Используйте [Visual Studio](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [визуальный код студии](https://code.visualstudio.com/).
 
-WebMatrix — это набор средств, обеспечивающих простой способ создания веб-сайтов для Microsoft Windows. Он включает IIS Express (веб-сервер разработки), ASP.NET (платформа веб-программирования) и SQL Server Compact (внедренная база данных). Краткий обзор WebMatrix см. в [обзоре WebMatrix](https://www.microsoft.com/web/webmatrix/). Дополнительные сведения о главных функциях WebMatrix см. в разделе [функции WebMatrix](https://www.microsoft.com/web/webmatrix/features/).
+WebMatrix — это набор инструментов, который обеспечивает простой способ создания веб-сайтов для Microsoft Windows. Она включает в себя IIS Express (веб-сервер разработки), ASP.NET (база веб-программирования) и S'L Server Compact (встроенная база данных). Чтобы увидеть быстрый тур WebMatrix, [см.](https://www.microsoft.com/web/webmatrix/) Чтобы просмотреть лучшие функции WebMatrix, [см.](https://www.microsoft.com/web/webmatrix/features/)
 
 | **Сценарий** | **Содержимое** |
 | --- | --- |
-| Начало работы с WebMatrix | [Введение в WebMatrix](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/intro.mp4) (видео) [Начало работы с WebMatrix и веб-страницы ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202889) [начать с нуля](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough1b.mp4) (видео) узнайте, как использовать код Razor ASP.NET для написания пользовательского веб-сайта. [Первый веб-сайт, использующий WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208553) [Start с веб-приложениями](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4) (видео), использует бесплатное приложение с открытым кодом для создания собственного сайта. |
-| Установка компонентов (включая WebMatrix) | [Использование](https://www.iis.net/learn/install/web-platform-installer/using-the-microsoft-web-platform-installer) [пошагового руководства по установщику веб-платформы установщик веб-платформы Майкрософт 2,0](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-20-walkthrough) [ресурсы установщика веб-платформы](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-resources) |
-| Работа с пользовательским интерфейсом WebMatrix | [Рабочая область сайта WebMatrix Справка](https://go.microsoft.com/fwlink/?LinkId=208788) рабочей [области файлы WebMatrix Справка](https://go.microsoft.com/fwlink/?LinkId=208787) в рабочей области [базы данных WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208786) Справка по [рабочей области отчеты WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208789) |
-| Работа с кодом | [Введение в веб-программирование ASP.NET с помощью синтаксиса Razor,](https://go.microsoft.com/fwlink/?LinkId=202890) [простого в коде](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4) (видео) [программирование веб-страницы ASP.NET с помощью Visual Studio](https://go.microsoft.com/fwlink/?LinkId=205854) [веб-страницы ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202908) [Справочник по API Visual Basic ASP.NET](https://go.microsoft.com/fwlink/?LinkId=202907) |
-| Создание единообразного вида веб-сайта | [Создание единообразного вида](https://go.microsoft.com/fwlink/?LinkId=202891) . Создание многократно используемых блоков содержимого — создание единообразного вида с помощью страниц макета. Разработка страниц макета с несколькими разделами содержимого — создание разделов содержимого необязательно — передача данных на страницы макета. создается и используется базовый вспомогательный метод. |
-| Работа с формами HTML на веб-страницах | [Работа с формами](https://go.microsoft.com/fwlink/?LinkId=202892) . Создание простой формы HTML — чтение вводимых пользователем данных из формы проверка вводимых пользователем данных после обратной передачи |
-| Отображение данных и управление ими | [Простая база данных](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4) (видео). [Подключение к базе данных SQL Server или MySQL в WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208661) [Работа с данными](https://go.microsoft.com/fwlink/?LinkId=202893) (программным путем). Общие сведения о базах данных — создание базы данных добавление данных в базу данных. Отображение данных из базы данных Вставка данных в база данных. обновление данных в базе данных — удаление данных из базы данных — как подключается к базе данным. Основные сведения о миграции базы данных SQL на SQL Server [Отображение данных в](https://go.microsoft.com/fwlink/?LinkId=202894) сетке — указание и форматирование Столбцы для вывода — стилизация сетки как целого по страницам данных |
-| Отображение диаграмм на веб-странице | [Отображение данных в диаграмме](https://go.microsoft.com/fwlink/?LinkId=202895) . Вспомогательная диаграмма — создание диаграммы на основе диаграмм, отображаемых в виде данных на веб-странице — стилизация диаграммы с сохранением диаграммы |
-| Чтение и запись файлов на веб-сайте | [Работа с файлами](https://go.microsoft.com/fwlink/?LinkId=202896) — создание текстового файла и запись в него данных — добавление данных к существующему файлу — чтение и отображение данных из файлов. Это позволяет пользователям отправлять файлы, позволяющие пользователям отправлять несколько файлов. |
-| Отображение изображений на веб-странице и работа с ними | [Работа с образами](https://go.microsoft.com/fwlink/?LinkId=202897) — Добавление изображения на веб-страницу. динамическое перезагрузка изображения с поворотом изображения и отражением изображения с добавлением водяного знака к изображению — использование изображения в качестве водяного знака |
-| Отображение видео (и воспроизведение звука) на веб-странице | [Работа с видео](https://go.microsoft.com/fwlink/?LinkId=202898) — выбор видеопроигрывателя видео Flash (. SWF) — воспроизведение видеороликов MediaPlayer (. wmv). видеоматериалы по Silverlight |
-| Отправка сообщений электронной почты с веб-сайта | [Добавление электронной почты на веб-сайт](https://go.microsoft.com/fwlink/?LinkId=202899) — отправка сообщений электронной почты с веб-сайта — Отправка файла по электронной почте |
-| Добавление поиска на веб-сайт | [Добавление поиска на веб-сайт](https://go.microsoft.com/fwlink/?LinkId=202900) — Поиск с веб-сайта |
-| Добавление каналов социальных сетей и закладок на веб-сайт | [Добавление социальных сетей на веб-сайт](https://go.microsoft.com/fwlink/?LinkId=202901) . Связывание веб-сайта на сайтах социальных сетей — Добавление веб-канала Twitter — визуализация граватаров изображения с помощью кнопки "подобно" Facebook |
-| Анализ трафика сайта и оптимизация для SEO | [Анализ](https://go.microsoft.com/fwlink/?LinkId=202902) сведений посетителей об отслеживании трафика (аналитика) [Использование WebMatrix для оптимизации сайта для поисковых машин,](https://go.microsoft.com/fwlink/?LinkId=202953) [оптимизированных для поиска](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-seo.mp4) (видео) |
-| Повышение производительности веб-сайта | [Добавление кэширования для ускорения веб-сайтов](https://go.microsoft.com/fwlink/?LinkId=202903) — кэширование для повышения скорости реагирования веб-сайта |
-| Добавление безопасности (членства) на веб-сайт | [Добавление безопасности и членства](https://go.microsoft.com/fwlink/?LinkId=202904) — введение в принадлежность к веб-сайту. Создание веб-сайта с регистрацией и входом в систему — создание страницы, которая будет создаваться только для членов группы пользователей (ролей) — создание пароля, позволяющий пользователям создавать новые пароли, предотвращая присоединение к веб-сайту автоматических программ. |
-| Тестирование безопасного взаимодействия (SSL) | [Обеспечение безопасности веб-обмена данными: сертификаты, SSL и https://](https://go.microsoft.com/fwlink/?LinkId=208660) |
-| Отладка веб-страниц с помощью средств и методов программирования | [Общие сведения об отладке](https://go.microsoft.com/fwlink/?LinkId=202905) . Использование вспомогательного приложения ServerInfo для вывода сведений о сервере — внедрение выходных выражений для вывода значений страниц — использование вспомогательного метода Обжектинфо для вывода значений объектов — использование средств отладки |
-| Добавление в код функциональности на уровне сайта | [Настройка поведения всего сайта](https://go.microsoft.com/fwlink/?LinkId=202906) . Добавление кода запуска веб-сайта — выполнение кода до и после файлов в папке — создание более удобочитаемых и доступных для поиска URL-адресов |
-| Публикация веб-сайта | [Как опубликовать веб-приложение с помощью WebMatrix](https://go.microsoft.com/fwlink/?LinkId=202954) [скачать, изменить и повторно опубликовать свой веб-сайт с помощью WebMatrix](https://go.microsoft.com/?linkid=9751042) [Microsoft WebMatrix: публикация совместимость](https://www.iis.net/learn/develop/troubleshooting-webmatrix/microsoft-webmatrix-publish-compatibility) [Microsoft WebMatrix: ошибки сертификата во время](https://www.iis.net/learn/develop/troubleshooting-webmatrix/microsoft-webmatrix-certificate-errors-during-publishing) публикации [сайта](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-publish.mp4) (видео) |
-| Использование IIS Express для тестирования веб-сайтов | [Обзор IIS Express.](https://www.iis.net/learn/extensions/introduction-to-iis-express/iis-express-overview) [Использование панели задач Windows для управления веб-сайтами и приложениями,](https://www.iis.net/learn/extensions/using-iis-express/using-the-windows-system-tray-to-manage-websites-and-applications) [запускающими IIS Express из командной строки](https://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-the-command-line) [Защита веб-связи: сертификаты, SSL и IIS Express HTTPS://](https://go.microsoft.com/fwlink/?LinkId=208660) [вопросы и ответы](https://www.iis.net/learn/extensions/introduction-to-iis-express/iis-express-faq) |
+| Начало работы с WebMatrix | [Введение в WebMatrix](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/intro.mp4) (видео) [Начало работы с WebMatrix и ASP.NET веб-страниц ы](https://go.microsoft.com/fwlink/?LinkId=202889) [Начало с нуля](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough1b.mp4) (видео) Узнайте, как использовать ASP.NET razor код для написания пользовательского веб-сайта. [Первый веб-сайт с помощью WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208553) [Начните с web-приложений](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4) (видео) Используйте бесплатное приложение с открытым исходным кодом для создания собственного сайта. |
+| Установка компонентов (включая WebMatrix) | [Использование веб-платформы Microsoft Установить](https://www.iis.net/learn/install/web-platform-installer/using-the-microsoft-web-platform-installer) [веб-платформы Установщик 2.0 Пошаговая](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-20-walkthrough) [веб-платформа Установщик ресурсов](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-resources) |
+| Работа с uI WebMatrix | [WebMatrix сайта Рабочее пространство поможет](https://go.microsoft.com/fwlink/?LinkId=208788) [WebMatrix Файлы Рабочее пространство поможет](https://go.microsoft.com/fwlink/?LinkId=208787) [WebMatrix базы данных Рабочее пространство поможет](https://go.microsoft.com/fwlink/?LinkId=208786) [WebMatrix Отчеты Рабочее пространство Справка](https://go.microsoft.com/fwlink/?LinkId=208789) |
+| Работа с кодом | [Введение ASP.NET веб-программирования с помощью бритвы Syntax](https://go.microsoft.com/fwlink/?LinkId=202890) [Простой код](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4) (видео) [Программирование ASP.NET веб-страниц с Visual Studio](https://go.microsoft.com/fwlink/?LinkId=205854) ASP.NET [веб-страниц Visual Basic](https://go.microsoft.com/fwlink/?LinkId=202908) ASP.NET [Быстрая ссылка API](https://go.microsoft.com/fwlink/?LinkId=202907) |
+| Создание согласованного вида веб-сайта | [Создание последовательного взгляда](https://go.microsoft.com/fwlink/?LinkId=202891) - Создание многоразовых блоков контента - Создание последовательного взгляда с помощью страниц layout - Проектирование страниц layout, которые имеют несколько разделов содержимого - Создание разделов содержимого необязательным - Передача данных на страницы Layout - Создание и использование базового помощника |
+| Работа с формами HTML на веб-страницах | [Работа с формами](https://go.microsoft.com/fwlink/?LinkId=202892) - Создание простой формы HTML - Чтение пользовательского ввода из формы - Проверка ввода пользователя - Восстановление значений формы после Postbacks |
+| Отображение и управление данными | [База данных сделала простое](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4) (видео) [Подключение к серверу СЗЛ или базе данных MyS'L в WebMatrix](https://go.microsoft.com/fwlink/?LinkId=208661) [Working with Data](https://go.microsoft.com/fwlink/?LinkId=202893) (программно) - Введение в базы данных - Создание базы данных - Добавление данных в базу данных - Отображение данных из базы данных - Вставка данных в базу данных - Обновление данных в базе данных - Удалять данные в базе данных - Подключение к базе данных - Понимание S ' - Миграция базы данных на сервер S'L [Отображение данных в сетке](https://go.microsoft.com/fwlink/?LinkId=202894) - Отображение данных в сетке - Определение и форматирование столбцов для отображения - Укладка сетки как целое - Paging через данные |
+| Отображение диаграмм на веб-странице | [Отображение данных в диаграмме](https://go.microsoft.com/fwlink/?LinkId=202895) - Справочник диаграммы - Создание диаграммы из данных - Отображение диаграмм внутри веб-страницы - Укладка диаграммы - Сохранение диаграммы |
+| Читать и писать файлы на веб-сайте | [Работа с файлами](https://go.microsoft.com/fwlink/?LinkId=202896) - Создание текстового файла и написание данных к нему - Придаток данных к существующему файлу - Чтение и отображение данных из файла - Исключение файлов - Позволяя пользователям загружать файл - позволяя пользователям загружать несколько файлов |
+| Отображение и манипулирование изображениями на веб-странице | [Работа с изображениями](https://go.microsoft.com/fwlink/?LinkId=202897) - Добавление изображения на веб-страницу динамически - Загрузка изображения - Изменяя изображение - Вращание и перелистывание изображения - Добавление водяного знака к изображению - Использование изображения в качестве водяного знака |
+| Отображение видео (и воспроизведение звука) на веб-странице | [Работа с видео](https://go.microsoft.com/fwlink/?LinkId=202898) - Выбор видеоплеера - Воспроизведение Flash (.swf) Видео - Воспроизведение MediaPlayer (.wmv) Видео - Воспроизведение Видео Silverlight |
+| Отправка сообщений электронной почты с веб-сайта | [Добавление электронной почты на ваш веб-сайт](https://go.microsoft.com/fwlink/?LinkId=202899) - Отправка сообщений электронной почты с вашего веб-сайта - Отправка файла с помощью электронной почты |
+| Добавление поиска на веб-сайт | [Добавление поиска на ваш веб-сайт](https://go.microsoft.com/fwlink/?LinkId=202900) - Поиск с вашего сайта |
+| Добавление каналов социальной сети и закладок на веб-сайт | [Добавление социальных сетей на ваш веб-сайт](https://go.microsoft.com/fwlink/?LinkId=202901) - Ссылка на ваш сайт на сайтах социальных сетей - Добавление щебет Feed - Рендеринг Gravatar Изображение - Отображение Xbox Gamer Card - Отображение Facebook "Нравится" Кнопка |
+| Анализ трафика сайта и оптимизации для SEO | [Анализ трафика](https://go.microsoft.com/fwlink/?LinkId=202902) - Отслеживание информации для посетителей (аналитика) [Используйте WebMatrix для оптимизации вашего сайта для поисковых систем](https://go.microsoft.com/fwlink/?LinkId=202953) [Оптимизация для поиска](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-seo.mp4) (видео) |
+| Улучшение производительности на веб-сайте | [Добавление кэширования для более быстрых веб-сайтов](https://go.microsoft.com/fwlink/?LinkId=202903) - Кэшинг для улучшения ответственности веб-сайта |
+| Добавление безопасности (членства) на веб-сайт | [Добавление безопасности и членства](https://go.microsoft.com/fwlink/?LinkId=202904) - Введение в членство на веб-сайте - Создание веб-сайта, который имеет регистрацию и страницы входа - Создание только для членов страницы - Создание безопасности для групп пользователей (роли) - Создание страницы изменения пароля - Позволяя пользователям генерировать новый пароль - Предотвращение автоматизированных программ от присоединения к вашему веб-сайту |
+| Тест безопасной связи (SSL) | [Защита веб-коммуникаций: сертификаты, SSL и https://](https://go.microsoft.com/fwlink/?LinkId=208660) |
+| Отожоблять веб-страницы с помощью инструментов и методов кодирования | [Введение в debugging](https://go.microsoft.com/fwlink/?LinkId=202905) - Использование помощника ServerInfo для отображения информации о сервере - Встраивание выражения выводов для отображения значений страницы - Использование помощника ObjectInfo для отображения значений объектов - использование инструментов дебукинга |
+| Добавление функциональности в коде в целом по сайту | [Настройка веб-широкого поведения](https://go.microsoft.com/fwlink/?LinkId=202906) - Добавление кода запуска веб-сайта - Запуск кода до и после файлов в Folder - Создание более читаемых и читаемых URL-адресов |
+| Публикация веб-сайта | [Как опубликовать веб-приложение с помощью WebMatrix](https://go.microsoft.com/fwlink/?LinkId=202954) [Скачать, отсвативать и переиздать свой веб-сайт с WebMatrix](https://go.microsoft.com/?linkid=9751042) [Microsoft WebMatrix: Публикация совместимости](https://www.iis.net/learn/develop/troubleshooting-webmatrix/microsoft-webmatrix-publish-compatibility) Microsoft [WebMatrix: Ошибки сертификата при публикации](https://www.iis.net/learn/develop/troubleshooting-webmatrix/microsoft-webmatrix-certificate-errors-during-publishing) [сайта публикации](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-publish.mp4) (видео) |
+| Используйте IIS Express для тестирования веб-сайтов | [IIS Express Обзор](https://www.iis.net/learn/extensions/introduction-to-iis-express/iis-express-overview) [Использование системы Windows Tray для управления веб-сайтами и приложениями](https://www.iis.net/learn/extensions/using-iis-express/using-the-windows-system-tray-to-manage-websites-and-applications) [Запуск IIS Express от командной линии](https://www.iis.net/learn/extensions/using-iis-express/running-iis-express-from-the-command-line) [безопасности веб-коммуникаций: Сертификаты, SSL, и https://](https://go.microsoft.com/fwlink/?LinkId=208660) [IIS Экспресс часто задаваемые вопросы](https://www.iis.net/learn/extensions/introduction-to-iis-express/iis-express-faq) |
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 **Чтение**
 
-- [Microsoft Web Camp Training Kit for WebMatrix](http://trainingkit.webcamps.ms/WebMatrix.htm)
-- [Отправка ошибки или предложения](https://go.microsoft.com/fwlink/?LinkId=195940)
+- [Учебный комплект Microsoft Web Camps для WebMatrix](http://trainingkit.webcamps.ms/WebMatrix.htm)
+- [Отправьте сообщение об ошибке или предложение](https://go.microsoft.com/fwlink/?LinkId=195940)
 - [Файл сведений для WebMatrix](readme/index.md)
-- [Вопросы и ответы о коллекции приложений](https://go.microsoft.com/fwlink/?LinkId=196179)
-- [Документация по IIS Express](https://go.microsoft.com/fwlink/?LinkID=195075)
-- [Примеры кода синтаксиса Razor ASP.NET и страница загрузки учебника](https://go.microsoft.com/fwlink/?LinkId=208516)
-- [Задать вопрос или обсудить на форумах](https://forums.asp.net/1224.aspx)
-- [Сведения о SQL Server Compact](https://go.microsoft.com/fwlink/?LinkId=195939)
+- [Часто задаваемые вопросы App Gallery](https://go.microsoft.com/fwlink/?LinkId=196179)
+- [Экспресс-документация IIS](https://go.microsoft.com/fwlink/?LinkID=195075)
+- [ASP.NET образцы кода Razor Syntax и страница загрузки учебника](https://go.microsoft.com/fwlink/?LinkId=208516)
+- [Задайте вопрос или обсудите на форумах](https://forums.asp.net/1224.aspx)
+- [Информация о сервере сервера S'L](https://go.microsoft.com/fwlink/?LinkId=195939)
 
 **Просмотр (видео)**
 
 - [Введение в WebMatrix](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/intro.mp4)
-- [Начать с нуля](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough1b.mp4)
-- [Начало работы с веб-приложениями](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4)
-- [Малый, но полный пакет](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-compact.mp4)
-- [Растет с вами](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-extend.mp4)
+- [Начните с нуля](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough1b.mp4)
+- [Начните с веб-приложений](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4)
+- [Небольшой, но полный пакет](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-compact.mp4)
+- [Растет вместе с вами](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-extend.mp4)
 - [Открытый исходный код](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-webapps-b.mp4)
-- [База данных стала простой](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4)
-- [Изящный интерфейс, простая работа](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-ux.mp4)
-- [Простой в коде](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4)
-- [Больше "Hello, World"](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-helpers.mp4)
-- [Настольный компьютер или сервер, все они одинаковы](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-enviroment.mp4)
-- [Тесно компиляция, полностью интегрированный](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-integrated.mp4)
-- [Оптимизировать для поиска](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-seo.mp4)
+- [База данных упростила](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-databases.mp4)
+- [Элегантный интерфейс, простой опыт](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-ux.mp4)
+- [Простой код](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-aspnetpages.mp4)
+- [Больше, чем "Здравствуйте, Мир"](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-helpers.mp4)
+- [Рабочий стол или сервер, это все то же самое](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-enviroment.mp4)
+- [Плотно вязать, полностью интегрированы](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-integrated.mp4)
+- [Оптимизация для поиска](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-seo.mp4)
 - [Публикация сайта](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/webx-publish.mp4)
 - [Настройка и развертывание CMS](https://mediadl.microsoft.com/mediadl/www/s/silverlight/video/web/webmatrix/walkthrough2b.mp4)

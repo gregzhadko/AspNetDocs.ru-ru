@@ -1,27 +1,27 @@
 ---
 uid: web-pages/videos/introduction/install-and-use-the-microsoft-webmatrix-tool
-title: Установка и использование средства Microsoft WebMatrix | Документация Майкрософт
+title: Установка и использование инструмента Microsoft WebMatrix (ru) Документы Майкрософт
 author: rick-anderson
-description: В части 1 рассказывается о WebMatrix и о том, как его можно установить и использовать.
+description: Часть 1 знакомит вас с WebMatrix и как вы можете установить и использовать его.
 ms.author: riande
 ms.date: 04/12/2011
 ms.assetid: c0087185-82eb-40fd-b3fd-9d0c6937ee9a
 msc.legacyurl: /web-pages/videos/introduction/install-and-use-the-microsoft-webmatrix-tool
 msc.type: video
-ms.openlocfilehash: ab0d3c950b3ed117e5e40e478ca5a2120efb9278
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 64c6c3eeb3279e09c352443b9f57c40748f82ebd
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78512730"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543006"
 ---
 # <a name="install-and-use-the-microsoft-webmatrix-tool"></a>Установка и использование средства Microsoft WebMatrix
 
-по [адваийа](https://twitter.com/Advaiyasolns)
+по [Адвайя](https://twitter.com/Advaiyasolns)
 
 > [!NOTE] 
-> WebMatrix больше не рекомендуется использовать в качестве интегрированной среды разработки для веб-страницы ASP.NET. Используйте [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix больше не рекомендуется в качестве интегрированной среды разработки для ASP.NET web-страниц. Используйте [Visual Studio](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [визуальный код студии](https://code.visualstudio.com/).
 
-В части 1 рассказывается о WebMatrix и о том, как его можно установить и использовать.
+Часть 1 знакомит вас с WebMatrix и как вы можете установить и использовать его.
 
-[&#9654;Смотреть видео (2 минуты)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/install-and-use-the-microsoft-webmatrix-tool)
+[&#9654; Смотреть видео (2 минуты)](https://channel9.msdn.com/Blogs/ASP-NET-Site-Videos/install-and-use-the-microsoft-webmatrix-tool)

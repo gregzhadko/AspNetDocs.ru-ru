@@ -1,24 +1,24 @@
 ---
 uid: web-pages/index
-title: Веб-страницы ASP.NET | Документация Майкрософт
+title: ASP.NET веб-страницы Документы Майкрософт
 author: rick-anderson
-description: Загрузите WebMatrix & Узнайте, как быстро создавать веб-страницы с помощью упрощенного способа объединения серверного кода с HTML.
+description: Скачать WebMatrix & узнать, как быстро построить веб-страницы в легкий способ объединить код сервера с HTML.
 ms.author: riande
 ms.date: 05/18/2012
 ms.assetid: 5418ba96-ff49-4a43-9cbb-09dea4949d23
 msc.legacyurl: /web-pages
 msc.type: categoryindex
-ms.openlocfilehash: 56bf82e22b3562893ef842a90d42aa7b6ff5858f
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: d767325a376e5daa0ea4236f67c88e6b97ae71a7
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78520674"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543526"
 ---
 # <a name="aspnet-web-pages"></a>Веб-страницы ASP.NET
 
 > [!NOTE] 
-> WebMatrix больше не рекомендуется использовать в качестве интегрированной среды разработки для веб-страницы ASP.NET. Используйте [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix больше не рекомендуется в качестве интегрированной среды разработки для ASP.NET web-страниц. Используйте [Visual Studio](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [визуальный код студии](https://code.visualstudio.com/).
 
 - [Руководство](overview/index.md)
 
@@ -50,13 +50,13 @@ ms.locfileid: "78520674"
         - [Проверка пользовательского ввода на сайтах веб-страниц ASP.NET](overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites.md)
         - [Создание согласованного вида](overview/ui-layouts-and-themes/3-creating-a-consistent-look.md)
         - [Настройка поведения в масштабах сайта](overview/ui-layouts-and-themes/18-customizing-site-wide-behavior.md)
-        - [Работа с образами](overview/ui-layouts-and-themes/9-working-with-images.md)
+        - [Работа с изображениями](overview/ui-layouts-and-themes/9-working-with-images.md)
         - [Работа с видео](overview/ui-layouts-and-themes/10-working-with-video.md)
         - [Создание и использование вспомогательного метода на сайте веб-страниц ASP.NET](overview/ui-layouts-and-themes/creating-and-using-a-helper-in-an-aspnet-web-pages-site.md)
         - [Установка вспомогательного метода](overview/ui-layouts-and-themes/installing-helpers.md)
         - [Добавление вспомогательного приложения Twitter с помощью веб-страниц ASP.NET](overview/ui-layouts-and-themes/twitter-helper.md)
         - [Отображение карт на сайте веб-страниц ASP.NET](overview/ui-layouts-and-themes/displaying-maps-in-an-aspnet-web-pages-site.md)
-    - [Mobile](overview/mobile/index.md)
+    - [Мобильные](overview/mobile/index.md)
 
         - [Отрисовка сайтов веб-страниц ASP.NET для мобильных устройств](overview/mobile/rendering-aspnet-web-pages-sites-for-mobile-devices.md)
     - [Работа с данными](overview/data/index.md)
@@ -64,7 +64,7 @@ ms.locfileid: "78520674"
         - [Работа с данными](overview/data/5-working-with-data.md)
         - [Отображение данных в диаграмме](overview/data/7-displaying-data-in-a-chart.md)
         - [Работа с файлами](overview/data/working-with-files.md)
-    - [Тестирование и отладка](overview/testing-and-debugging/index.md)
+    - [Тестирование и дебукинг](overview/testing-and-debugging/index.md)
 
         - [Общие сведения об отладке](overview/testing-and-debugging/introduction-to-debugging.md)
         - [Руководство по устранению неполадок веб-страниц ASP.NET (Razor)](overview/testing-and-debugging/aspnet-web-pages-razor-troubleshooting-guide.md)
@@ -78,7 +78,7 @@ ms.locfileid: "78520674"
         - [Кэширование для повышения производительности веб-сайта](overview/performance-and-traffic/15-caching-to-improve-the-performance-of-your-website.md)
         - [Анализ трафика](overview/performance-and-traffic/14-analyzing-traffic.md)
         - [Объединение и минификация активов на сайте веб-страниц ASP.NET (Razor)](overview/performance-and-traffic/bundling-and-minifying-assets-in-an-aspnet-web-pages-razor-site.md)
-    - [Справочник по API](overview/api-reference/index.md)
+    - [Справка по API](overview/api-reference/index.md)
 
         - [Краткий справочник по API ASP.NET](overview/api-reference/asp-net-web-pages-api-reference.md)
     - [Выпуски](overview/releases/index.md)
@@ -102,7 +102,7 @@ ms.locfileid: "78520674"
         - [Создание страницы изменения данных в WebMatrix](videos/introduction/create-an-edit-data-page-in-webmatrix.md)
         - [Создание страницы удаления данных в WebMatrix](videos/introduction/create-a-delete-data-page-in-webmatrix.md)
         - [Публикация веб-сайта в Интернете с помощью WebMatrix](videos/introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-    - [ASP.NET Razor Pages](videos/aspnet-razor-pages/index.md)
+    - [страницы ASP.NET бритвы](videos/aspnet-razor-pages/index.md)
 
         - [Начало работы с WebMatrix и веб-страницами ASP.NET](videos/aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
         - [Введение в веб-программирование на ASP.NET с синтаксисом Razor](videos/aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
@@ -116,7 +116,7 @@ ms.locfileid: "78520674"
         - [Отображение данных в диаграмме (часть 1)](videos/aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
         - [Отображение данных в диаграмме (часть 2)](videos/aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
         - [Работа с файлами](videos/aspnet-razor-pages/working-with-files.md)
-        - [Работа с образами](videos/aspnet-razor-pages/working-with-images.md)
+        - [Работа с изображениями](videos/aspnet-razor-pages/working-with-images.md)
         - [Работа с видео](videos/aspnet-razor-pages/working-with-video.md)
         - [Добавление функционала электронной почты на веб-сайт](videos/aspnet-razor-pages/adding-email-to-your-web-site.md)
         - [Добавление функции поиска на веб-сайт](videos/aspnet-razor-pages/adding-search-to-your-web-site.md)

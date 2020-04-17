@@ -1,6 +1,6 @@
 ---
 uid: web-pages/videos/index
-title: Видео | Документация Майкрософт
+title: Видеоролики Документы Майкрософт
 author: rick-anderson
 description: ''
 ms.author: riande
@@ -8,17 +8,17 @@ ms.date: 05/18/2012
 ms.assetid: febf2824-4e3d-4dc6-84c5-f99777ec6144
 msc.legacyurl: /web-pages/videos
 msc.type: book
-ms.openlocfilehash: 4c22b024240740d971740e9f043231ccbcdc47fb
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 8c24a01b592bead86369a0a9cebeca05f566de53
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78512784"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543045"
 ---
 # <a name="videos"></a>Видео
 
 > [!NOTE] 
-> WebMatrix больше не рекомендуется использовать в качестве интегрированной среды разработки для веб-страницы ASP.NET. Используйте [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [Visual Studio Code](https://code.visualstudio.com/).
+> WebMatrix больше не рекомендуется в качестве интегрированной среды разработки для ASP.NET web-страниц. Используйте [Visual Studio](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [визуальный код студии](https://code.visualstudio.com/).
 
 - [Введение](introduction/index.md)
 
@@ -32,7 +32,7 @@ ms.locfileid: "78512784"
     - [Создание страницы изменения данных в WebMatrix](introduction/create-an-edit-data-page-in-webmatrix.md)
     - [Создание страницы удаления данных в WebMatrix](introduction/create-a-delete-data-page-in-webmatrix.md)
     - [Публикация веб-сайта в Интернете с помощью WebMatrix](introduction/publish-a-website-to-the-internet-using-webmatrix.md)
-- [ASP.NET Razor Pages](aspnet-razor-pages/index.md)
+- [страницы ASP.NET бритвы](aspnet-razor-pages/index.md)
 
     - [Начало работы с WebMatrix и веб-страницами ASP.NET](aspnet-razor-pages/getting-started-with-webmatrix-and-aspnet-web-pages.md)
     - [Введение в веб-программирование на ASP.NET с синтаксисом Razor](aspnet-razor-pages/introduction-to-aspnet-web-programming-using-the-razor-syntax.md)
@@ -46,7 +46,7 @@ ms.locfileid: "78512784"
     - [Отображение данных в диаграмме (часть 1)](aspnet-razor-pages/displaying-data-in-a-chart-part-1.md)
     - [Отображение данных в диаграмме (часть 2)](aspnet-razor-pages/displaying-data-in-a-chart-part-2.md)
     - [Работа с файлами](aspnet-razor-pages/working-with-files.md)
-    - [Работа с образами](aspnet-razor-pages/working-with-images.md)
+    - [Работа с изображениями](aspnet-razor-pages/working-with-images.md)
     - [Работа с видео](aspnet-razor-pages/working-with-video.md)
     - [Добавление функционала электронной почты на веб-сайт](aspnet-razor-pages/adding-email-to-your-web-site.md)
     - [Добавление функции поиска на веб-сайт](aspnet-razor-pages/adding-search-to-your-web-site.md)

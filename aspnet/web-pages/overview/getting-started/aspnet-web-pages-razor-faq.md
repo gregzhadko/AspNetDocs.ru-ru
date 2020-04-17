@@ -1,135 +1,135 @@
 ---
 uid: web-pages/overview/getting-started/aspnet-web-pages-razor-faq
-title: Вопросы и ответы по веб-страницы ASP.NET (Razor) | Документация Майкрософт
+title: ASP.NET веб-страниц (Razor) часто задаваемые вопросы Документы Майкрософт
 author: Rick-Anderson
-description: В этой статье перечислены часто задаваемые вопросы о веб-страницы ASP.NET (Razor) и WebMatrix. Версии программного обеспечения, используемые в руководстве веб-страницы ASP.NET (R...
+description: В этой статье перечислены некоторые часто задаваемые вопросы о ASP.NET веб-страниц (Razor) и WebMatrix. Версии программного обеспечения, используемые в учебнике ASP.NET веб-страниц (R...
 ms.author: riande
 ms.date: 02/07/2014
 ms.assetid: b137bd04-25e1-47cb-9d96-ef2e179ecf1f
 msc.legacyurl: /web-pages/overview/getting-started/aspnet-web-pages-razor-faq
 msc.type: authoredcontent
-ms.openlocfilehash: 6fa1b668e915af856a693e79eafb7180ed504dc2
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: a312d1327bc88e721bf7fc7459e420e3f582c88d
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78520656"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543708"
 ---
 # <a name="aspnet-web-pages-razor-faq"></a>Вопросы и ответы по веб-страницам ASP.NET (Razor)
 
-от [Tom фитзмаккен](https://github.com/tfitzmac)
+; автор — [Том ФитцМакен (Tom FitzMacken)](https://github.com/tfitzmac)
 
 > > [!NOTE] 
-> > WebMatrix больше не рекомендуется использовать в качестве интегрированной среды разработки для веб-страницы ASP.NET. Используйте [Visual Studio](xref:aspnet/web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [Visual Studio Code](https://code.visualstudio.com/).
+> > WebMatrix больше не рекомендуется в качестве интегрированной среды разработки для ASP.NET web-страниц. Используйте [Visual Studio](xref:web-pages/overview/getting-started/program-asp-net-web-pages-in-visual-studio) или [визуальный код студии](https://code.visualstudio.com/).
 >
-> В этой статье перечислены часто задаваемые вопросы о веб-страницы ASP.NET (Razor) и WebMatrix.
+> В этой статье перечислены некоторые часто задаваемые вопросы о ASP.NET веб-страниц (Razor) и WebMatrix.
 > 
-> ## <a name="software-versions-used-in-the-tutorial"></a>Версии программного обеспечения, используемые в этом руководстве
+> ## <a name="software-versions-used-in-the-tutorial"></a>Версии программного обеспечения, используемые в учебнике
 > 
 > 
-> - Веб-страницы ASP.NET (Razor) 3
+> - ASP.NET веб-страниц (Razor) 3
 > - Visual Studio 2013
 > - WebMatrix 3
 >   
 > 
-> Этот учебник также работает с веб-страницы ASP.NET 2, WebMatrix 2 и Visual Studio 2012.
+> Этот учебник также работает с ASP.NET web Pages 2, WebMatrix 2 и Visual Studio 2012.
 
-- [В чем разница между веб-страницы ASP.NET, веб-формами ASP.NET и ASP.NET MVC?](#Whats_the_difference_between_ASP.NET_Web_Pages,_ASP.NET_Web_Forms,_and_ASP.NET_MVC)
-- [Нужен ли WebMatrix для работы с веб-страницами?](#Do_I_need_WebMatrix_in_order_to_work_with_Web_Pages)
-- [Можно ли использовать элементы управления веб-форм ASP.NET на странице веб-страниц?](#Can_I_use_ASP.NET_Web_Forms_controls_on_a_Web_Pages_page)
-- [Можно ли развернуть веб-страницы ASP.NET сайт без использования WebMatrix?](#Can_I_deploy_an_ASP.NET_Web_Pages_site_without_using_WebMatrix)
-- [Нужно ли использовать вспомогательный модуль безопасности для поддержки имен входа?](#Do_I_have_to_use_the_WebSecurity_helper_to_support_logins)
-- [Поддерживает ли веб-страницы ASP.NET HTML5?](#Does_ASP.NET_Web_Pages_support_HTML5)
-- [Можно ли использовать JavaScript и jQuery с веб-страницами?](#Can_I_use_JavaScript_and_jQuery_with_Web_Pages)
+- [В чем разница между веб-страницами ASP.NET, ASP.NET веб-формами и ASP.NET MVC?](#Whats_the_difference_between_ASP.NET_Web_Pages,_ASP.NET_Web_Forms,_and_ASP.NET_MVC)
+- [Нужен ли мне WebMatrix для работы с веб-страницами?](#Do_I_need_WebMatrix_in_order_to_work_with_Web_Pages)
+- [Могу ли я использовать элементы управления веб-ASP.NET веб-формами на странице Веб-страницы?](#Can_I_use_ASP.NET_Web_Forms_controls_on_a_Web_Pages_page)
+- [Могу ли я развернуть веб-сайт ASP.NET без использования WebMatrix?](#Can_I_deploy_an_ASP.NET_Web_Pages_site_without_using_WebMatrix)
+- [Должен ли я использовать помощника WebSecurity для поддержки логинов?](#Do_I_have_to_use_the_WebSecurity_helper_to_support_logins)
+- [Поддерживает ли ASP.NET веб-страниц HTML5?](#Does_ASP.NET_Web_Pages_support_HTML5)
+- [Могу ли я использовать JavaScript и j'еry с веб-страницами?](#Can_I_use_JavaScript_and_jQuery_with_Web_Pages)
 - [Дополнительные ресурсы](#AdditionalResources)
 
-Вопросы об ошибках и других проблемах см. в разделе [руководство по устранению неполадок веб-страницы ASP.NET (Razor)](https://go.microsoft.com/fwlink/?LinkId=253001).
+Для вопросов об ошибках и других проблемах, см [ASP.NET веб-страниц (Razor) Устранение неполадок Руководство](https://go.microsoft.com/fwlink/?LinkId=253001).
 
 <a id="Whats_the_difference_between_ASP.NET_Web_Pages,_ASP.NET_Web_Forms,_and_ASP.NET_MVC"></a>
-## <a name="whats-the-difference-between-aspnet-web-pages-aspnet-web-forms-and-aspnet-mvc"></a>В чем разница между веб-страницы ASP.NET, веб-формами ASP.NET и ASP.NET MVC?
+## <a name="whats-the-difference-between-aspnet-web-pages-aspnet-web-forms-and-aspnet-mvc"></a>В чем разница между веб-страницами ASP.NET, ASP.NET веб-формами и ASP.NET MVC?
 
-Все три являются ASP.NET технологиями для создания динамических веб-приложений:
+Все три ASP.NET технологии для создания динамических веб-приложений:
 
-- Веб-страницы ASP.NET рассказывает о добавлении динамического кода (на стороне сервера) и доступе к базе данных к HTML-страницам и простых и упрощенных синтаксисов.
-- Веб-формы ASP.NET основаны на объектной модели страницы и традиционных элементах управления окнами (кнопки, списки и т. д.). Веб-формы используют модель на основе событий, которая знакома тем, кто работал с разработкой на основе клиента (Windows Forms).
-- ASP.NET MVC реализует шаблон модель-представление-контроллер для ASP.NET. Особое внимание уделяется «разделению проблем» (обработка, данные и уровни пользовательского интерфейса).
+- ASP.NET Web Pages фокусируется на добавлении динамического (серверного) кода и доступа к базе данных к HTML-страницам, а также имеет простой и легкий синтаксис.
+- ASP.NET Web Forms основан на модели объекта страницы и традиционных элементах управления типом окна (кнопки, списки и т.д.). Web Forms использует модель, основанную на событиях, знакомую тем, кто работал с разработкой на основе клиентов (Windows forms).
+- ASP.NET MVC реализует шаблон модели-вид-контроллер для ASP.NET. Акцент делается на "разделение проблем" (обработка, данные и слои uI).
 
-Все три платформы полностью поддерживаются и продолжают разрабатываться командой ASP.NET. Как правило, выбор используемой платформы зависит от фона и опыта работы с ASP.NET.
+Все три структуры полностью поддерживаются и продолжают разрабатываться ASP.NET группой. В общем, выбор, какие рамки использовать зависит от вашего фона и опыта работы с ASP.NET.
 
-Веб-страницы ASP.NET в частности, была разработана, чтобы облегчить пользователям, которые уже знакомы с HTML, добавлять серверную обработку на страницы. Это хороший вариант для учащихся, любителей, людей в целом, которые не знакомы с программированием. Это также может быть хорошим выбором для разработчиков, имеющих опыт работы с веб-технологиями non-ASP.NET.
+ASP.NET веб-страниц, в частности, был разработан, чтобы сделать его легким для людей, которые уже знают HTML, чтобы добавить обработку сервера на свои страницы. Это хороший выбор для студентов, любителей, людей в целом, которые являются новыми для программирования. Он также может быть хорошим выбором для разработчиков, которые имеют опыт работы с non-ASP.NET веб-технологий.
 
 <a id="Do_I_need_WebMatrix_in_order_to_work_with_Web_Pages"></a>
-## <a name="do-i-need-webmatrix-in-order-to-work-with-web-pages"></a>Нужен ли WebMatrix для работы с веб-страницами?
+## <a name="do-i-need-webmatrix-in-order-to-work-with-web-pages"></a>Нужен ли мне WebMatrix для работы с веб-страницами?
 
-Нет. WebMatrix больше не рекомендуется использовать в качестве интегрированной среды разработки для веб-страницы ASP.NET. Используйте [Visual Studio](program-asp-net-web-pages-in-visual-studio.md) или [Visual Studio Code](https://code.visualstudio.com/).
+Нет. WebMatrix больше не рекомендуется в качестве интегрированной среды разработки для ASP.NET web-страниц. Используйте [Visual Studio](program-asp-net-web-pages-in-visual-studio.md) или [визуальный код студии](https://code.visualstudio.com/).
 
-Если вы не хотите использовать Visual Studio или Visual Studio Code, можно установить компоненты отдельных продуктов с помощью [установщик веб-платформы Майкрософт](https://www.microsoft.com/web/downloads/platform.aspx). Вам потребуются следующие продукты:
+Если вы не хотите использовать visual Studio или Visual Studio Code, вы можете установить компоненты индивидуально с помощью [установки веб-платформы Майкрософт.](https://www.microsoft.com/web/downloads/platform.aspx) Вам нужны следующие продукты:
 
 - Microsoft .NET Framework 4.5
-- ASP.NET MVC 5 (который также устанавливает веб-страницы ASP.NET Framework)
+- ASP.NET MVC 5 (который также устанавливает ASP.NET веб-страницы)
 - IIS Express (веб-сервер)
-- Microsoft SQL Server Compact 4,0 (база данных)
+- Компакт серверный сервер Microsoft S'L 4.0 (база данных)
 
-Для редактирования страниц *. cshtml* (или *. vbhtml*) можно использовать текстовый редактор.
+Вы можете использовать текстовый редактор для редактирования *страниц .cshtml* (или *.vbhtml).*
 
-Управление базами данных SQL Server Compact (*SDF* -файлы) без инструмента немного сложнее. Средства Visual Studio контаиндс для управления базами данных *. sdf* . Вы также можете выполнять команды SQL в коде для выполнения многих задач управления SQL Server.
+Управление базами данных S'L Server Compact (*файлы .sdf)* без инструмента немного сложнее. Visual Studio содержит инструменты для управления базами данных *.sdf.* Вы также можете запустить команды в коде для выполнения многих задач управления сервером S'L.
 
-Для проверки страниц *. cshtml* без использования интегрированной среды разработки (IDE) их можно развернуть на активном сервере. (См [. раздел можно ли развернуть веб-страницы ASP.net сайт без использования WebMatrix?](#Can_I_deploy_an_ASP.NET_Web_Pages_site_without_using_WebMatrix))
+Для тестирования страниц *.cshtml* без использования интегрированной среды разработки (IDE) можно развернуть их на живой сервер. (См. [Могу ли я развернуть веб-сайт ASP.NET без использования WebMatrix?)](#Can_I_deploy_an_ASP.NET_Web_Pages_site_without_using_WebMatrix)
 
-### <a name="running-iis-express-without-using-an-ide"></a>Запуск IIS Express без использования интегрированной среды разработки
+### <a name="running-iis-express-without-using-an-ide"></a>Запуск IIS Express без использования IDE
 
-При установке IIS Express на компьютере в качестве веб-сервера его можно использовать для тестирования страниц. Можно запустить IIS Express из командной строки и связать ее с конкретным номером порта. Затем этот порт указывается при запросе *CSHTML* файлов в браузере.
+Если вы установите IIS Express на свой компьютер в качестве веб-сервера, вы можете использовать его для тестирования страниц. Вы можете запустить IIS Express из командной строки и связать его с определенным номером порта. Затем вы указываете этот порт при запросе файлов *.cshtml* в вашем браузере.
 
-В Windows откройте командную строку с правами администратора и измените значение на *C:\Program Files\IIS Express.* (Для 64-разрядных систем используйте папку *C:\Program Files (x86) \Иис Express.)* Затем введите следующую команду, используя фактический путь к сайту:
+В Windows откройте запрос команды с привилегиями администратора и измените его на *C:'Program Files.IIS Express.* (Для 64-разрядных систем используйте папку *C: «Файлы программы »(x86)»IIS Express.)* Затем введите следующую команду, используя фактический путь к вашему сайту:
 
 `iisexpress.exe /port:35896 /path:C:\BasicWebSite`
 
-Можно использовать любой номер порта, который еще не зарезервирован другим процессом. (Обычно номера портов выше 1024.) Для значения `path` используйте путь к папке веб-сайта, в которой находятся файлы. *CSHTML* .
+Вы можете использовать любой номер порта, который еще не зарезервирован каким-либо другим процессом. (Номера порта выше 1024, как правило, бесплатны.) Для `path` значения используйте путь папки веб-сайта, где находятся файлы *.cshtml.*
 
-После выполнения этой команды для настройки IIS Express для обслуживания страниц можно открыть браузер и выбрать *CSHTML* -файл. Используйте URL-адрес, как в следующем примере:
+После запуска этой команды для настройки IIS Express для обслуживания ваших страниц можно открыть браузер и просмотреть файл *.cshtml.* Используйте URL,как следующее:
 
 `http://localhost:35896/default.cshtml`
 
-Чтобы получить справку по IIS Express параметров командной строки, введите `iisexpress.exe /?` в командной строке.
+Для получения помощи с вариантами `iisexpress.exe /?` командной строки IIS Express введите на командной строке.
 
 <a id="Can_I_use_ASP.NET_Web_Forms_controls_on_a_Web_Pages_page"></a>
-## <a name="can-i-use-aspnet-web-forms-controls-on-a-web-pages-page"></a>Можно ли использовать элементы управления веб-форм ASP.NET на странице веб-страниц?
+## <a name="can-i-use-aspnet-web-forms-controls-on-a-web-pages-page"></a>Могу ли я использовать элементы управления веб-ASP.NET веб-формами на странице Веб-страницы?
 
-Нет. Элементы управления веб-форм, такие как элемент управления [CheckBox](https://msdn.microsoft.com/library/system.web.ui.webcontrols.checkbox) , [элементы управления проверки](https://msdn.microsoft.com/library/bwd43d0x)и элемент управления [GridView](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview) , работают только на страницах Web Forms (*ASPX* -файлы). Для этих элементов управления требуется платформа страницы веб-форм.
+Нет. Элементы управления web Forms, такие как контроль [CheckBox,](https://msdn.microsoft.com/library/system.web.ui.webcontrols.checkbox) [элементы управления проверки](https://msdn.microsoft.com/library/bwd43d0x)и управление [GridView](https://msdn.microsoft.com/library/system.web.ui.webcontrols.gridview) работают только на страницах Web Forms *(файлы .aspx).* Эти элементы управления требуют платформы страницы Web Forms.
 
 <a id="Can_I_deploy_an_ASP.NET_Web_Pages_site_without_using_WebMatrix"></a>
-## <a name="can-i-deploy-an-aspnet-web-pages-site-without-using-webmatrix"></a>Можно ли развернуть веб-страницы ASP.NET сайт без использования WebMatrix?
+## <a name="can-i-deploy-an-aspnet-web-pages-site-without-using-webmatrix"></a>Могу ли я развернуть веб-сайт ASP.NET без использования WebMatrix?
 
-Да. Можно вручную скопировать файлы веб-сайта на сервер (обычно с помощью FTP). При выполнении ручного копирования также необходимо скопировать файлы, поддерживающие SQL Server Compact (база данных). Дополнительные сведения см. в записи блога [развертывание приложений веб-страниц без инструмента](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2317).
+Да. Вы можете вручную копировать файлы веб-сайта на сервер (обычно с помощью FTP). Если вы выполняете ручную копию, вы также должны скопировать файлы, которые поддерживают S'L Server Compact (база данных). Для получения подробной информации смотрите запись в блоге [Развертывание веб-страниц приложений без инструмента](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2317).
 
 <a id="Do_I_have_to_use_the_WebSecurity_helper_to_support_logins"></a>
-## <a name="do-i-have-to-use-the-websecurity-helper-to-support-logins"></a>Нужно ли использовать вспомогательный модуль безопасности для поддержки имен входа?
+## <a name="do-i-have-to-use-the-websecurity-helper-to-support-logins"></a>Должен ли я использовать помощника WebSecurity для поддержки логинов?
 
-Нет. Поставщик `SimpleMembership`, который является частью веб-страницы ASP.NET, является одним из вариантов. Также доступны поставщики безопасности, являющиеся частью ASP.NET (которые могут использоваться для работы с веб-формами). Например, можно использовать проверку подлинности с помощью форм в веб-страницы ASP.NET точно так же, как в веб-формах. Один из примеров использования проверки подлинности с помощью форм см. в служба поддержки Майкрософт статье [Реализация проверки подлинности на основе форм в приложении ASP.NET C#с использованием .NET](https://support.microsoft.com/kb/301240). Чтобы скачать простой пример, см. статью [ASP.NET версии &amp; Password](http://www.codeguru.com/csharp/.net/net_asp/scripting/article.php/c19295/ASPNET-version-of-Login--Password.htm).
+Нет. Одним `SimpleMembership` из вариантов является поставщик, врамкахный ASP.NET web-страниц. Поставщики безопасности, которые являются частью ASP.NET (с которыми вы могли бы работать в веб-формах), также доступны. Например, вы можете использовать проверку подлинности форм в ASP.NET веб-страниц так же, как в Web-формах. В качестве примера использования аутентификации форм можно ознакомиться в статье поддержки Майкрософт [«Как реализовать проверку подлинности на основе форм в вашем ASP.NET приложении с помощью C'.NET](https://support.microsoft.com/kb/301240). Чтобы загрузить простой пример, [см. &amp; ASP.NET версию "Логин пароль](http://www.codeguru.com/csharp/.net/net_asp/scripting/article.php/c19295/ASPNET-version-of-Login--Password.htm).
 
-Сведения об использовании проверки подлинности Windows см. в записи блога [использование проверки подлинности Windows в веб-страницы ASP.NET](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2298).
+Для получения информации о том, как использовать проверку подлинности Windows, смотрите запись в блоге [с помощью проверки подлинности Windows в ASP.NET веб-страниц.](http://mikepope.com/blog/DisplayBlog.aspx?permalink=2298)
 
 <a id="Does_ASP.NET_Web_Pages_support_HTML5"></a>
-## <a name="does-aspnet-web-pages-support-html5"></a>Поддерживает ли веб-страницы ASP.NET HTML5?
+## <a name="does-aspnet-web-pages-support-html5"></a>Поддерживает ли ASP.NET веб-страниц HTML5?
 
-Да. Страницы, создаваемые с веб-страницы ASP.NET ( *. cshtml* или *. vbhtml* ), представляют собой HTML-страницы, которые также содержат код, выполняемый на сервере до подготовки страницы к просмотру. Пока браузер пользователя поддерживает HTML5, можно использовать элементы HTML5 на странице *. cshtml* или *. vbhtml* .
+Да. Страницы, создаваемые с помощью веб-страниц ASP.NET *(страницы .cshtml* или *.vbhtml),* по существу являются HTML-страницами, которые также содержат код, который работает на сервере, до того, как страница будет отрисована. Пока браузер пользователя поддерживает HTML5, вы можете использовать элементы HTML5 на странице *.cshtml* или *.vbhtml.*
 
 <a id="Can_I_use_JavaScript_and_jQuery_with_Web_Pages"></a>
-## <a name="can-i-use-javascript-and-jquery-with-web-pages"></a>Можно ли использовать JavaScript и jQuery с веб-страницами?
+## <a name="can-i-use-javascript-and-jquery-with-web-pages"></a>Могу ли я использовать JavaScript и j'еry с веб-страницами?
 
-Конечно. Страницы, создаваемые с веб-страницы ASP.NET ( *. cshtml* или *. vbhtml* ), представляют собой HTML-страницы с серверным кодом. Таким образом, все, что можно сделать на обычной HTML-странице с помощью JavaScript или jQuery, можно также сделать на странице *. cshtml* или *. vbhtml* .
+Конечно. Страницы, которые вы создаете с помощью веб-страниц ASP.NET *(страницы .cshtml* или *.vbhtml)* являются просто HTML-страницами с кодом сервера. Таким образом, все, что вы можете сделать в обычной странице HTML, используя JavaScript или j'sry вы также можете сделать в *.cshtml* или *.vbhtml* странице.
 
-Шаблон **начального сайта** в WebMatrix содержит несколько библиотек jQuery. При создании сайта с помощью этого шаблона папка *Scripts* содержит библиотеку ядра jQuery (*жкуери-1.6.2. js)* и библиотеки для проверки JQuery (*jQuery. Validate. js*и т. д.).
+Шаблон **стартового сайта** в WebMatrix содержит ряд библиотек j'ery. Если вы создаете сайт, используя этот шаблон, папка *Скриптов* содержит основную библиотеку j'ery *(jquery-1.6.2.js)* и библиотеки для проверки j'ery *(jquery.validate.js*и т.д.).
 
-Ниже приведены некоторые записи в блоге, иллюстрирующие способы использования jQuery с веб-страницы ASP.NET.
+Вот некоторые сообщения в блоге, которые иллюстрируют способы использования j'ery с ASP.NET веб-страниц:
 
-- [Добавление "jQuery" в веб-страницы ASP.NET с помощью WebMatrix](http://rachelappel.com/jquery/adding-jquery-goodness-to-asp-net-web-pages-using-webmatrix/) с Рейчел Аппель (
-- [5 мин: WebMatrix + пользовательский интерфейс jQuery + JSON + jQuery Templates](http://joeriks.com/2011/01/30/5-min-webmatrix-jquery-ui-json-jquery-templates/) by Йонас Ерикссон
-- [Формы WebMatrix и jQuery](http://mikesdotnetting.com/Article/155/WebMatrix-And-jQuery-Forms) по Майк бринд
+- [Добавление J'S'ry Добра к ASP.NET веб-страниц с помощью WebMatrix](http://rachelappel.com/jquery/adding-jquery-goodness-to-asp-net-web-pages-using-webmatrix/) Рейчел Аппель
+- [5 мин. Веб-Матрика и J'Ui j'ury - Json и j'ury шаблоны](http://joeriks.com/2011/01/30/5-min-webmatrix-jquery-ui-json-jquery-templates/) Джонаса Эрикссона
+- [WebMatrix и J'Ury формы](http://mikesdotnetting.com/Article/155/WebMatrix-And-jQuery-Forms) Майк Бринд
 
 <a id="AdditionalResources"></a>
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 [Руководство по устранению неполадок веб-страниц ASP.NET (Razor)](https://go.microsoft.com/fwlink/?LinkId=253001)
 
-[Форум WebMatrix и веб-страницы ASP.NET](https://forums.asp.net/1224.aspx/1?WebMatrix) на веб-сайте ASP.NET
+[WebMatrix и форум веб-страниц ASP.NET](https://forums.asp.net/1224.aspx/1?WebMatrix) на веб-сайте ASP.NET

@@ -1,271 +1,271 @@
 ---
 uid: visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
-title: Заметки о выпуске Visual Studio 2013 ASP.NET and Web Tools 2013,2 | Документация Майкрософт
-author: microsoft
+title: ASP.NET и веб-инструменты 2013.2 для Визуальной студии 2013 Примечания к выпуску (ru) Документы Майкрософт
+author: rick-anderson
 description: ''
 ms.author: riande
 ms.date: 03/06/2014
 ms.assetid: 7ef5f73c-ca60-43c1-bdb2-702800347e7e
 msc.legacyurl: /visual-studio/overview/2013/aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes
 msc.type: authoredcontent
-ms.openlocfilehash: 22d4d4afd6963f23d6cfef1745a859c20b69d599
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 41b0f3ad43846bc5799ecd398188b0f6ffcc0d66
+ms.sourcegitcommit: 022f79dbc1350e0c6ffaa1e7e7c6e850cdabf9af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78505452"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81543630"
 ---
 # <a name="aspnet-and-web-tools-20132--for-visual-studio-2013-release-notes"></a>Заметки о выпуске ASP.NET and Web Tools 2013.2 для Visual Studio 2013
 
-по [Майкрософт](https://github.com/microsoft)
+[корпорацией Майкрософт](https://github.com/microsoft)
 
 ## <a name="installation-notes"></a>Замечания по установке
 
-ASP.NET and Web Tools для Visual Studio 2013,2 объединены в основной установщик и могут быть загружены в составе [Visual Studio 2013 обновления 2](https://go.microsoft.com/fwlink/?LinkId=390521).
+ASP.NET и веб-инструменты для визуальной студии 2013.2 в комплекте в основной установщик и могут быть загружены в рамках [Visual Studio 2013 Обновление 2](https://go.microsoft.com/fwlink/?LinkId=390521).
 
 ## <a name="documentation"></a>Документация
 
-Руководства и другие сведения о ASP.NET and Web Tools для Visual Studio 2013,2 доступны на [веб-сайте ASP.NET](https://www.asp.net/).
+Учебники и другая информация о ASP.NET и веб-инструменты для визуальной студии 2013.2 доступны на [веб-сайте ASP.NET](https://www.asp.net/).
 
 ## <a name="software-requirements"></a>Требования к программному обеспечению
 
-Для ASP.NET and Web Tools Visual Studio 2013,2 требуется Visual Studio 2013.
+ASP.NET и веб-инструменты для визуальной студии 2013.2 требует Visual Studio 2013.
 
-## <a name="new-features-in-aspnet-and-web-tools-for-visual-studio-20132"></a>Новые функции в ASP.NET and Web Tools для Visual Studio 2013,2
+## <a name="new-features-in-aspnet-and-web-tools-for-visual-studio-20132"></a>Новые возможности в ASP.NET и веб-инструменты для визуальной студии 2013.2
 
-В следующих разделах описаны функции, которые появились в выпуске.
+В следующих разделах описаны функции, которые были введены в релизе.
 
-- [Один шаблон проекта ASP.NET](#oneaspnet)
+- [Один ASP.NET шаблоны проекта](#oneaspnet)
 - [Поддержка SSL при запуске веб-приложений на IIS Express](#ssl)
-- [Усовершенствования веб-редактора Visual Studio](#vswebeditor)
+- [Улучшения веб-редактора визуальной студии](#vswebeditor)
 - [Привязывание к браузеру](#browserlink)
-- [Поддержка веб-приложений службы приложений Azure в Visual Studio](#waws)
+- [Поддержка веб-приложений службы приложений Azure в визуальной студии](#waws)
 - [Создание удаленных ресурсов Azure при создании нового веб-проекта](#AzureResources)
-- [Усовершенствования веб-публикации](#webpublish)
-- [Формирование шаблонов ASP.NET](#scaffolding)
+- [Веб-публикации Улучшения](#webpublish)
+- [ASP.NET Леса](#scaffolding)
 - [NuGet 2.8.1](#nuget)
-- [Веб-формы ASP.NET](#webforms)
+- [ASP.NET веб-формы](#webforms)
 - [ASP.NET MVC 5.1.2](#mvc)
-- [Веб-API ASP.NET 2.1.2](#webapi)
-- [Веб-страницы ASP.NET 3.1.2](#webpages)
-- [Entity Framework 6,1](#ef)
-- [ASP.NET Identity 2.0.0](#identity)
+- [ASP.NET Web API 2.1.2](#webapi)
+- [ASP.NET веб-страниц 3.1.2](#webpages)
+- [Рамки сущности 6.1](#ef)
+- [ASP.NET Идентичность 2.0.0](#identity)
 - [Компоненты Microsoft OWIN](#owin)
-- [2.0.2 ASP.NET SignalR](#signalr)
+- [ASP.NET сигнал 2.0.2](#signalr)
 
 <a id="oneaspnet"></a>
-### <a name="one-aspnet-project-templates"></a>Один шаблон проекта ASP.NET
+### <a name="one-aspnet-project-templates"></a>Один ASP.NET шаблоны проекта
 
-- Обновления шаблонов проектов ASP.NET для поддержки подтверждения учетной записи и сброса пароля.
-- Обновите шаблон веб-API ASP.NET для поддержки проверки подлинности с помощью локальных учетных записей организации.
-- Шаблон ASP.NET SPA теперь содержит проверку подлинности, основанную на MVC и серверных представлениях. Шаблон имеет контроллер WebAPI, доступ к которому могут получить только пользователи, прошедшие проверку подлинности.
+- Обновления для ASP.NET шаблонов проекта для поддержки подтверждения учетной записи и сбросить пароль.
+- Обновление шаблона Web API ASP.NET для поддержки аутентификации с помощью организационных учетных записей На Premises.
+- Шаблон ASP.NET SPA теперь содержит аутентификацию, основанную на представлениях MVC и серверной стороны. Шаблон имеет контроллер WebAPI, к которому могут получить доступ только аутентифицированные пользователи.
 
 <a id="ssl"></a>
 ### <a name="support-ssl-when-launching-web-applications-on-iis-express"></a>Поддержка SSL при запуске веб-приложений на IIS Express
 
-Чтобы устранить предупреждение безопасности при просмотре и отладке HTTPS на localhost, мы добавили диалоговое окно, позволяющее Internet Explorer и Chrome доверять самозаверяющего SSL-сертификата IIS Express.
+Чтобы исключить предупреждение о безопасности при просмотре и отладке HTTPS на локальном хосте, мы добавили диалог, чтобы позволить Internet Explorer и Chrome доверять самоподписанному сертификату IIS Express SSL.
 
-Например, свойство веб-проекта можно настроить для использования SSL. Нажмите клавишу F4, чтобы открыть диалоговое окно свойств. Измените значение по **протоколу SSL с Enabled** на true. Скопируйте URL-адрес SSL.
+Например, свойство веб-проекта может быть настроено на использование SSL. Нажмите F4, чтобы поднять диалог о свойствах. Изменение **SSL Позволило** верно. Скопируйте URL-адрес SSL.
 
-![Свойство Enabled SSL](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image1.png)
+![Свойство включено SSL](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image1.png)
 
-Задайте для веб-вкладки страницы свойств веб-проекта использование URL-адреса на основе HTTPS (URL-адрес SSL будет `https://localhost:44300/`, если вы ранее не создали веб-сайты SSL.)
+Установите веб-вкладку веб-страницы свойств веб-проекта, чтобы использовать `https://localhost:44300/` URL-адрес на основе HTTPS (URL SSL будет, если вы ранее не создали веб-сайты SSL).
 
-![Задание URL-адреса проекта (HTTPS)](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image2.png)
+![Набор URL-адреса проекта (HTTPS)](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image2.png)
 
-Для запуска приложения нажмите сочетание клавиш CTRL+F5. Следуйте инструкциям, чтобы доверять самостоятельно подписанному сертификату, созданному IIS Express.
+Для запуска приложения нажмите сочетание клавиш CTRL+F5. Следуйте инструкциям, чтобы доверять самоподписанному сертификату, созданному IIS Express.
 
 ![Предупреждение SSL](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image3.png)
 
-Прочтите диалоговое окно **Security Warning (предупреждение системы безопасности** ) и нажмите кнопку **Да** , если хотите установить сертификат, представляющий localhost.
+Прочитайте диалог **предупреждения о безопасности,** а затем нажмите **«Да»,** если вы хотите установить сертификат, представляющий localhost.
 
 ![Предупреждение системы безопасности](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image4.png)
 
-Сайт будет отображаться в IE или Chrome без предупреждения сертификата в браузере.
+Сайт будет отображаться в IE или Chrome без предупреждения о сертификате в браузере.
 
 ![Страница HTTPS без предупреждений](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image5.png)
 
-Firefox использует собственное хранилище сертификатов, поэтому отобразится предупреждение.
+Firefox использует свой собственный магазин сертификатов, поэтому он будет отображать предупреждение.
 
 <a id="vswebeditor"></a>
-### <a name="visual-studio-web-editor-enhancements"></a>Усовершенствования веб-редактора Visual Studio
+### <a name="visual-studio-web-editor-enhancements"></a>Улучшения веб-редактора визуальной студии
 
-- **Новый элемент проекта JSON и редактор**: мы добавили в Visual Studio элемент проекта JSON и редактор. Текущие функции редактора JSON включают выделение цветом, проверку синтаксиса, завершение фигурных скобок, структуризацию, настройку параметров инструментов и многое другое.
+- **Новый элемент проекта JSON и редактор**: Мы добавили элемент проекта JSON и редактора в Visual Studio. Текущие функции редактора JSON включают окраску, проверку синтаксиса, завершение скобки, изложение, настройки опций инструментов и многое другое.
 
     ![Редактор JSON](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image6.png)
 
-    IntelliSense теперь поддерживает [JSON Schema](http://json-schema.org/) v3 и v4. Существует поле со списком схем для выбора существующих схем, изменения пути к локальной схеме или просто перетаскивания JSON-файла проекта для получения относительного пути.
+    IntelliSense теперь поддерживает [JSON Schema](http://json-schema.org/) v3 и v4. Существует комбо-коробка схемы для выбора существующих схем, отсечения локального пути схемы или просто перетащите файл проекта JSON, чтобы получить относительный путь.
 
-    ![IntelliSense для JSON](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image7.png)    ![Редактор схемы JSON](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image8.png)
-- **Новый редактор Sasser (SCSS)** : мы добавили меньшее значение в VS2013 RTM, и теперь у нас есть элемент проекта и редактор. Функции редактора Sasser сравнимы с редактором LESS, а также включают выделение цветом, переменную и примеси IntelliSense, комментирование/раскомментировать, краткие сведения, форматирование, проверку синтаксиса, структуризацию, goto Definition, выбор цвета, параметр инструментов и т. д.
+    ![JSON Intellisense](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image7.png)    ![Редактор JSON Schema](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image8.png)
+- **Новый редактор Sass (SCSS):** Мы добавили LESS в VS2013 RTM, и теперь у нас есть элемент проекта Sass и редактор. Функции редактора Sass сопоставимы с редактором LESS, и включают в себя окраску, переменную и Mixins IntelliSense, комментарий / комментарий, быструю информацию, форматирование, синтаксис проверки, изложение, определение Гото, сборщик цветов, параметры инструментов и т.д.
 
-    ![Добавление нового элемента: таблица стилей SCSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image9.png)    ![Редактор таблицы стилей](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image10.png)
-- **Средство выбора нового URL-адреса в документах HTML, Razor, CSS, less и Sasser:** VS 2013 поставляется без средства выбора URL-адресов за пределами страниц веб-форм. Средство выбора нового URL-адреса для редакторов HTML, Razor, CSS, LESS и Sasser является бесплатным средством выбора ввода, которое распознает ".." и соответствующим образом фильтрует списки файлов для тегов и ссылок IMG.
+    ![Добавить новый пункт: SCSS Стиль листа](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image9.png)    ![Редактор листа стиля](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image10.png)
+- **Новый URL-выборщик в документах HTML, Razor, CSS, LESS и Sass:** VS 2013 поставляется без сборщика URL-адресов за пределами страниц Web Forms. Новый сборщик URL для редакторов HTML, Razor, CSS, LESS и Sass — это сборщик диалогов, свободно вводимый, который понимает»... и фильтры списков файлов соответствующим образом для img теги и ссылки.
 
-    ![Средство выбора URL-адресов для тега Image](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image11.png)    ![Средство выбора URL-адресов для представлений](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image12.png)    ![Средство выбора URL-адресов для CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image13.png)
-- **Обновляет редактор LESS, добавляя дополнительные функции**
-- **Обновление с помощью технологии Unвыколачивание**. Мы добавили нестандартный синтаксис маскирования для VS IntelliSense, синтаксис "Ko-VS-Editor viewModel:". Его можно использовать для привязки к нескольким моделям представления на странице с помощью комментариев в форме:
+    ![URL Picker для тега изображений](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image11.png)    ![URL Picker для просмотров](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image12.png)    ![URL-выборщик для CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image13.png)
+- **Обновления для редактора LESS, добавив больше возможностей**
+- **Knockout Intellisense Upgrade**: Мы добавили нестандартный синтаксис KnockOut для VS intelliSense, "ko-vs-editor viewModel:" синтаксис. Он может быть использован для привязки к нескольким моделям представления на странице с помощью комментариев в форме:
 
-    ![Маскирование IntelliSense](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image14.png)
+    ![Нокаут Интеллект](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image14.png)
 
-    Мы также добавили поддержку вложенной функции IntelliSense для ViewModel, поэтому вы можете углубиться в глубоко вложенные объекты в ViewModel.
+    Мы также добавили поддержку вложенных ViewModel IntelliSense, так что вы можете просверлить глубоко вложенных объектов на ViewModel.
 
     `<div data-bind="text: foo.bar.baz.etc" />`
 
-    Отображаемая IntelliSense является полной технологией IntelliSense объекта JavaScript.
+    Отображаемый IntelliSense — это полное IntelliSense объекта JavaScript.
 
-    ![Технология IntelliSense, показывающая полный объект JavaScript](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image15.png)
-- **Средство выбора нового URL-адреса в документах HTML, Razor, CSS, less и Sasser**: VS 2013 поставляется без выбора URL-адресов за пределами страниц веб-форм. Средство выбора нового URL-адреса для редакторов HTML, Razor, CSS, LESS и Sasser является бесплатным средством выбора ввода, которое распознает ".." и соответствующим образом фильтрует списки файлов для тегов и ссылок IMG.
+    ![Intellisense показывает полный объект JavaScript](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image15.png)
+- **Новый URL-выборщик в HTML, Razor, CSS, LESS и Sass документы**: VS 2013 поставляется без сборщика URL за пределами страниц веб-форм. Новый сборщик URL для редакторов HTML, Razor, CSS, LESS и Sass — это сборщик диалогов, свободно вводимый, который понимает»... и фильтры списков файлов соответствующим образом для img теги и ссылки.
 
-    ![Средство выбора URL-адресов для тега Image](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image16.png)    ![Средство выбора URL-адресов для представлений](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image17.png)    ![Средство выбора URL-адресов для CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image18.png)
+    ![URL Picker для тега изображений](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image16.png)    ![URL Picker для просмотров](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image17.png)    ![URL-выборщик для CSS](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image18.png)
 
 <a id="browserlink"></a>
 ### <a name="browser-link"></a>Привязывание к браузеру
 
-- Связь с браузером теперь поддерживает подключения по протоколу HTTPS и будет выводить список на панели мониторинга с другими подключениями, если сертификат является доверенным для браузера.
-- Сопоставление статического HTML-кода
-- Поддержка SPA для сопоставления данных
-- Автоматическое обновление данных сопоставления
+- Браузер ссылка теперь поддерживает httpS соединений и будет перечислять, что в dashboard с другими соединениями до тех пор, как сертификат доверяют браузера.
+- Статическое отображение источника HTML
+- Поддержка SPA для картографических данных
+- Данные отображения автоматического обновления
 
 <a id="waws"></a>
-### <a name="support-for-azure-app-service-web-apps-in-visual-studio"></a>Поддержка веб-приложений службы приложений Azure в Visual Studio
+### <a name="support-for-azure-app-service-web-apps-in-visual-studio"></a>Поддержка веб-приложений службы приложений Azure в визуальной студии
 
-- **Поддержка входа в Azure.**
-- **Удаленная отладка и удаленное представление для веб-приложений**. Теперь поддерживается [Удаленная отладка веб-приложений в службе приложений Azure](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio) и удаленное представление файлов содержимого веб-приложения в обозревателе сервера.
+- **Поддержка в ввоза Azure.**
+- **Удаленная отладка и удаленное представление для веб-приложений:** Теперь мы поддерживаем [удаленную отладку для веб-приложений в Azure App Service](https://docs.microsoft.com/azure/app-service-web/web-sites-dotnet-troubleshoot-visual-studio) и удаленное представление файлов содержимого веб-приложений в сервере Explorer.
 
 <a id="AzureResources"></a>
 ### <a name="create-remote-azure-resources-when-creating-a-new-web-project"></a>Создание удаленных ресурсов Azure при создании нового веб-проекта
 
-В диалоговом окне новое веб-приложение добавлен флажок Azure ["создать удаленные ресурсы"](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet) . Выбрав его, вы сможете интегрировать возможности создания нового веб-приложения, настройки сайта публикации Azure для тестирования и создания профиля публикации за несколько простых шагов.
+Мы добавили флажок Azure ["Создание удаленных ресурсов"](https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-dotnet) в новый диалог веб-приложений. Выбрав его, вы сможете интегрировать опыт создания нового веб-приложения, настройки издательского сайта Azure для тестирования и создания профиля публикации в несколько простых шагов.
 
 ![Новый проект с ресурсами Azure](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image19.png)![Публикация в Azure](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image20.png)
 
 <a id="webpublish"></a>
-### <a name="web-publish-enhancements"></a>Усовершенствования веб-публикации
+### <a name="web-publish-enhancements"></a>Веб-публикации Улучшения
 
-- Улучшение взаимодействия с пользователем при публикации.
+- Улучшение пользовательского опыта публикации.
 
 <a id="scaffolding"></a>
-### <a name="aspnet-scaffolding"></a>Формирование шаблонов ASP.NET
+### <a name="aspnet-scaffolding"></a>ASP.NET Леса
 
-- **Поддержка перечисления:** Если модель использует перечисление, то формирование шаблонов MVC создаст раскрывающийся список для перечисления. При этом используются вспомогательные функции перечисления в MVC.
-- **Поддержка начальной загрузки**: обновлены шаблоны Едиторфор в формировании шаблонов MVC, чтобы они использовали классы начальной загрузки.
-- **Поддержка пакетов**. шаблоны MVC и веб-API будут добавлять пакеты 5,1 для MVC и веб-API.
+- **Поддержка Enum:** Если ваша модель использует Enums, то MVC Scaffolder будет генерировать выпадение для Enum. При этом используются помощники Enum в MVC.
+- **Поддержка Bootstrap**: Обновлено шаблоны EditorFor в MVC Scaffolding, чтобы они использовали классы Bootstrap.
+- **Поддержка пакетов**: MVC и Web API Scaffolders добавят 5.1 пакетов для MVC и Web API
 
-На следующих снимках экрана показаны модели формирования шаблонов.
+На следующих скриншотах демонстрируются модели строительных лесов.
 
 - Код модели:
 
      ![Код модели](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image21.png)
-- Скомпилируйте код модели, щелкните правой кнопкой мыши и выберите **Добавить**, создать шаблонный **элемент**.
+- Соберите код модели, нажмите правой кнопкой мыши и выберите **Добавить,** **Новый Scaffolded Пункт**.
 
-     ![Добавление нового шаблона элемента](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image22.png)
-- Выберите **контроллер MVC5 с представлениями с помощью Entity Framework**:
+     ![Добавить новый Scaffolded Пункт](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image22.png)
+- Выберите **контроллер MVC5 с представлениями, используя рамки Entity:**
 
      ![Добавление нового контроллера MVC5 с представлениями](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image23.png)
 - **Добавить контроллер** с помощью модели:
 
     ![](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image24.png)
-- Проверьте созданный код, например Views/Викдаймоделс/Edit. cshtml содержит `@Html.EnumDropDownListFor`: ![представление, содержащее Енумдропдовнлистфор](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image25.png)
-- Запустите страницу, чтобы увидеть созданное поле со списком перечислимых значений. Обратите внимание, что если значение может быть равно null, для поля со списком можно выбрать пустую строку. Например, на странице **Создание** отображаются следующие сведения:
+- Проверьте сгенерированный код, например, Просмотры/WeekdayModels/Edit.cshtml содержит: `@Html.EnumDropDownListFor` ![Просмотр, содержащий EnumDropDownListFor](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image25.png)
+- Выполнить страницу, чтобы увидеть enum combobox генерируется, обратите внимание, что если значение может быть нулевым, пустая строка может быть выбрана для комбо-бокс. Например, на странице **«Создание»** показано следующее:
 
-    ![Поле со списком, допускающее пустую строку](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image26.png)
+    ![Комбо-коробка, позволяющая пустую строку](aspnet-and-web-tools-20132-preview-for-visual-studio-2013-release-notes/_static/image26.png)
 
 <a id="nuget"></a>
 ### <a name="nuget-281"></a>NuGet 2.8.1
 
-Версия NuGet 2.8.1 RTM будет выпущена в апреле 2014. Ниже приведены ключевыеные точки из заметок о выпуске, но дополнительные сведения об этих изменениях см. в [полной заметке о выпуске](http://docs.nuget.org/docs/release-notes/nuget-2.8) .
+NuGet 2.8.1 RTM будет выпущен в апреле 2014 года. Вот основные моменты из примечаний к выпуску, но, пожалуйста, проверьте [полные примечания к выпуску](http://docs.nuget.org/docs/release-notes/nuget-2.8) для получения дополнительной информации об этих изменениях.
 
-- **Целевое приложение Windows Phone 8,1**. NuGet 2.8.1 теперь поддерживает целевые приложения Windows Phone 8,1, используя моникеры целевой платформы "виндовсфонеапп", "WPA", "WindowsPhoneApp81" и "WPA81".
+- **Целевая Windows Phone 8.1 Приложения**: NuGet 2.8.1 теперь поддерживает таргетинг Windows Phone 8.1 Приложения с использованием целевых рамочных кликеров 'WindowsPhoneApp', 'WPA', 'WindowsPhoneApp81'и 'WPA81'.
 
-- **Разрешение исправлений для зависимостей**. при разрешении зависимостей пакетов NuGet выполнил стратегию выбора наименьшей основной и дополнительной версии пакета, удовлетворяющей зависимостям пакета. Однако, в отличие от основной и дополнительной версий, версия исправления всегда была решена до самой высокой версии. Хотя поведение было хорошо намерено, было создано отсутствие детерминированности при установке пакетов с зависимостями.
-- **Депенденциверсион Switch**: хотя NuGet 2,8 изменяет поведение *по умолчанию* для разрешения зависимостей, оно также добавляет более точный контроль над процессом разрешения зависимостей с помощью параметра-депенденциверсион в консоли диспетчера пакетов. Параметр позволяет разрешать зависимости от наименьшей возможной версии (поведения по умолчанию), максимально возможной версии или самой высокой версии или исправления. Этот параметр работает только для Install-Package в команде PowerShell.
-- **Атрибут депенденциверсион**. в дополнение к параметру-депенденциверсион, описанному выше, NuGet также допускал возможность установки нового атрибута в файле NuGet. config, определяющего значение по умолчанию, если параметр-депенденциверсион не указан при вызове Install-Package. Это значение будет также соблюдаться в диалоговом окне диспетчера пакетов NuGet для всех операций установки пакета. Чтобы задать это значение, добавьте приведенный ниже атрибут в файл NuGet. config:
+- **Разрешение патча для зависимостей:** При разрешении зависимостей пакетов NuGet исторически реализовал стратегию выбора самой низкой основной и незначительной версии пакета, которая удовлетворяет зависимостям от пакета. В отличие от основной и незначительной версии, однако, патч версия всегда была решена на самую высокую версию. Хотя поведение было благими намерениями, это создало отсутствие детерминизма для установки пакетов с зависимостями.
+- **Переключатель зависимости:** Хотя NuGet 2.8 изменяет поведение *по умолчанию* для разрешения зависимостей, он также добавляет более точный контроль над процессом разрешения зависимостей через переключатель -DependencyVersion в консоли менеджера пакетов. Коммутатор позволяет разрешать зависимости к минимально возможной версии (поведение по умолчанию), максимально возможной версии или самой высокой незначительной или патч-версии. Этот переключатель работает только для установки пакета в команде powershell.
+- **Атрибут зависимости:** В дополнение к коммутатору -DependencyVersion, описанного выше, NuGet также допустил возможность установки нового атрибута в файле nuget.config, определяющем значение по умолчанию, если переключатель -DependencyVersion не указан в вызове установки-пакета. Это значение также будет уважаться менеджером пакета NuGet Dialog для любых операций установки пакета. Чтобы установить это значение, добавьте атрибут ниже в файл nuget.config:
 
     `<config> <add key="dependencyversion" value="Highest" /> </config>`
-- **Предварительная версия операций NuGet с параметром-WhatIf**: некоторые пакеты NuGet могут иметь глубокие графы зависимостей, поэтому они могут быть полезны во время операции установки, удаления или обновления, чтобы сначала увидеть, что произойдет. NuGet 2,8 добавляет стандарт PowerShell-What, если переключились на команды install-Package, uninstall-package и Update-Package, чтобы обеспечить визуализацию всего замыкания пакетов, к которым будет применена команда.
-- **Понизить версию пакета**. Установка предварительной версии пакета не является распространенной, чтобы исследовать новые возможности, а затем решили выполнить откат до последней стабильной версии. До NuGet 2,8 этот процесс был многошаговым процессом удаления пакета предварительной версии и его зависимостей, а затем установки более ранней версии. Однако в NuGet 2,8 пакет Update-Package теперь будет выполнять откат всего замыкания пакета (например, дерева зависимостей пакета) до предыдущей версии.
-- **Зависимости разработки**. многие различные типы возможностей могут доставляться как пакеты NuGet, включая средства, используемые для оптимизации процесса разработки. Эти компоненты, хотя они могут быть Instrumental при разработке нового пакета, не должны рассматриваться как зависимость нового пакета при последующей публикации. NuGet 2,8 позволяет пакету идентифицировать себя в файле. nuspec как developmentDependency. При установке эти метаданные также будут добавлены в файл Packages. config проекта, в который был установлен пакет. Когда этот файл Packages. config будет впоследствии проанализирован для зависимостей NuGet во время пакета NuGet. exe, он исключит эти зависимости, помеченные как зависимости разработки.
-- **Отдельные файлы Packages. config для различных платформ**: при разработке приложений для нескольких целевых платформ часто используются разные файлы проекта для каждой из соответствующих сред сборки. Также часто используются разные пакеты NuGet в разных файлах проекта, так как пакеты имеют разные уровни поддержки для разных платформ. NuGet 2,8 обеспечивает улучшенную поддержку этого сценария путем создания различных файлов Packages. config для различных файлов проектов, зависящих от платформы.
-- **Откат к локальному кэшу**: Хотя пакеты NuGet обычно используются из удаленной галереи, такой как [коллекция NuGet](http://www.nuget.org) , с помощью сетевого подключения, существует множество сценариев, в которых клиент не подключен. Без подключения к сети клиент NuGet не смог успешно установить пакеты, даже если эти пакеты уже были на компьютере клиента в локальном кэше NuGet. NuGet 2,8 добавляет автоматический возврат кэша в консоль диспетчера пакетов.
+- **Предварительный просмотр операций NuGet с -WhatIf**: Некоторые пакеты NuGet могут иметь глубокие графики зависимости, и как таковой, это может быть полезно во время установки, удаления или обновления операции, чтобы сначала увидеть, что произойдет. NuGet 2.8 добавляет стандартные PowerShell - что, если переключитесь на установку-пакет, удалить пакет и обновления пакеткоманды команды, чтобы визуализировать все закрытие пакетов, к которым команда будет применяться.
+- **Понижающий пакет**: Это не редкость, чтобы установить пререлиз версию пакета для того, чтобы исследовать новые функции, а затем решили откатить к последней стабильной версии. До NuGet 2.8 это был многоступенчатый процесс удаления пакета пререлизов и его зависимостей, а затем установки более ранней версии. Однако с NuGet 2.8 пакет обновления будет откатывать все закрытие пакета (например, дерево зависимости пакета) к предыдущей версии.
+- **Зависимости разработчиков:** Многие различные типы возможностей могут быть доставлены в виде пакетов NuGet, включая инструменты, которые используются для оптимизации процесса разработки. Эти компоненты, хотя они могут играть важную роль в разработке нового пакета, не должны рассматриваться как зависимость нового пакета, когда он будет опубликован позже. NuGet 2.8 позволяет пакету идентифицировать себя в файле .nuspec как разработкаЗависимость. После установки эти метаданные также будут добавлены в packages.config файл проекта, в который был установлен пакет. Когда этот файл packages.config будет позже проанализирован для зависимостей NuGet во время пакета nuget.exe, он исключит те зависимости, помеченные как зависимости развития.
+- **Индивидуальные файлы packages.config для различных платформ**: При разработке приложений для нескольких целевых платформ, как обычно, имеются различные файлы проекта для каждой из соответствующих сред сборки. Также часто используются различные пакеты NuGet в различных файлах проекта, так как пакеты имеют различные уровни поддержки для различных платформ. NuGet 2.8 обеспечивает улучшенную поддержку этого сценария, создавая различные файлы packages.config для различных файлов проектов, специфичными для платформы.
+- **Возврат к локальному кэшу**: Хотя пакеты NuGet обычно потребляются из удаленной галереи, такой как [галерея NuGet,](http://www.nuget.org) используя сетевое соединение, существует множество сценариев, в которых клиент не подключен. Без сетевого подключения клиент NuGet не смог успешно установить пакеты - даже когда эти пакеты уже были на машине клиента в локальном кэше NuGet. NuGet 2.8 добавляет автоматический кэш резервного копирования на консоль управления пакетами.
 
-    Функция резервного кэша не требует никаких конкретных аргументов команды. Кроме того, резерв кэша в настоящее время работает только в консоли диспетчера пакетов. в настоящее время поведение не работает в диалоговом окне диспетчера пакетов.
-- **Исправления ошибок**: одна из основных исправленных ошибок была улучшена в ходе повышения производительности в команде Update-Package-REINSTALL.
+    Функция резервного копирования кэша не требует каких-либо конкретных аргументов команды. Кроме того, запас кэша в настоящее время работает только в консоли менеджера пакетов - поведение в настоящее время не работает в диалоге менеджера пакетов.
+- **Исправление ошибок**: Одним из основных исправлений ошибок было улучшение производительности в команде обновления-пакета-переустановки.
 
-    В дополнение к этим функциям и упомянутому выше исправлению производительности в этом выпуске NuGet также содержится множество других исправлений ошибок. В выпуске было 181о общих проблем. Полный список рабочих элементов, исправленных в NuGet 2,8, см [. в этом](https://nuget.codeplex.com/workitem/list/advanced?release=NuGet%202.8&status=all) выпуске.
+    В дополнение к этим функциям и вышеупомянутому исправлению производительности, этот релиз NuGet также включает в себя множество других исправлений ошибок. В релизе был рассмотрен 181 вопрос. Полный список рабочих элементов, зафиксированных в NuGet 2.8, пожалуйста, просмотрите [NuGet Issue Tracker](https://nuget.codeplex.com/workitem/list/advanced?release=NuGet%202.8&status=all) для этого выпуска.
 
 <a id="webforms"></a>
 ### <a name="aspnet-web-forms"></a>Веб-формы ASP.NET
 
-- Теперь в шаблонах веб-форм показано, как выполнить подтверждение учетной записи и сброс пароля для ASP.NET Identity.
-- Элемент управления источника данных сущностей и поставщик платформа динамических данных для Entity Framework 6. Дополнительные сведения см. в следующем блоге MSDN: [Платформа динамических данных provider и EntityDataSource Control для Entity Framework 6](https://blogs.msdn.com/b/webdev/archive/2014/01/30/announcing-preview-of-dynamic-data-provider-and-entitydatasource-control-for-entity-framework-6.aspx).
+- Шаблоны Web Forms теперь показывают, как сделать подтверждение учетной записи и сбросить пароль для ASP.NET identity.
+- Управление источником данных сущности и динамический поставщик данных для рамочной системы сущности 6. Для получения более подробной информации, пожалуйста, смотрите следующий блог MSDN: [Динамические данные поставщика и EntityDataSource управления для Entity Framework 6](https://blogs.msdn.com/b/webdev/archive/2014/01/30/announcing-preview-of-dynamic-data-provider-and-entitydatasource-control-for-entity-framework-6.aspx).
 
 <a id="mvc"></a>
 ### <a name="aspnet-mvc-512"></a>ASP.NET MVC 5.1.2
 
-- [Усовершенствования маршрутизации атрибутов](../../../mvc/overview/releases/mvc51-release-notes.md#AttributeRouting)
-- [Поддержка начальной загрузки для шаблонов редактора](../../../mvc/overview/releases/mvc51-release-notes.md#Bootstrap)
-- [Поддержка перечисления в представлениях](../../../mvc/overview/releases/mvc51-release-notes.md#Enum)
-- [Ненавязчивая поддержка атрибутов MinLength и MaxLength](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
-- [Поддержка контекста this в ненавязчивой AJAX](../../../mvc/overview/releases/mvc51-release-notes.md#thisContext)
-- [Исправления различных ошибок](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=MVC&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
+- [Улучшения атрибута для реуктора](../../../mvc/overview/releases/mvc51-release-notes.md#AttributeRouting)
+- [Поддержка Bootstrap для шаблонов редакторов](../../../mvc/overview/releases/mvc51-release-notes.md#Bootstrap)
+- [Поддержка Enum в представлениях](../../../mvc/overview/releases/mvc51-release-notes.md#Enum)
+- [Ненавязчивая поддержка атрибутов MinLength/ MaxLength](../../../mvc/overview/releases/mvc51-release-notes.md#Unobtrusive)
+- [Поддержка «этого» контекста в ненавязчивом Ajax](../../../mvc/overview/releases/mvc51-release-notes.md#thisContext)
+- Различные [исправления ошибок](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=MVC&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 
 <a id="webapi"></a>
-### <a name="aspnet-web-api-212"></a>Веб-API ASP.NET 2.1.2
+### <a name="aspnet-web-api-212"></a>ASP.NET Web API 2.1.2
 
 - [Глобальная обработка ошибок](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#global-error)
-- [Усовершенствования маршрутизации атрибутов](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#attribute-routing)
-- [Улучшения страницы справки](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#help-page)
-- [Поддержка Игнорерауте](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#ignoreroute)
-- [Модуль форматирования мультимедиа BSON](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#bson)
-- [Улучшенная поддержка асинхронных фильтров](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#async-filters)
-- [Синтаксический анализ запросов для библиотеки форматирования клиента](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#query-parsing)
-- [Исправления различных ошибок](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20API%7cWeb%20API%20OData&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
+- [Улучшения аспогеонных характеристик](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#attribute-routing)
+- [Улучшение страницы справки](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#help-page)
+- [Игнорировать поддержку маршрута](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#ignoreroute)
+- [БСОН медиа-типа formatter](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#bson)
+- [Улучшенная поддержка асиновых фильтров](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#async-filters)
+- [Разбор запросов для библиотеки форматирования клиента](../../../web-api/overview/releases/whats-new-in-aspnet-web-api-21.md#query-parsing)
+- Различные [исправления ошибок](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20API%7cWeb%20API%20OData&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 
 <a id="webpages"></a>
-### <a name="aspnet-web-pages-312"></a>Веб-страницы ASP.NET 3.1.2
+### <a name="aspnet-web-pages-312"></a>ASP.NET веб-страниц 3.1.2
 
-- [Исправления различных ошибок](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20Pages/Razor&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
+- Различные [исправления ошибок](https://aspnetwebstack.codeplex.com/workitem/list/advanced?keyword=&status=Closed&type=All&priority=All&release=v5.1%20Preview%7cv5.1%20RTM&assignedTo=All&component=Web%20Pages/Razor&sortField=AssignedTo&sortDirection=Ascending&page=0&reasonClosed=Fixed)
 
 <a id="ef"></a>
-### <a name="entity-framework-61"></a>Entity Framework 6,1
+### <a name="entity-framework-61"></a>Рамки сущности 6.1
 
-Entity Framework была обновлена до версии 6,1 как для среды выполнения, так и для инструментов. Entity Framework (EF) 6,1 является незначительным обновлением для Entity Framework 6 и включает ряд исправлений ошибок и новых функций. Подробные сведения о EF 6.1, включая ссылки на документацию по новым функциям, см. в разделе [Entity Framework журнал версий](https://msdn.microsoft.com/data/jj574253). В этом выпуске доступны следующие новые функции:
+Рамки сущности были обновлены до версии 6.1 как для выполнения, так и для инструментария. Entity Framework (EF) 6.1 представляет собой незначительное обновление для Entity Framework 6 и включает в себя ряд исправлений ошибок и новые функции. Для получения подробной информации о EF6.1, включая ссылки на документацию для новых функций, [см.](https://msdn.microsoft.com/data/jj574253) Новые функции в этом выпуске включают в себя:
 
-- **Консолидация инструментов** обеспечивает единообразный способ создания новой модели EF. Эта функция расширяет возможности мастера ADO.NET EDM для поддержки создания моделей Code First, включая реконструирование из существующей базы данных. Эти функции ранее были доступны по качеству бета-версии в средствах EF Power Tools.
-- **Обработка ошибок фиксации транзакций** предоставляет новый объект [System. Data. Entity. Infrastructure. коммитфаилурехандлер](https://msdn.microsoft.com/library/system.data.entity.infrastructure.commitfailurehandler(v=vs.113).aspx) , который использует вновь появившуюся возможность перехвата операций транзакций. **Коммитфаилурехандлер** позволяет выполнять автоматическое восстановление после сбоев соединения, в то же самое фиксирует транзакцию.
-- **Индексаттрибуте** позволяет указать индексы, размещая атрибут в свойстве (или свойствах) в модели Code First. Code First создаст соответствующий индекс в базе данных.
-- **Открытый API сопоставления** предоставляет доступ к информации EF о том, как свойства и типы сопоставляются со столбцами и таблицами в базе данных. В прошлых выпусках этот API был внутренним.
-- **Возможность настройки перехватчиков с помощью файла App/Web. config**(позволяет добавлять перехватчики без перекомпиляции приложения).
-- **Датабаселогжер** — это новый перехватчик, который упрощает запись всех операций базы данных в файл. В сочетании с предыдущим компонентом это позволяет легко переключать ведение журнала операций базы данных для развернутого приложения без необходимости перекомпиляции.
-- Было улучшено **Обнаружение изменений в модели миграции** , чтобы формировать более точные шаблоны. производительность процесса обнаружения изменений также была значительно улучшена.
-- **Улучшения производительности** , включая уменьшение количества операций с базой данных во время инициализации, оптимизацию для сравнения значений NULL в запросах LINQ, более быстрое создание представления (создание модели), а также более эффективная материализация отслеживаний сущностей с несколькими ассоциациями.
+- **Консолидация инструментов** обеспечивает последовательный способ создания новой модели EF. Эта функция расширяет мастер-модель данных ADO.NET сущности, чтобы поддержать создание моделей Code First, включая обратную инженерию из существующей базы данных. Эти функции ранее были доступны в бета-качество в EF Power Tools.
+- **Обработка сбоев транзакционных сбоев** обеспечивает новую [систему System.Data.Entity.Infrastructure.CommitFailureHandler,](https://msdn.microsoft.com/library/system.data.entity.infrastructure.commitfailurehandler(v=vs.113).aspx) которая использует недавно введенную возможность перехвата транзакционных операций. **CommitFailureHandler** позволяет автоматически восстановить сядки соединения при совершении транзакции.
+- **IndexAttribute** позволяет указывать индексы, размещая атрибут на свойстве (или свойствах) в модели Code First. Код First создаст соответствующий индекс в базе данных.
+- **API публичного картирования** предоставляет доступ к информации EF о том, как свойства и типы отображаются в столбцах и таблицах в базе данных. В прошлых выпусках этот API был внутренним.
+- **Возможность настройки перехватчиков через файл App/Web.config**(позволяет добавлять перехватчики без перекомпиляции приложения).
+- **DatabaseLogger** — это новый перехватчик, который позволяет легко регистрировать все операции базы данных в файл. В сочетании с предыдущей функцией это позволяет легко включать журнал операций базы данных для развернутого приложения без необходимости перекомпилировать.
+- **Обнаружение изменений модели миграции** было улучшено таким образом, чтобы миграции с лесами были более точными; также значительно повысилась эффективность процесса обнаружения изменений.
+- **Улучшения производительности,** включая сокращение операций с базами данных во время инициализации, оптимизацию сравнения нулевого равенства в запросах ЛИНЗ, более быструю генерацию представления (создание модели) в большем количестве сценариев и более эффективную материализацию отслеживаемых сущностей с несколькими ассоциациями.
 
 <a id="identity"></a>
-### <a name="aspnet-identity-200"></a>ASP.NET Identity 2.0.0
+### <a name="aspnet-identity-200"></a>ASP.NET Идентичность 2.0.0
 
-- **Двухфакторная проверка подлинности**: ASP.NET Identity теперь поддерживает двухфакторную проверку подлинности. Двухфакторная проверка подлинности обеспечивает дополнительный уровень безопасности учетных записей пользователей в случае компрометации пароля. Также существует защита от атак методом подбора с использованием двух кодов фактора.
-- **Блокировка учетной записи:** Предоставляет способ блокировки пользователя, если пользователь вводит свой пароль или два фактора кода неправильно. Можно настроить количество недопустимых попыток и временной диапазон для пользователей. При необходимости разработчик может отключить блокировку учетной записи для определенных учетных записей пользователей.
-- **Подтверждение учетной записи:** Система ASP.NET Identity теперь поддерживает подтверждение учетной записи. Это довольно распространенный сценарий на большинстве веб-сайтов, где при регистрации новой учетной записи на веб-сайте необходимо подтвердить свою электронную почту, прежде чем можно будет выполнять любые действия на веб-сайте. Подтверждение электронной почты полезно, так как оно предотвращает создание фиктивных учетных записей. Это чрезвычайно полезно, если вы используете электронную почту в качестве метода связи с пользователями вашего веб-сайта, например для веб-узлов форума, банковских, электронных писем или социальных сетей.
-- **Сброс пароля:** Сброс пароля — это функция, позволяющая пользователю сбрасывать пароли, если они забыли пароль.
-- **Метка безопасности (выйдите везде):** Поддерживает способ повторного создания маркера безопасности для пользователя в случае, когда пользователь изменяет пароль или другие сведения, связанные с безопасностью, такие как удаление связанного имени входа (например, Facebook, Google, учетная запись Майкрософт и т. д.). Это необходимо для того, чтобы все маркеры, созданные с помощью старого пароля, стали недействительными. В примере проекта при изменении пароля пользователя создается новый маркер для пользователя, а все предыдущие токены становятся недействительными. Эта функция обеспечивает дополнительный уровень безопасности для приложения, так как при смене пароля будет выполнен выход из любого места (все остальные браузеры), где вы вошли в это приложение.
-- **Сделайте тип первичного ключа расширяемым для пользователей и ролей**: в ASP.NET Identity 1,0 тип первичного ключа для пользователей и ролей таблицы был строкой. Это означает, что ASP.NET Identity система была сохранена в SQL Server с помощью Entity Framework, мы использовали nvarchar. Существует много обсуждений этой реализации по умолчанию на Stack Overflow и на основе входящих отзывов. Мы предоставили обработчик расширения, где можно указать, что должно быть первичным ключом для таблицы пользователей и ролей. Этот обработчик расширяемости особенно полезен при переносе приложения, и приложение хранило идентификаторы пользователя — GUID или ints.
-- **Поддержка IQueryable для пользователей и ролей**. Добавлена поддержка IQueryable для Усерссторе и ролессторе. Вы можете легко получить список пользователей и ролей.
-- **Поддержка операции удаления через UserManager**
-- **Индексирование по имени пользователя**: в ASP.NET Identity реализации Entity Framework мы добавили уникальный индекс для имени пользователя с помощью New ИНДЕКСАТТРИБУТЕ в EF 6.1.0. Это гарантирует, что имена пользователей всегда являются уникальными и не возникало состояния гонки, в результате чего могут возникнуть повторяющиеся имена пользователей.
-- **Улучшенный проверяющий элемент управления паролями:** Средство проверки пароля, поставляющееся в ASP.NET Identity 1,0, было довольно простым средством проверки пароля, которое использовалось только для проверки минимальной длины. Существует новый проверяющий элемент управления для пароля, который обеспечивает более полный контроль над сложностью пароля. Обратите внимание, что даже если включить все параметры в этом пароле, мы рекомендуем включить двухфакторную проверку подлинности для учетных записей пользователей.
-- **Идентитифактори по промежуточного слоя или креатеперовинконтекст**:
+- **Двухфакторная аутентификация**: ASP.NET Identity теперь поддерживает двухфакторную аутентификацию. Двухфакторная аутентификация обеспечивает дополнительный уровень безопасности учетных записей пользователей в случае, если ваш пароль будет скомпрометирован. Существует также защита от атак грубой силы против двух факторных кодов.
+- **Блокировка учетной записи:** Предоставляет способ блокировки пользователя, если пользователь вводит свой пароль или двухфакторные коды неправильно. Количество недействительных попыток и временной промежуток для пользователей заблокированы. Разработчик может по желанию отключить блокировку учетной записи для определенных учетных записей пользователя, если это необходимо.
+- **Подтверждение учетной записи:** Система ASP.NET идентификации теперь поддерживает подтверждение учетной записи. Это довольно распространенный сценарий в большинстве веб-сайтов сегодня, где, когда вы регистрируетесь для новой учетной записи на веб-сайте, вы должны подтвердить вашу электронную почту, прежде чем вы можете сделать что-нибудь на веб-сайте. Подтверждение электронной почты полезно, потому что оно предотвращает создание фиктивных учетных записей. Это чрезвычайно полезно, если вы используете электронную почту в качестве метода общения с пользователями вашего сайта, таких как форум сайтов, банковских услуг, электронной коммерции или социальных веб-сайтов.
+- **Спроза паролей:** Сбросить пароль — это функция, в которой пользователь может сбросить свои пароли, если он забыл свой пароль.
+- **Штамп безопасности (Выйти везде):** Поддерживает способ регенерации маркера безопасности для пользователя в тех случаях, когда Пользователь меняет свой пароль или любую другую информацию, связанную с безопасностью, такую как удаление связанного входа (например, Facebook, Google, учетная запись Майкрософт и так далее). Это необходимо для обеспечения того, чтобы все токены, генерируемые старым паролем, были признаны недействительными. В примере проекта, если вы измените пароль пользователя, то для пользователя генерируется новый маркер, и все предыдущие маркеры аннулируются. Эта функция обеспечивает дополнительный уровень безопасности для вашего приложения, так как при изменении пароля, вы будете зарегистрированы отовсюду (все другие браузеры), где вы вошли в это приложение.
+- **Сделайте тип основного ключа расширяемым для пользователей и ролей:** в ASP.NET Identity 1.0 тип основного ключа для пользователей таблицы и ролей был строкой. Это означает, что, когда система ASP.NET identity была упорна в сервере S'L, используя систему Entity Framework, мы использовали nvarchar. Было много дискуссий вокруг этой реализации по умолчанию на стек переполнения и на основе входящих обратной связи. Мы предоставили расширяемость крючка, где вы можете указать, что должно быть основным ключом таблицы пользователей и ролей. Этот крюк расширяемости особенно полезен, если вы мигрируете вашего приложения и приложение было хранение UserIds являются GUIDs или ints.
+- **Поддержка I'Sна на пользователях и ролях**: Добавлена поддержка i'queryable на UsersStore и RolesStore, вы можете легко получить список пользователей и ролей.
+- **Поддержка Операции Удаления через UserManager**
+- **Индексирование на UserName**: В ASP.NET реализации Identity Entity Framework мы добавили уникальный индекс на имя пользователя, используя новый IndexAttribute в EF 6.1.0. Это гарантирует, что имена пользователей всегда уникальны и не было никакого состояния гонки, в котором вы могли бы в конечном итоге с дублировать имена пользователей.
+- **Улучшенный валидатор паролей:** Валидатор пароля, который был отправлен в ASP.NET Identity 1.0, был достаточно базовым валидатором пароля, который только подтверждал минимальную длину. Существует новый валидатор пароля, который дает вам больше контроля над сложностью пароля. Обратите внимание, что даже если вы включите все настройки этого пароля, мы рекомендуем включить двухфакторную аутентификацию для учетных записей пользователей.
+- **IdentityFactory Middleware/ CreatePerOwinContext**:
 
-    - **Диспетчер пользователей**. можно использовать реализацию фабрики для получения экземпляра UserManager из контекста OWIN. Этот шаблон похож на то, что мы используем для получения AuthenticationManager из контекста OWIN для входа и выхода. Это рекомендуемый способ получения экземпляра UserManager для каждого запроса приложения.
-    - **Дбконтекстфактори**: ASP.NET Identity использует Entity Framework для сохранения системы удостоверений в SQL Server. Для этого система удостоверений имеет ссылку на ApplicationDbContext. По промежуточного слоя Дбконтекстфактори возвращает экземпляр ApplicationDbContext для каждого запроса, который можно использовать в приложении.
-- **ASP.NET Identity примеры пакета NuGet**: пакет NuGet Samples может упростить установку и запуск примеров для ASP.NET Identity и следовать рекомендациям. Это пример приложения ASP.NET MVC. Измените код в соответствии с вашим приложением перед развертыванием в рабочей среде. Образец должен быть установлен в пустое приложение ASP.NET. Чтобы получить дополнительные сведения о пакете, перейдите к следующей записи блога: [объявление о RTM ASP.NET Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx)
+    - **Менеджер пользователя:** Вы можете использовать реализацию Factory для получения экземпляра UserManager из контекста OWIN. Эта модель аналогична тому, что мы используем для получения аутентификацииManager от контекста OWIN для SignIn и SignOut. Это рекомендуемый способ получения экземпляра UserManager за запрос для приложения.
+    - **DbContextFactory**: ASP.NET Identity использует рамки сущности для сохранения системы идентификации в сервере S'L. Для этого система идентификации имеет ссылку на ApplicationDbContext. DbContextFactory Middleware возвращает экземпляр ApplicationDbContext за запрос, который можно использовать в приложении.
+- **ASP.NET Identity Samples NuGet пакет**: Образцы NuGet пакет может сделать его легче установить и запустить образцы для ASP.NET identity и следовать лучшим практикам. Это образец приложения mVC ASP.NET. Пожалуйста, измените код в соответствии с вашим приложением, прежде чем развернуть это в производство. Образец должен быть установлен в пустое ASP.NET приложение. Для получения дополнительной информации о пакете, перейдите на следующий блог: [Объявление RTM ASP.NET Identity 2.0.0](https://blogs.msdn.com/b/webdev/archive/2014/03/20/test-announcing-rtm-of-asp-net-identity-2-0-0.aspx)
 
 <a id="owin"></a>
 ### <a name="microsoft-owin-components"></a>Компоненты Microsoft OWIN
 
-В этом выпуске было исправлено множество ошибок. Более подробные сведения см. в [заметках](https://katanaproject.codeplex.com/releases/view/113281) о выпуске 2.1.0.
+Существовали много ошибок, которые были исправлены в этом выпуске. Более подробную информацию можно найти в [примечаниях к выпуску 2.1.0 для выпуска 2.1.0.](https://katanaproject.codeplex.com/releases/view/113281)
 
 <a id="signalr"></a>
-### <a name="aspnet-signalr-202"></a>2\.0.2 ASP.NET SignalR
+### <a name="aspnet-signalr-202"></a>ASP.NET сигнал 2.0.2
 
-В этом выпуске было исправлено множество ошибок. Более подробные сведения см. в [заметках](https://github.com/SignalR/SignalR/releases/tag/2.0.2) о выпуске 2.0.2.
+Существовали много ошибок, которые были исправлены в этом выпуске. Более подробную информацию можно найти в [примечаниях к выпуску 2.0.2.](https://github.com/SignalR/SignalR/releases/tag/2.0.2)
