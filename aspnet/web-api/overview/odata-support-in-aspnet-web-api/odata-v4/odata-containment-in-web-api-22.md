@@ -8,12 +8,12 @@ ms.date: 06/27/2014
 ms.assetid: 5fbfefad-a17a-4c46-8646-f1ccd154cd56
 msc.legacyurl: /web-api/overview/odata-support-in-aspnet-web-api/odata-v4/odata-containment-in-web-api-22
 msc.type: authoredcontent
-ms.openlocfilehash: 50050e40c4c42bf6d769d077c27864ee6417d4db
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 3be81eac9de4686a0d187396e951b121ea65bac4
+ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78421404"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84173008"
 ---
 # <a name="containment-in-odata-v4-using-web-api-22"></a>Включение в OData v4 с помощью веб-API 2,2
 
@@ -21,7 +21,7 @@ ms.locfileid: "78421404"
 
 > Обычно доступ к сущности можно получить только в том случае, если она была инкапсулирована в набор сущностей. Но OData v4 предоставляет два дополнительных параметра: Singleton и Contain, которые поддерживаются WebAPI 2,2.
 
-В этом разделе показано, как определить вложение в конечной точке OData в WebApi 2,2. Дополнительные сведения о [включении см. в разделе Включение в OData](https://blogs.msdn.com/b/odatateam/archive/2014/03/13/containment-is-coming-with-odata-v4.aspx). Чтобы создать конечную точку OData v4 в веб-API, см. раздел [Создание конечной точки OData v4 с помощью веб-API ASP.NET 2,2](create-an-odata-v4-endpoint.md).
+В этом разделе показано, как определить вложение в конечной точке OData в WebApi 2,2. Дополнительные сведения о [включении см. в разделе Включение в OData](https://devblogs.microsoft.com/odata/tutorial-sample-containment-is-coming-with-odata-v4/). Чтобы создать конечную точку OData v4 в веб-API, см. раздел [Создание конечной точки OData v4 с помощью веб-API ASP.NET 2,2](create-an-odata-v4-endpoint.md).
 
 Сначала мы создадим модель домена включения в службе OData, используя эту модель данных:
 
@@ -37,18 +37,18 @@ ms.locfileid: "78421404"
 
     [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample1.cs)]
 
-    Атрибут `Contained` используется для свойств навигации вложения.
+    `Contained`Атрибут используется для свойств навигации вложения.
 2. Создание модели EDM на основе типов CLR.
 
     [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample2.cs)]
 
-    `ODataConventionModelBuilder` будет выполнять сборку модели EDM, если атрибут `Contained` добавляется к соответствующему свойству навигации. Если свойство является типом коллекции, будет также создана `GetCount(string NameContains)` функция.
+    Компонент `ODataConventionModelBuilder` будет выполнять сборку модели EDM, если `Contained` атрибут добавляется к соответствующему свойству навигации. Если свойство является типом коллекции, `GetCount(string NameContains)` будет также создана функция.
 
     Созданные метаданные будут выглядеть следующим образом:
 
     [!code-xml[Main](odata-containment-in-web-api-22/samples/sample3.xml?highlight=10)]
 
-    Атрибут `ContainsTarget` указывает, что свойство навигации является вложением.
+    `ContainsTarget`Атрибут указывает, что свойство навигации является вложением.
 
 ## <a name="define-the-containing-entity-set-controller"></a>Определение содержащего контроллера набора сущностей
 
@@ -56,6 +56,6 @@ ms.locfileid: "78421404"
 
 [!code-csharp[Main](odata-containment-in-web-api-22/samples/sample4.cs)]
 
-Если путь OData имеет 4 или более сегментов, работает только маршрутизация атрибутов, например `[ODataRoute("Accounts({accountId})/PayinPIs({paymentInstrumentId})")]` на контроллере выше. В противном случае работают и атрибут, и Обычная маршрутизация: например, `GetPayInPIs(int key)` соответствует `GET ~/Accounts(1)/PayinPIs`.
+Если путь OData имеет 4 или более сегментов, работает только маршрутизация атрибутов, например `[ODataRoute("Accounts({accountId})/PayinPIs({paymentInstrumentId})")]` в контроллере выше. В противном случае работает и атрибут, и Обычная маршрутизация: например, `GetPayInPIs(int key)` соответствует `GET ~/Accounts(1)/PayinPIs` .
 
 *Благодарим вас за первоначальное содержимое этой статьи, Leo Hu.*

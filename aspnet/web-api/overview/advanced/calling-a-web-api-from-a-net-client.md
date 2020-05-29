@@ -8,12 +8,12 @@ ms.date: 11/24/2017
 ms.custom: seoapril2019
 msc.legacyurl: /web-api/overview/advanced/calling-a-web-api-from-a-net-client
 msc.type: authoredcontent
-ms.openlocfilehash: ab3ba71839123e848dffaa59871f9dac8c1a88d0
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 484d927eeb0ba49f5f00d476f4658ebc081d0a4a
+ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78504960"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172943"
 ---
 # <a name="call-a-web-api-from-a-net-client-c"></a>Вызов веб-API из клиента .NET (C#)
 
@@ -27,7 +27,7 @@ ms.locfileid: "78504960"
 
 | Действие | Метод HTTP | Относительный URI |
 | --- | --- | --- |
-| Получение продукта по ИДЕНТИФИКАТОРу | GET | *идентификатор* /АПИ/Продуктс/ |
+| Получение сведений о продукте по идентификатору | GET | *идентификатор* /АПИ/Продуктс/ |
 | Создать продукт | POST | /апи/продуктс |
 | Обновить продукт | ОТПРАВКА | *идентификатор* /АПИ/Продуктс/ |
 | Удалить продукт | DELETE | *идентификатор* /АПИ/Продуктс/ |
@@ -36,6 +36,11 @@ ms.locfileid: "78504960"
 ).
 
 Для простоты клиентское приложение в этом учебнике является консольным приложением Windows. **HttpClient** также поддерживается для приложений Windows Phone и магазина Windows. Дополнительные сведения см. в статье [написание кода клиента веб-API для нескольких платформ с помощью переносимых библиотек](https://blogs.msdn.com/b/webdev/archive/2013/07/19/writing-web-api-client-code-for-multiple-platforms-using-portable-libraries.aspx) .
+
+**Примечание.** При передаче базовых URL-адресов и относительных URI в виде жестко заданных значений следует учитывать правила использования `HttpClient` API. `HttpClient.BaseAddress`Для свойства необходимо задать адрес с завершающей косой чертой ( `/` ). Например, при передаче в метод жестко запрограммированных URI ресурсов `HttpClient.GetAsync` не включайте в начале косую черту вперед. Чтобы получить объект `Product` по идентификатору:
+
+1. Параметр`client.BaseAddress = new Uri("https://localhost:5001/");`
+1. Запрос а `Product` . Например, `client.GetAsync<Product>("api/products/4");`.
 
 <a id="CreateConsoleApp"></a>
 ## <a name="create-the-console-application"></a>Создание консольного приложения
@@ -46,7 +51,7 @@ ms.locfileid: "78504960"
 
 Приведенный выше код является полноценным клиентским приложением.
 
-`RunAsync` выполняется и блокируется до завершения. Большинство методов **HttpClient** являются асинхронными, так как они выполняют сетевые операции ввода-вывода. Все асинхронные задачи выполняются в `RunAsync`. Обычно приложение не блокирует основной поток, но это приложение не позволяет никакого взаимодействия.
+`RunAsync`выполняется и блокируется до завершения. Большинство методов **HttpClient** являются асинхронными, так как они выполняют сетевые операции ввода-вывода. Все асинхронные задачи выполняются внутри `RunAsync` . Обычно приложение не блокирует основной поток, но это приложение не позволяет никакого взаимодействия.
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_run)]
 
@@ -61,7 +66,7 @@ ms.locfileid: "78504960"
 
 Предыдущая команда добавляет в проект следующие пакеты NuGet:
 
-* Microsoft.AspNet.WebApi.Client
+* Microsoft. AspNet. WebApi. Client
 * Newtonsoft.Json.
 
 Нетвонсофт. JSON (также называется Json.NET) — это популярная высокопроизводительная платформа JSON для .NET.
@@ -73,7 +78,7 @@ ms.locfileid: "78504960"
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_prod)]
 
-Этот класс соответствует модели данных, используемой веб-API. Приложение может использовать **HttpClient** для чтения экземпляра `Product` из HTTP-ответа. Приложению не нужно писать код десериализации.
+Этот класс соответствует модели данных, используемой веб-API. Приложение может использовать **HttpClient** для чтения `Product` экземпляра из HTTP-ответа. Приложению не нужно писать код десериализации.
 
 <a id="InitClient"></a>
 ## <a name="create-and-initialize-httpclient"></a>Создание и инициализация HttpClient
@@ -105,9 +110,9 @@ ms.locfileid: "78504960"
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_GetProductAsync)]
 
-Метод **Async** ОТПРАВЛЯЕТ запрос HTTP GET. Когда метод завершает работу, он возвращает **HttpResponseMessage** , СОДЕРЖАЩИЙ ответ HTTP. Если код состояния в ответе является кодом успешного выполнения, текст ответа содержит представление JSON продукта. Вызовите **реадасасинк** , чтобы десериализовать полезные данные JSON в экземпляр `Product`. Метод **реадасасинк** является асинхронным, так как текст ответа может быть произвольным большим.
+Метод **Async** ОТПРАВЛЯЕТ запрос HTTP GET. Когда метод завершает работу, он возвращает **HttpResponseMessage** , СОДЕРЖАЩИЙ ответ HTTP. Если код состояния в ответе является кодом успешного выполнения, текст ответа содержит представление JSON продукта. Вызовите **реадасасинк** , чтобы десериализовать полезные данные JSON в `Product` экземпляре. Метод **реадасасинк** является асинхронным, так как текст ответа может быть произвольным большим.
 
-**HttpClient** не создает исключение, если HTTP-ответ содержит код ошибки. Вместо этого свойство **IsSuccessStatusCode** имеет **значение false** , если состояние — код ошибки. Если вы предпочитаете обрабатывать коды ошибок HTTP как исключения, вызовите метод [HttpResponseMessage. енсуресукцессстатускоде](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.ensuresuccessstatuscode(v=vs.110).aspx) для объекта Response. `EnsureSuccessStatusCode` создает исключение, если код состояния находится за пределами диапазона 200&ndash;299. Обратите внимание, что **HttpClient** может создавать исключения по другим причинам &mdash; например, если время ожидания запроса истекло.
+**HttpClient** не создает исключение, если HTTP-ответ содержит код ошибки. Вместо этого свойство **IsSuccessStatusCode** имеет **значение false** , если состояние — код ошибки. Если вы предпочитаете обрабатывать коды ошибок HTTP как исключения, вызовите метод [HttpResponseMessage. енсуресукцессстатускоде](https://msdn.microsoft.com/library/system.net.http.httpresponsemessage.ensuresuccessstatuscode(v=vs.110).aspx) для объекта Response. `EnsureSuccessStatusCode`создает исключение, если код состояния находится за пределами диапазона 200 &ndash; 299. Обратите внимание, что **HttpClient** может создавать исключения по другим причинам, например при истечении &mdash; времени ожидания запроса.
 
 <a id="MediaTypeFormatters"></a>
 ### <a name="media-type-formatters-to-deserialize"></a>Модули форматирования типов мультимедиа для десериализации
@@ -129,7 +134,7 @@ resp.Content.ReadAsAsync<IEnumerable<Product>>(formatters);
 
 ## <a name="sending-a-post-request-to-create-a-resource"></a>Отправка запроса POST для создания ресурса
 
-Следующий код отправляет запрос POST, содержащий экземпляр `Product` в формате JSON:
+Следующий код отправляет запрос POST, содержащий `Product` экземпляр в формате JSON:
 
 [!code-csharp[Main](calling-a-web-api-from-a-net-client/sample/client/Program.cs?name=snippet_CreateProductAsync)]
 

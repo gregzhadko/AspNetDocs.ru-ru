@@ -8,12 +8,12 @@ ms.date: 06/11/2014
 ms.assetid: 43a6cce7-a3ef-42aa-ad06-90d36d49f098
 msc.legacyurl: /web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api
 msc.type: authoredcontent
-ms.openlocfilehash: cdb1700537021e276669de1a9e0330a62659746c
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 3b89009a375e766f1c5b439dfe3fffd43b4963b3
+ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78447006"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84172930"
 ---
 # <a name="unit-testing-controllers-in-aspnet-web-api-2"></a>Контроллеры модульного тестирования в ASP.NET веб-API 2
 
@@ -30,7 +30,7 @@ ms.locfileid: "78447006"
 > [!NOTE]
 > Я использовал MOQ, но та же идея применяется к любой инфраструктуре макетирования. MOQ 4.5.30 (и более поздние версии) поддерживает Visual Studio 2017, Roslyn и .NET 4,5 и более поздние версии.
 
-Распространенный шаблон в модульных тестах — &quot;«организовать-акт-Assert»&quot;:
+Распространенный шаблон в модульных тестах — это оператор « &quot; организовать-акт-утверждение» &quot; :
 
 - Расположение. Настройте все необходимые компоненты для выполнения теста.
 - Акт: выполните тест.
@@ -53,7 +53,7 @@ ms.locfileid: "78447006"
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample1.cs)]
 
-Обратите внимание, что контроллер использует внедрение зависимостей для внедрения `IProductRepository`. Это делает контроллер более пригодным для тестирования, так как вы можете внедрить макет репозитория. В следующем модульном тесте проверяется, что метод `Get` записывает `Product` в текст ответа. Предположим, что `repository` является макетом `IProductRepository`.
+Обратите внимание, что контроллер использует внедрение зависимостей для внедрения `IProductRepository` . Это делает контроллер более пригодным для тестирования, так как вы можете внедрить макет репозитория. Следующий модульный тест проверяет, что `Get` метод записывает в `Product` текст ответа. Предположим, что `repository` является макетом `IProductRepository` .
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample2.cs)]
 
@@ -61,7 +61,7 @@ ms.locfileid: "78447006"
 
 ## <a name="testing-link-generation"></a>Тестирование создания ссылки
 
-Метод `Post` вызывает **урлхелпер. Link** для создания ссылок в ответе. Для этого требуется немного больше настроек модульного теста.
+`Post`Метод вызывает **Урлхелпер. Link** для создания ссылок в ответе. Для этого требуется немного больше настроек модульного теста.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample3.cs)]
 
@@ -85,7 +85,7 @@ ms.locfileid: "78447006"
 
 ### <a name="action-returns-200-ok-with-a-response-body"></a>Действие возвращает 200 (ОК) с текстом ответа.
 
-Метод `Get` вызывает `Ok(product)`, если продукт найден. В модульном тесте убедитесь, что возвращаемый тип — **окнеготиатедконтентресулт** , а возвращенный продукт имеет правильный идентификатор.
+`Get`Метод вызывает, `Ok(product)` Если продукт найден. В модульном тесте убедитесь, что возвращаемый тип — **окнеготиатедконтентресулт** , а возвращенный продукт имеет правильный идентификатор.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample6.cs)]
 
@@ -93,30 +93,30 @@ ms.locfileid: "78447006"
 
 ### <a name="action-returns-404-not-found"></a>Действие возвращает 404 (не найдено)
 
-Метод `Get` вызывает `NotFound()`, если продукт не найден. В этом случае модульный тест просто проверяет, является ли возвращаемый тип **нотфаундресулт**.
+`Get`Метод вызывает, `NotFound()` Если продукт не найден. В этом случае модульный тест просто проверяет, является ли возвращаемый тип **нотфаундресулт**.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample7.cs)]
 
 ### <a name="action-returns-200-ok-with-no-response-body"></a>Действие возвращает 200 (ОК) без текста ответа
 
-Метод `Delete` вызывает `Ok()`, чтобы вернуть пустой ответ HTTP 200. Как и в предыдущем примере, модульный тест проверяет возвращаемый тип, в данном случае **окресулт**.
+`Delete`Вызов метода `Ok()` возвращает пустой ответ HTTP 200. Как и в предыдущем примере, модульный тест проверяет возвращаемый тип, в данном случае **окресулт**.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample8.cs)]
 
 ### <a name="action-returns-201-created-with-a-location-header"></a>Действие возвращает 201 (создано) с заголовком Location.
 
-Метод `Post` вызывает `CreatedAtRoute`, чтобы вернуть ответ HTTP 201 с URI в заголовке Location. В модульном тесте убедитесь, что действие задает правильные значения маршрутизации.
+`Post`Вызов метода `CreatedAtRoute` ВОЗВРАЩАЕТ ответ HTTP 201 с URI в заголовке Location. В модульном тесте убедитесь, что действие задает правильные значения маршрутизации.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample9.cs)]
 
 ### <a name="action-returns-another-2xx-with-a-response-body"></a>Действие возвращает другой 2xx с текстом ответа
 
-Метод `Put` вызывает `Content`, чтобы вернуть ответ HTTP 202 (принято) с текстом ответа. Этот случай аналогичен возврату 200 (ОК), но модульный тест должен также проверять код состояния.
+`Put`Вызов метода `Content` ВОЗВРАЩАЕТ ответ HTTP 202 (принято) с текстом ответа. Этот случай аналогичен возврату 200 (ОК), но модульный тест должен также проверять код состояния.
 
 [!code-csharp[Main](unit-testing-controllers-in-web-api/samples/sample10.cs)]
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 - [Имитация Entity Framework при модульном тестировании веб-API ASP.NET 2](mocking-entity-framework-when-unit-testing-aspnet-web-api-2.md)
-- [Написание тестов для службы веб-API ASP.NET](https://blogs.msdn.com/b/youssefm/archive/2013/01/28/writing-tests-for-an-asp-net-webapi-service.aspx) (запись блога с помощью йоуссеф мауссаауи).
-- [Отладка веб-API ASP.NET с помощью отладчика маршрутов](https://blogs.msdn.com/b/webdev/archive/2013/04/04/debugging-asp-net-web-api-with-route-debugger.aspx)
+- [Написание тестов для службы веб-API ASP.NET](https://docs.microsoft.com/en-gb/archive/blogs/youssefm/writing-tests-for-an-asp-net-web-api-service) (запись блога с помощью йоуссеф мауссаауи).
+- [Debugging ASP.NET Web API with Route Debugger (Отладка веб-API ASP.NET с помощью Route Debugger)](https://blogs.msdn.com/b/webdev/archive/2013/04/04/debugging-asp-net-web-api-with-route-debugger.aspx)
