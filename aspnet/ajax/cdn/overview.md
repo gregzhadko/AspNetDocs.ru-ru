@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: 27b1ca8567e29fa4bca0ae9f32e0c904ad54ba8f
-ms.sourcegitcommit: a4c3c7e04e5f53cf8cd334f036d324976b78d154
+ms.openlocfilehash: b66e812f0324be95effdd8d232baa6a59302b9df
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84172956"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240599"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Сеть доставки содержимого Microsoft Ajax
 
@@ -48,7 +48,7 @@ ms.locfileid: "84172956"
  [Реагирование на выпуски CDN](#Respond_Releases_on_the_CDN_13)  
  [Начальные версии в CDN](#Bootstrap_Releases_on_the_CDN_14)  
  [Начальная загрузка выпусков Таучкараусел в CDN](#BootstrapTouchCarousel_Releases_on_the_CDN_18)  
- [Выпуски с натиском. js в CDN](#Hammerjs_Releases_on_the_CDN_19)  
+ [Hammer.js выпусков в CDN](#Hammerjs_Releases_on_the_CDN_19)  
  [ASP.NET веб-формы и выпуски AJAX в CDN](#ASPNET_Web_Forms_and_Ajax_Releases_on_the_CDN_15)  
  [Выпуски MVC ASP.NET в CDN](#ASPNET_MVC_Releases_on_the_CDN_16)  
  [Выпуски SignalR ASP.NET в CDN](#ASPNET_SignalR_Releases_on_the_CDN_17)
@@ -627,6 +627,7 @@ CDN также включает версию минифицированные с
 
 Следующие выпуски подключаемого модуля [проверки JQuery](https://jqueryvalidation.org/ "Подключаемый модуль проверки jQuery") размещаются в этой сети CDN. Щелкните каждую ссылку, чтобы просмотреть фактический список файлов.
 
+- [jQuery проверить 1.19.2](jquery-validate/cdnjqueryvalidate1192.md "1.19.2 проверки jQuery")
 - [jQuery проверить 1.19.1](jquery-validate/cdnjqueryvalidate1191.md "1.19.1 проверки jQuery")
 - [jQuery проверить 1.19.0](jquery-validate/cdnjqueryvalidate1190.md "1.19.0 проверки jQuery")
 - [jQuery проверить 1.17.0](jquery-validate/cdnjqueryvalidate1170.md "1.17.0 проверки jQuery")
@@ -779,7 +780,7 @@ CDN также включает версию минифицированные с
     - Все языки и региональные параметры
 - https://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.culture.{culture-code}.js
 
-    - Замените "{Culture-Code}" требуемым кодом языка и региональных параметров, например глобализация. culture. Ен-ГБ. JS = = файлы Майкрософт в сети CDN = = эти библиотеки были переданы корпорацией Майкрософт.
+    - Замените "{Culture-Code}" требуемым кодом языка и региональных параметров, например globalize.culture.en-GB.js= = Microsoft Files in the CDN = = эти библиотеки были переданы корпорацией Майкрософт.
 
 <a id="Respond_Releases_on_the_CDN_13"></a>
 
@@ -1186,11 +1187,11 @@ CDN также включает версию минифицированные с
 
 <a id="Hammerjs_Releases_on_the_CDN_19"></a>
 
-### <a name="hammerjs-releases-on-the-cdn"></a>Выпуски с натиском. js в CDN
+### <a name="hammerjs-releases-on-the-cdn"></a>Hammer.js выпусков в CDN
 
-Следующие выпуски для [http://hammerjs.github.io/](http://hammerjs.github.io/ "http://hammerjs.github.io/") выпусков с натиском с помощью версии JS размещаются в сети CDN:
+Следующие выпуски [http://hammerjs.github.io/](http://hammerjs.github.io/ "http://hammerjs.github.io/") Hammer.js выпусков размещаются в сети CDN:
 
-#### <a name="hammerjs-version-204"></a>2.0.4. js версии
+#### <a name="hammerjs-version-204"></a>Версия Hammer.js 2.0.4
 
 - https://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.js
 - https://ajax.aspnetcdn.com/ajax/hammer.js/2.0.4/hammer.min.js

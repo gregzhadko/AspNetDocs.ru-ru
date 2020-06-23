@@ -8,12 +8,12 @@ ms.date: 01/28/2011
 ms.assetid: 1febce65-cdd4-47da-bdb5-1e6022ccd20a
 msc.legacyurl: /mobile
 msc.type: content
-ms.openlocfilehash: 7f631f5052060b3523a23fb8ee7799cc07a68e1c
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: 769484ee505599eef48ff4a106ddd4f7ec7d99af
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78471564"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240728"
 ---
 # <a name="mobile-apps--sites-with-aspnet"></a>Мобильные приложения & сайты с помощью ASP.NET
 
@@ -61,6 +61,6 @@ ms.locfileid: "78471564"
 
 В этом разговоре, представленном на конференции Microsoft MIX, Скотт Hanselman рассказывает о том, как можно создавать веб-сайты для мобильных устройств с помощью ASP.NET MVC.
 
-### <a name="develop-iphone-applications-with-aspnet"></a>[Разработка приложений iPhone с помощью ASP.NET](http://labs.componentone.com/iPhone/)
+### <a name="develop-iphone-applications-with-aspnet"></a>[Разработка приложений iPhone с помощью ASP.NET](https://www.componentsource.com/product/componentone-studio-for-iphone)
 
 ComponentOne Studio для iPhone — это набор элементов управления ASP.NET, которые имитируют внешний вид и поведение пользовательских интерфейсов iPhone и iPod Touch при подготовке к просмотру в мобильном браузере Safari.

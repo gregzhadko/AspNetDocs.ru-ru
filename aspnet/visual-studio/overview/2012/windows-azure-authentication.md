@@ -8,12 +8,12 @@ ms.date: 02/20/2013
 ms.assetid: a3cef801-a54b-4ebd-93c3-55764e2e14b1
 msc.legacyurl: /visual-studio/overview/2012/windows-azure-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: ce98effe18dd739504fb0d5453bae8a46c3ba102
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: ab75218cbe3817c14a064e9816388aebc7e431f7
+ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78449466"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85240568"
 ---
 # <a name="windows-azure-authentication"></a>Проверка подлинности Microsoft Azure
 
@@ -25,7 +25,7 @@ ms.locfileid: "78449466"
 >
 > Дополнительные сведения о настройке синхронизации между локальными Active Directory и клиентом Windows Azure Active Directory см. в статье [использование AD FS 2,0 для реализации единого входа и управления им](https://technet.microsoft.com/library/jj205462.aspx).
 >
-> Windows Azure Active Directory в настоящее время доступна в качестве [бесплатной предварительной версии службы](https://azure.microsoft.com/free/?WT.mc_id=A443DD604).
+> Windows Azure Active Directory в настоящее время доступна в качестве [бесплатной предварительной версии службы](https://azure.microsoft.com/free/dotnet/).
 
 ## <a name="requirements"></a>Требования
 
@@ -65,7 +65,7 @@ ms.locfileid: "78449466"
 ![](windows-azure-authentication/_static/image6.png)
 
 В диалоговом окне отобразится **домен**, **идентификатор субъекта приложения** и **URL-адрес ответа** , необходимые для подготовки приложения с помощью Azure Active Directoryного принципа. Эти сведения необходимо предоставить пользователю, имеющему достаточные права для предоставления приложения. Сведения о том, как использовать командлет для создания субъекта-службы вручную, см. в статье[Реализация единого входа с помощью приложения Windows Azure Active Directory ASP.NET](https://github.com/Azure-Samples/active-directory-dotnet-webapp-openidconnect) .
-После успешной подготовки приложения можно нажать кнопку **продолжить, чтобы обновить Web. config с выбранными параметрами**. Если вы хотите продолжить разработку приложения во время ожидания подготовки, можно нажать кнопку **Закрыть, чтобы запомнить параметры в файле проекта**. При следующем вызове включения проверки подлинности Windows Azure и снятии флажка "подготовка" вы увидите те же параметры, и вы можете нажать кнопку **продолжить**, а затем **применить эти параметры в файле Web. config**.
+После успешной подготовки приложения можно нажать кнопку **продолжить обновление web.config с выбранными параметрами**. Если вы хотите продолжить разработку приложения во время ожидания подготовки, можно нажать кнопку **Закрыть, чтобы запомнить параметры в файле проекта**. При следующем вызове параметра включить проверку подлинности Windows Azure и снять флажок подготовить можно увидеть те же параметры и нажать кнопку **продолжить**, а затем **применить эти параметры в web.config**.
 
 1. Подождите, пока приложение настроено для проверки подлинности Windows Azure и подготовлено с помощью Azure Active Directory Windows.
 2. После включения проверки подлинности Windows Azure для приложения нажмите кнопку **Закрыть:**
@@ -85,9 +85,9 @@ ms.locfileid: "78449466"
 
 Включение проверки подлинности Windows Azure вносит в приложение следующие изменения:
 
-- В проект добавляется класс подделки межсайтовых запросов ([CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))) ( *app\_старт\антикссрфконфиг.КС* ).
+- В проект добавляется класс подделки межсайтовых запросов ([CSRF](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))) ( *app \_ старт\антикссрфконфиг.КС* ).
 - Пакеты NuGet `System.IdentityModel.Tokens.ValidatingIssuerNameRegistry` добавляются в проект.
-- Параметры Windows Identity Foundation в приложении будут настроены на прием маркеров безопасности от клиента Windows Azure Active Directory. Щелкните изображение ниже, чтобы просмотреть развернутое представление изменений, внесенных в файл *Web. config* .
+- Параметры Windows Identity Foundation в приложении будут настроены на прием маркеров безопасности от клиента Windows Azure Active Directory. Щелкните изображение ниже, чтобы просмотреть развернутое представление изменений, внесенных в файл *Web.config* .
 
      ![](windows-azure-authentication/_static/image9.png)
 - Будет подготовлен субъект-служба для приложения в клиенте Windows Azure Active Directory.
@@ -141,7 +141,7 @@ ms.locfileid: "78449466"
 
 #### <a name="browsing-to-an-application-with-windows-azure-authentication-results-in-the-error-acs20016-the-domain-of-the-logged-in-user-livecom-does-not-match-any-allowed-domain-of-this-sts"></a>При переходе к приложению с проверкой подлинности Windows Azure возникает ошибка "ACS20016 домен пользователя, вошедшего в систему (live.com), не соответствует ни одному домену этой STS"
 
-Если вы уже вошли в учетную запись Майкрософт (например, hotmail.com, live.com, outlook.com) и пытаетесь получить доступ к приложению с включенной проверкой подлинности Windows Azure, вы можете получить ответ об ошибке 400, так как домен учетной записи Майкрософт не распознается Azure Active Directory Windows. Чтобы войти в приложение, сначала выйдите из своей учетной записи Майкрософт.
+Если вы уже вошли в учетную запись Майкрософт (например, hotmail.com, live.com, outlook.com) и пытаетесь получить доступ к приложению, в котором включена проверка подлинности Windows Azure, вы можете получить ответ об ошибке 400, так как домен вашей учетной записи Майкрософт не распознается Azure Active Directory Windows. Чтобы войти в приложение, сначала выйдите из своей учетной записи Майкрософт.
 
 #### <a name="logging-into-an-application-with-windows-azure-authentication-enabled-and-a-x509certificatevalidationmode-other-than-none-results-in-certificate-validation-errors-for-the-accountsaccesscontrolwindowsnet-certificate"></a>Вход в приложение с включенной проверкой подлинности Windows Azure и X509CertificateValidationMode, отличное от None, приводит к ошибкам проверки сертификата для сертификата accounts.accesscontrol.windows.net.
 
