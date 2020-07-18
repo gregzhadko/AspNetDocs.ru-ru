@@ -8,27 +8,29 @@ ms.date: 12/18/2012
 ms.assetid: 71ee4c78-c500-4d1c-b761-b4e161a291b5
 msc.legacyurl: /web-api/overview/security/integrated-windows-authentication
 msc.type: authoredcontent
-ms.openlocfilehash: e4f31f191f3c0fabff308ea5dadb0f1d9ce7d448
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: c5fe57c4a20e28fa434659a75484e3a4c37195f8
+ms.sourcegitcommit: 000cbcd1de66fe8a766f203ef2d6f009e4435f53
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78504210"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86424792"
 ---
 # <a name="integrated-windows-authentication"></a>Встроенная проверка подлинности Windows
 
 по [Майк Уоссон](https://github.com/MikeWasson)
 
-Встроенная проверка подлинности Windows позволяет пользователям выполнять вход с использованием учетных данных Windows, используя Kerberos или NTLM. Клиент отправляет учетные данные в заголовке авторизации. Проверка подлинности Windows лучше всего подходит для среды интрасети. Дополнительные сведения: [Проверка подлинности Windows](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication).
+Встроенная проверка подлинности Windows позволяет пользователям выполнять вход с использованием учетных данных Windows, используя Kerberos или NTLM. Клиент отправляет учетные данные в заголовке авторизации. Проверка подлинности Windows наилучшим образом подходит для среды интрасети. Дополнительные сведения: [Проверка подлинности Windows](https://www.iis.net/configreference/system.webserver/security/authentication/windowsauthentication).
 
 | Преимущества | Недостатки |
 | --- | --- |
-| Встроенные в IIS. — Не отправляет учетные данные пользователя в запросе. — Если клиентский компьютер принадлежит домену (например, приложению интрасети), пользователю не нужно вводить учетные данные. | — Не рекомендуется для Интернет-приложений. — Требует поддержки Kerberos или NTLM в клиенте. -Клиент должен быть в домене Active Directory. |
+| Встроенные в IIS. | Не рекомендуется для Интернет приложений. | 
+| Не отправляет учетные данные пользователя в запросе. | Требует поддержки Kerberos или NTLM в клиенте. |
+| Если клиентский компьютер принадлежит к домену (например, к приложению интрасети), пользователю не нужно вводить учетные данные. | Клиент должен находиться в домене Active Directory. |
 
 > [!NOTE]
 > Если ваше приложение размещено в Azure и имеется локальный домен Active Directory, рассмотрите возможность Федерации локального AD с Azure Active Directory. Таким образом пользователи смогут входить с использованием локальных учетных данных, но проверка подлинности выполняется Azure AD. Дополнительные сведения см. в статье [Проверка подлинности Azure](../../../visual-studio/overview/2012/windows-azure-authentication.md).
 
-Чтобы создать приложение, использующее встроенную проверку подлинности Windows, выберите шаблон "приложение интрасети" в мастере проектов MVC 4. Этот шаблон проекта помещает в файл Web. config следующий параметр:
+Чтобы создать приложение, использующее встроенную проверку подлинности Windows, выберите шаблон "приложение интрасети" в мастере проектов MVC 4. Этот шаблон проекта помещает в файл Web.config следующий параметр:
 
 [!code-xml[Main](integrated-windows-authentication/samples/sample1.xml)]
 
