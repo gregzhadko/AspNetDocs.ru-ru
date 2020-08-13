@@ -8,12 +8,12 @@ ms.date: 10/14/2017
 ms.assetid: 8935bf14-ca6d-4a4e-9dbe-b96ce74cef49
 msc.legacyurl: /ajax/cdn
 msc.type: content
-ms.openlocfilehash: b66e812f0324be95effdd8d232baa6a59302b9df
-ms.sourcegitcommit: 0cf7d06071a8ff986e6c028ac9daf0c0e7490412
+ms.openlocfilehash: 58e2d62da2181108f34bbf3e1e948977241e1dee
+ms.sourcegitcommit: b3c0e67bb231dbb0db9e8dfccd51cf715481edcc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85240599"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88161361"
 ---
 # <a name="microsoft-ajax-content-delivery-network"></a>Сеть доставки содержимого Microsoft Ajax
 
@@ -84,8 +84,8 @@ CDN поддерживает протокол SSL (HTTPS), если необхо
 
 CDN, используемый для использования доменного имени microsoft.com, был изменен на использование доменного имени aspnetcdn.com. Это изменение было внесено для повышения производительности, так как когда браузер ссылался на домен microsoft.com, он будет передавать файлы cookie из этого домена по сети при каждом запросе. Переименование в доменное имя, отличное от microsoft.com, может увеличиться на 25%. Примечание. ajax.microsoft.com будет продолжать работать, но рекомендуется ajax.aspnetcdn.com.
 
-- Старый формат:https://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js
-- Новый формат:https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js
+- Старый формат: https://ajax.microsoft.com/ajax/jQuery/jquery-1.8.0.js
+- Новый формат: https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js
 
 <a id="Visual_Studio_vsdoc_Support_19"></a>
 
@@ -163,6 +163,14 @@ CDN также включает версию минифицированные с
 ### <a name="jquery-releases-on-the-cdn"></a>выпуски jQuery в CDN
 
 Следующие выпуски jQuery размещаются в CDN:
+
+#### <a name="jquery-version-351"></a>jQuery версии 3.5.1
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.min.map
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.min.js
+- https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.1.slim.min.map
 
 #### <a name="jquery-version-350"></a>jQuery версии 3.5.0
 - https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.js
@@ -619,7 +627,7 @@ CDN также включает версию минифицированные с
 - [1.8.8 пользовательского интерфейса jQuery](jquery-ui/cdnjqueryui188.md "Пользовательский интерфейс jQuery 1.8.8 в сети доставки содержимого Microsoft Ajax")
 - [1.8.7 пользовательского интерфейса jQuery](jquery-ui/cdnjqueryui187.md "Пользовательский интерфейс jQuery 1.8.7 в сети доставки содержимого Microsoft Ajax")
 - [1.8.6 пользовательского интерфейса jQuery](jquery-ui/cdnjqueryui186.md "Пользовательский интерфейс jQuery 1.8.6 в сети доставки содержимого Microsoft Ajax")
-- [Пользовательский интерфейс jQuery 1.8.5](jquery-ui/cdnjqueryui185.md "Пользовательский интерфейс jQuery 1.8.5")
+- [Пользовательский интерфейс jQuery 1.8.5](jquery-ui/cdnjqueryui185.md "Пользовательский интерфейс jQuery 1.8.5")
 
 <a id="jQuery_Validation_Releases_on_the_CDN_3"></a>
 
@@ -645,8 +653,8 @@ CDN также включает версию минифицированные с
 - [jQuery проверить 1.8.1](jquery-validate/cdnjqueryvalidate181.md "jquery.validate версии 1.8.1")
 - [jQuery Validate 1,8](jquery-validate/cdnjqueryvalidate18.md "jquery.validate версии 1.8")
 - [jQuery Validate 1,7](jquery-validate/cdnjqueryvalidate17.md "jquery.validate версии 1.7")
-- [jQuery Validate 1.6](jquery-validate/cdnjqueryvalidate16.md "jQuery Validate 1.6")
-- [jQuery Validate 1.5.5](jquery-validate/cdnjqueryvalidate155.md "jQuery Validate 1.5.5")
+- [jQuery Validate 1.6](jquery-validate/cdnjqueryvalidate16.md "jQuery Validate 1.6")
+- [jQuery Validate 1.5.5](jquery-validate/cdnjqueryvalidate155.md "jQuery Validate 1.5.5")
 
 <a id="jQuery_Mobile_Releases_on_the_CDN_4"></a>
 
@@ -678,7 +686,7 @@ CDN также включает версию минифицированные с
 
 Следующие выпуски подключаемого модуля шаблонов jQuery размещаются в этой сети CDN. Щелкните каждую ссылку, чтобы просмотреть фактический список файлов.
 
-- [jQuery Templates, бета-версия 1](jquery-templates/cdnjquerytemplatesbeta1.md "jQuery Templates, бета-версия 1")
+- [jQuery Templates, бета-версия 1](jquery-templates/cdnjquerytemplatesbeta1.md "jQuery Templates, бета-версия 1")
 
 <a id="jQuery_Cycle_Releases_on_the_CDN_6"></a>
 
@@ -686,9 +694,9 @@ CDN также включает версию минифицированные с
 
 Следующие выпуски подключаемого модуля jQuery Cycle размещены в этой сети CDN. Щелкните каждую ссылку, чтобы просмотреть фактический список файлов.
 
-- [Цикл jQuery 2,99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
-- [jQuery Cycle 2.94](jquery-cycle/cdnjquerycycle294.md "jQuery Cycle 2.94")
-- [jQuery Cycle 2.88](jquery-cycle/cdnjquerycycle288.md "jQuery Cycle 2.88")
+- [jQuery Cycle 2.99](jquery-cycle/cdnjquerycycle299.md "jQuery Cycle 2.99")
+- [jQuery Cycle 2.94](jquery-cycle/cdnjquerycycle294.md "jQuery Cycle 2.94")
+- [jQuery Cycle 2.88](jquery-cycle/cdnjquerycycle288.md "jQuery Cycle 2.88")
 
 <a id="jQuery_DataTables_Releases_on_the_CDN_7"></a>
 
@@ -696,14 +704,14 @@ CDN также включает версию минифицированные с
 
 Следующие выпуски подключаемого модуля таблиц данных jQuery размещаются в этой сети CDN. Щелкните каждую ссылку, чтобы просмотреть фактический список файлов.
 
-- [jQuery DataTables 1.10.5](jquery-datatables/cdnjquerydatatables105.md "jQuery DataTables 1.10.5")
-- [jQuery DataTables 1.10.4](jquery-datatables/cdnjquerydatatables104.md "jQuery DataTables 1.10.4")
+- [jQuery DataTables 1.10.5](jquery-datatables/cdnjquerydatatables105.md "jQuery DataTables 1.10.5")
+- [jQuery DataTables 1.10.4](jquery-datatables/cdnjquerydatatables104.md "jQuery DataTables 1.10.4")
 - [jQuery DataTables 1.9.4](jquery-datatables/cdnjquerydatatables194.md "jQuery DataTables 1.9.4")
-- [jQuery DataTables 1.9.3](jquery-datatables/cdnjquerydatatables193.md "jQuery DataTables 1.9.3")
-- [jQuery DataTables 1.9.2](jquery-datatables/cdnjquerydatatables192.md "jQuery DataTables 1.9.2")
-- [jQuery DataTables 1.9.1](jquery-datatables/cdnjquerydatatables191.md "jQuery DataTables 1.9.1")
-- [jQuery DataTables 1.9.0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
-- [jQuery DataTables 1.8.2](jquery-datatables/cdnjquerydatatables182.md "jQuery DataTables 1.8.2")
+- [jQuery DataTables 1.9.3](jquery-datatables/cdnjquerydatatables193.md "jQuery DataTables 1.9.3")
+- [jQuery DataTables 1.9.2](jquery-datatables/cdnjquerydatatables192.md "jQuery DataTables 1.9.2")
+- [jQuery DataTables 1.9.1](jquery-datatables/cdnjquerydatatables191.md "jQuery DataTables 1.9.1")
+- [jQuery DataTables 1.9.0](jquery-datatables/cdnjquerydatatables190.md "jQuery DataTables 1.9.0")
+- [jQuery DataTables 1.8.2](jquery-datatables/cdnjquerydatatables182.md "jQuery DataTables 1.8.2")
 
 <a id="Modernizr_Releases_on_the_CDN_8"></a>
 
