@@ -9,10 +9,10 @@ ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
 ms.openlocfilehash: f8f079f6d8ea663c6888456be422a2bae93a4b87
-ms.sourcegitcommit: ce28244209db8615bc9bdd576a2e2c88174d318d
+ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/06/2020
+ms.lasthandoff: 08/20/2020
 ms.locfileid: "86163579"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Дополнительные Entity Framework сценарии для веб-приложения MVC (10 из 10)
@@ -103,7 +103,7 @@ API Entity Framework Code First содержит методы, позволяю�
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample5.cs)]
 
-В *UnitOfWork.CS*измените `Course` Тип репозитория с `GenericRepository<Course>` на`CourseRepository:`
+В *UnitOfWork.CS*измените `Course` Тип репозитория с `GenericRepository<Course>` на `CourseRepository:`
 
 [!code-csharp[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample6.cs)]
 
