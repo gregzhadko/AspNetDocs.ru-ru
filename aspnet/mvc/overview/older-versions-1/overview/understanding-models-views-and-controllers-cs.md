@@ -1,6 +1,6 @@
 ---
 uid: mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs
-title: Основные сведения о моделях, представлениях иC#контроллерах () | Документация Майкрософт
+title: Основные сведения о моделях, представлениях и контроллерах (C#) | Документация Майкрософт
 author: StephenWalther
 description: Не путать с моделями, представлениями и контроллерами? В этом руководстве Стивен Вальтер содержит сведения о различных частях приложения ASP.NET MVC.
 ms.author: riande
@@ -8,12 +8,12 @@ ms.date: 08/19/2008
 ms.assetid: 87313792-0a96-4caf-89fc-1457d54e5c1e
 msc.legacyurl: /mvc/overview/older-versions-1/overview/understanding-models-views-and-controllers-cs
 msc.type: authoredcontent
-ms.openlocfilehash: 57dc82d02d38adc2514aa2c02c6f156ed0fb88a6
-ms.sourcegitcommit: e7e91932a6e91a63e2e46417626f39d6b244a3ab
+ms.openlocfilehash: f4d069ddf30634dd6d632468d8e282bf5b2593d3
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78486090"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045225"
 ---
 # <a name="understanding-models-views-and-controllers-c"></a>Общие сведения о моделях, представлениях и контроллерах (C#)
 
@@ -29,15 +29,15 @@ ms.locfileid: "78486090"
 
 Шаблон по умолчанию Visual Studio для создания веб-приложений ASP.NET MVC включает в себя очень простой пример приложения, который можно использовать для понимания различных частей приложения ASP.NET MVC. В этом руководстве мы используем это простое приложение.
 
-Вы создадите новое приложение ASP.NET MVC с шаблоном MVC, запустив Visual Studio 2008 и выбрав файл параметров меню, новый проект (см. рис. 1). В диалоговом окне Новый проект выберите предпочитаемый язык программирования в разделе Типы проектов (Visual Basic C#или) и выберите **веб-приложение ASP.NET MVC** в разделе Шаблоны. Нажмите кнопку "ОК".
+Вы создадите новое приложение ASP.NET MVC с шаблоном MVC, запустив Visual Studio 2008 и выбрав файл параметров меню, новый проект (см. рис. 1). В диалоговом окне Новый проект выберите предпочитаемый язык программирования в разделе Типы проектов (Visual Basic или C#) и выберите **веб-приложение ASP.NET MVC** в разделе Шаблоны. Нажмите кнопку "ОК".
 
-[Диалоговое окно ![нового проекта](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
+[![Диалоговое окно создания проекта](understanding-models-views-and-controllers-cs/_static/image1.jpg)](understanding-models-views-and-controllers-cs/_static/image1.png)
 
 **Рис. 01**. диалоговое окно создания проекта ([щелкните, чтобы просмотреть изображение с полным размером](understanding-models-views-and-controllers-cs/_static/image2.png))
 
 При создании нового приложения ASP.NET MVC появляется диалоговое окно **Создание проекта модульного теста** (см. рис. 2). Это диалоговое окно позволяет создать отдельный проект в решении для тестирования приложения ASP.NET MVC. Выберите вариант **нет, не создавать проект модульного теста** и нажмите кнопку **ОК** .
 
-[Диалоговое окно создания модульного теста ![](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
+[![Диалоговое окно создания модульного теста](understanding-models-views-and-controllers-cs/_static/image2.jpg)](understanding-models-views-and-controllers-cs/_static/image3.png)
 
 **Рис. 02**. диалоговое окно "Создание модульного теста[" (щелкните, чтобы просмотреть изображение с полным размером](understanding-models-views-and-controllers-cs/_static/image4.png))
 
@@ -45,7 +45,7 @@ ms.locfileid: "78486090"
 
 Если развернуть папку Controllers, появится файл с именем AccountController.cs и файл с именем HomeController.cs. Если развернуть папку Views, вы увидите три вложенных папки с именем Account, Home и Shared. Если развернуть корневую папку, вы увидите два дополнительных файла с именами About. aspx и index. aspx (см. рис. 3). Эти файлы составляют пример приложения, который входит в состав шаблона по умолчанию ASP.NET MVC.
 
-[![обозреватель решений окно](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
+[![Окно обозреватель решений](understanding-models-views-and-controllers-cs/_static/image3.jpg)](understanding-models-views-and-controllers-cs/_static/image5.png)
 
 **Рис. 03**. окно Обозреватель решений ([щелкните, чтобы просмотреть изображение с полным размером](understanding-models-views-and-controllers-cs/_static/image6.png))
 
@@ -53,19 +53,19 @@ ms.locfileid: "78486090"
 
 При первом запуске приложения ASP.NET открывается диалоговое окно на рис. 4, в котором рекомендуется включить режим отладки. Нажмите кнопку ОК, и приложение будет запущено.
 
-[диалоговое окно ![отладки не включено](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
+[![Диалоговое окно "Отладка не включена"](understanding-models-views-and-controllers-cs/_static/image4.jpg)](understanding-models-views-and-controllers-cs/_static/image7.png)
 
 **Рис. 04**. диалоговое окно "Отладка не включена" ([щелкните, чтобы просмотреть изображение с полным размером](understanding-models-views-and-controllers-cs/_static/image8.png))
 
 При запуске приложения ASP.NET MVC Visual Studio запускает приложение в веб-браузере. Пример приложения состоит только из двух страниц: страницы индекса и страницы About. При первом запуске приложения отображается страница индекса (см. рис. 5). Можно переходить на страницу About, щелкнув ссылку меню в правом верхнем углу приложения.
 
-[![страницы индекса](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
+[![Страница индекса](understanding-models-views-and-controllers-cs/_static/image10.png)](understanding-models-views-and-controllers-cs/_static/image9.png)
 
 **Рис. 05**. страница индекса ([щелкните, чтобы просмотреть изображение с полным размером](understanding-models-views-and-controllers-cs/_static/image11.png))
 
 Обратите внимание на URL-адреса в адресной строке браузера. Например, если щелкнуть ссылку меню About, URL-адрес в адресной строке браузера изменится на **/Хоме/абаут**.
 
-Если закрыть окно браузера и вернуться в Visual Studio, вы не сможете найти файл с путем "Домашняя страница" или "о программе". Файлы не существуют. Как такое возможно?
+Если закрыть окно браузера и вернуться в Visual Studio, вы не сможете найти файл с путем "Домашняя страница" или "о программе". Файлы не существуют. Как это возможно?
 
 ## <a name="a-url-does-not-equal-a-page"></a>URL-адрес не равен странице
 
@@ -85,7 +85,7 @@ ms.locfileid: "78486090"
 
 [!code-csharp[Main](understanding-models-views-and-controllers-cs/samples/sample1.cs)]
 
-При первом запуске приложения ASP.NET вызывается метод Application\_Start (). В листинге 1 Этот метод вызывает метод Регистерраутес (), а метод Регистерраутес () создает таблицу маршрутов по умолчанию.
+При первом запуске приложения ASP.NET \_ вызывается метод Start () приложения. В листинге 1 Этот метод вызывает метод Регистерраутес (), а метод Регистерраутес () создает таблицу маршрутов по умолчанию.
 
 Таблица маршрутов по умолчанию состоит из одного маршрута. Этот маршрут по умолчанию разбивает все входящие запросы на три сегмента (сегмент URL-адреса является любым символом обратной косой черты). Первый сегмент сопоставляется с именем контроллера, второй сегмент сопоставляется с именем действия, а последний сегмент сопоставляется с параметром, передаваемым в действие с именем ID.
 
@@ -109,15 +109,15 @@ Controller = продукт
 
 Контроллер = сотрудник
 
-действие = индекс
+Действие = индекс
 
 Идентификатор =
 
-Наконец, при открытии приложения ASP.NET MVC без указания URL-адреса (например, `http://localhost`) URL-адрес анализируется следующим образом:
+Наконец, если вы откроете приложение ASP.NET MVC без указания URL-адреса (например, `http://localhost` ), URL-адрес будет проанализирован следующим образом:
 
-контроллер = Главная
+Контроллер = Главная
 
-действие = индекс
+Действие = индекс
 
 Идентификатор =
 
@@ -127,7 +127,7 @@ Controller = продукт
 
 Контроллер отвечает за управление способом взаимодействия пользователя с приложением MVC. Контроллер содержит логику управления потоком для приложения ASP.NET MVC. Контроллер определяет ответ, отправляемый пользователю, когда пользователь выполняет запрос к браузеру.
 
-Контроллер — это просто класс (например, Visual Basic или C# класс). Пример приложения ASP.NET MVC включает в себя контроллер с именем HomeController.cs, расположенный в папке Controllers. Содержимое файла HomeController.cs воспроизводится в листинге 2.
+Контроллер — это просто класс (например, класс Visual Basic или C#). Пример приложения ASP.NET MVC включает в себя контроллер с именем HomeController.cs, расположенный в папке Controllers. Содержимое файла HomeController.cs воспроизводится в листинге 2.
 
 **Листинг 2. HomeController.cs**
 
@@ -143,11 +143,11 @@ Controller = продукт
 
 Необходимо создать представления в правильном расположении. Действие HomeController. index () возвращает представление, расположенное по следующему пути:
 
-\Views\Home\Index.aspx
+\виевс\хоме\индекс.аспкс
 
 Действие HomeController. About () возвращает представление, расположенное по следующему пути:
 
-\Views\Home\About.aspx
+\виевс\хоме\абаут.аспкс
 
 В общем случае, если требуется возвратить представление для действия контроллера, необходимо создать вложенную папку в папке Views с тем же именем, что и у контроллера. Во вложенной папке необходимо создать файл. aspx с тем же именем, что и действие контроллера.
 

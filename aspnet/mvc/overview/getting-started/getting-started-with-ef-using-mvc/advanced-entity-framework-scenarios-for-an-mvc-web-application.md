@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.assetid: f35a9b0c-49ef-4cde-b06d-19d1543feb0b
 msc.legacyurl: /mvc/overview/getting-started/getting-started-with-ef-using-mvc/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: d7cc83a5b78a60f575f5c3065079679189296a0c
-ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
+ms.openlocfilehash: 2bfa4401c73b56be87502ffbb189abab3c59c226
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "86188735"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045004"
 ---
 # <a name="tutorial-learn-about-advanced-ef-scenarios-for-an-mvc-5-web-app"></a>Учебник. Изучение сложных сценариев EF для веб-приложения MVC 5
 
@@ -130,7 +130,7 @@ API Entity Framework Code First содержит методы, позволяю�
 
 Теперь установите точку останова в `return` операторе (F9 с курсором в этой строке). Нажмите клавишу **F5** , чтобы запустить проект в режиме отладки, и выберите страницу индекса курса. Когда код достигает точки останова, изучите `sql` переменную. Отобразится запрос, отправленный в SQL Server. Это простая `Select` инструкция.
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample7.sql)]
 
 Щелкните увеличительное стекло, чтобы увидеть запрос в **визуализаторе текста**.
 

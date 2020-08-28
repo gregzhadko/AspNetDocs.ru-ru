@@ -8,12 +8,12 @@ ms.date: 07/30/2013
 ms.assetid: 64906a1d-f734-41cf-9615-ee95f8740996
 msc.legacyurl: /mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/advanced-entity-framework-scenarios-for-an-mvc-web-application
 msc.type: authoredcontent
-ms.openlocfilehash: f8f079f6d8ea663c6888456be422a2bae93a4b87
-ms.sourcegitcommit: c9d9210e0d16fbb3829b7688cfb832dc263c79cc
+ms.openlocfilehash: 85dd59016d904a9f654c438db977b5ae2c0187d2
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "86163579"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89045056"
 ---
 # <a name="advanced-entity-framework-scenarios-for-an-mvc-web-application-10-of-10"></a>Дополнительные Entity Framework сценарии для веб-приложения MVC (10 из 10)
 
@@ -191,7 +191,7 @@ API Entity Framework Code First содержит методы, позволяю�
 
 Теперь установите точку останова в *GenericRepository.CS* в `return query.ToList();` `return orderBy(query).ToList();` инструкциях и для `Get` метода. Запустите проект в режиме отладки и выберите страницу индекса курса. Когда код достигает точки останова, изучите `query` переменную. Отобразится запрос, отправленный в SQL Server. Это простая `Select` Инструкция:
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample14.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample14.sql)]
 
 ![](advanced-entity-framework-scenarios-for-an-mvc-web-application/_static/image12.png)
 
@@ -219,7 +219,7 @@ API Entity Framework Code First содержит методы, позволяю�
 
 На этот раз первая точка останова будет относиться к запросу отделов для раскрывающегося списка. Пропустите эту переменную и просмотрите ее в `query` следующий раз, когда код достигнет точки останова, чтобы увидеть, как будет выглядеть `Course` запрос. Вы увидите нечто вроде следующего:
 
-[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample17.json)]
+[!code-json[Main](advanced-entity-framework-scenarios-for-an-mvc-web-application/samples/sample17.sql)]
 
 Вы видите, что запрос теперь является `JOIN` запросом, который загружает `Department` данные вместе с `Course` данными и включает `WHERE` предложение.
 

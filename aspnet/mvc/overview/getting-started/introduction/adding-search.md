@@ -8,26 +8,26 @@ ms.date: 01/17/2019
 ms.assetid: df001954-18bf-4550-b03d-43911a0ea186
 msc.legacyurl: /mvc/overview/getting-started/introduction/adding-search
 msc.type: authoredcontent
-ms.openlocfilehash: f6d6d32a648fed453be924790a1b55698c9cf209
-ms.sourcegitcommit: 0d583ed9253103f3e50b6d729276e667591cdd41
+ms.openlocfilehash: be4e4d13e574b0fcb77d2d0fb8c6f58041b1ece2
+ms.sourcegitcommit: 4e6d586faadbe4d9ef27122f86335ec9385134af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2020
-ms.locfileid: "86211469"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89044925"
 ---
 # <a name="search"></a>Поиск
 
-[!INCLUDE [Tutorial Note](index.md)]
+[!INCLUDE [consider RP](~/includes/razor.md)]
 
 ## <a name="adding-a-search-method-and-search-view"></a>Добавление метода поиска и представления поиска
 
 В этом разделе вы добавите функцию поиска в `Index` метод действия, который позволяет искать фильмы по жанру или названию.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 Чтобы сопоставить снимки экрана этого раздела, необходимо запустить приложение (F5) и добавить в базу данных следующие фильмы.
 
-| Название | Дата выпуска | Genre | Цена |
+| Заголовок | Дата выпуска | Genre | Цена |
 | ----- | ------------ | ----- | ----- |
 | Ghostbusters | 6/8/1984 | Комедия | 6,99 |
 | Ghostbusters II | 6/16/1989 | Комедия | 6,99 |
@@ -62,7 +62,7 @@ ms.locfileid: "86211469"
 
 Если изменить сигнатуру `Index` метода для параметра с именем `id` , `id` параметр будет соответствовать `{id}` заполнительу для маршрутов по умолчанию, заданных в файле * \_ старт\раутеконфиг.КС приложения* .
 
-[!code-json[Main](adding-search/samples/sample4.json)]
+[!code-json[Main](adding-search/samples/sample4.txt)]
 
 Исходный `Index` метод выглядит следующим образом:
 
