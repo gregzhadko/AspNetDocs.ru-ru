@@ -32,7 +32,7 @@ ms.locfileid: "78499332"
 > * Добавление разбиения по страницам
 > * Создание страницы сведений
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 * [Реализация базовой функциональности CRUD](implementing-basic-crud-functionality-with-the-entity-framework-in-asp-net-mvc-application.md)
 
@@ -42,7 +42,7 @@ ms.locfileid: "78499332"
 
 ### <a name="add-sorting-functionality-to-the-index-method"></a>Добавление функции сортировки в метод Index
 
-- В *контроллерс\студентконтроллер.КС*замените метод `Index` следующим кодом:
+- В *Conrollers\StudentController.cs*замените метод `Index` следующим кодом:
 
    [!code-csharp[Main](sorting-filtering-and-paging-with-the-entity-framework-in-an-asp-net-mvc-application/samples/sample1.cs)]
 
